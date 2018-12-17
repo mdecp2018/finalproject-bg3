@@ -79,10 +79,10 @@ def checkLogin():
         session['admin'] = 1
         return redirect('/edit_page')
     elif password == "bg3":
-        return redirect('/holleworld')
+        return redirect('/helloworld')
     return redirect('/')
 
-@app.route('/holleworld')
+@app.route('/helloworld')
 def show_helloworld():
     return "<p>hello world</p>"
 @app.route('/delete_file', methods=['POST'])
