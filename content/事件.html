@@ -1,0 +1,233 @@
+<!doctype html>
+<html><head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
+<title>期末分組專案</title> <link rel="stylesheet" type="text/css" href="./../static/cmsimply.css">
+
+<script type="text/javascript" src="./../static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushLua.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushCSharp.js"></script>
+<link type="text/css" rel="stylesheet" href="./../static/syntaxhighlighter/css/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+
+<!-- for LaTeX equations 暫時不用
+<script src="https://scrum-3.github.io/web/math/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script>
+<script type="text/javascript">
+init_mathjax = function() {
+    if (window.MathJax) {
+        // MathJax loaded
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+            },
+            displayAlign: 'left', // Change this to 'center' to center equations.
+            "HTML-CSS": {
+                styles: {'.MathJax_Display': {"margin": 0}}
+            }
+        });
+        MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+    }
+}
+init_mathjax();
+</script>
+-->
+<!-- 暫時不用
+<script src="./../static/fengari-web.js"></script>
+<script type="text/javascript" src="./../static/Cango-13v08-min.js"></script>
+<script type="text/javascript" src="./../static/CangoAxes-4v01-min.js"></script>
+<script type="text/javascript" src="./../static/gearUtils-05.js"></script>
+-->
+<!-- for Brython 暫時不用
+<script src="https://scrum-3.github.io/web/brython/brython.js"></script>
+<script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
+-->
+
+<script src="./../static/jquery.js"></script>
+<script type="text/javascript">
+$(function(){
+    $("ul.topmenu> li:has(ul) > a").append('<div class="arrow-right"></div>');
+    $("ul.topmenu > li ul li:has(ul) > a").append('<div class="arrow-right"></div>');
+});
+</script>
+
+</head><header><h1>第三組 期末分組網站</h1> <confmenu>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="sitemap.html">Site Map</a></li>
+<li><a href="./../reveal/index.html">reveal</a></li>
+<li><a href="./../blog/index.html">blog</a></li>
+
+</ul>
+</confmenu></header>
+<div class='container'><nav><ul id='css3menu1' class='topmenu'><li><a href='Introduction.html'>Introduction</a><li><a href='Course.html'>Course</a><ul><li><a href='git基本指令.html'>git基本指令</a><li><a href='python基本語法.html'>python基本語法</a></li></ul><li><a href='Ggame-synopsis.html'>Ggame-synopsis</a><ul><li><a href='ggame應用程序類.html'>ggame應用程序類</a><li><a href='事件.html'>事件</a><li><a href='ggame資產.html'>ggame資產</a><li><a href='聲音.html'>聲音</a><li><a href='精靈.html'>精靈</a></li></ul><li><a href='Independent Study.html'>Independent Study</a><ul><li><a href='Group Member Operation video.html'>Group Member Operation video</a><ul><li><a href='Week10.html'>Week10</a><li><a href='Week11.html'>Week11</a><li><a href='Week12.html'>Week12</a><li><a href='Week13.html'>Week13</a><li><a href='Week14.html'>Week14</a><li><a href='Week15.html'>Week15</a><li><a href='Week16.html'>Week16</a><li><a href='Week17.html'>Week17</a><li><a href='Week18.html'>Week18</a></li></ul><li><a href='Operation history.html'>Operation history</a><ul><li><a href='W10 progress.html'>W10 progress</a><li><a href='W11 progress.html'>W11 progress</a><li><a href='W12 progress.html'>W12 progress</a><li><a href='W13 progress.html'>W13 progress</a><li><a href='W14 progress.html'>W14 progress</a><li><a href='W15 progress.html'>W15 progress</a><li><a href='W16 progress.html'>W16 progress</a><li><a href='W17 progress.html'>W17 progress</a><li><a href='W18 progress.html'>W18 progress</a></li></li></ul></ul><li><a href='Issue＆Solution.html'>Issue＆Solution</a><li><a href='Experience.html'>Experience</a><ul><li><a href='W10.html'>W10</a><li><a href='W11.html'>W11</a><li><a href='W12.html'>W12</a><li><a href='W13.html'>W13</a><li><a href='W14.html'>W14</a><li><a href='W15.html'>W15</a><li><a href='W16.html'>W16</a><li><a href='W17.html'>W17</a><li><a href='W18.html'>W18</a></li></ul><li><a href='Final Report.html'>Final Report</a><li><a href='Attend＆Absence.html'>Attend＆Absence</a></li></ul></nav><section>ggame應用程序類 << <a href='ggame應用程序類.html'>Previous</a> <a href='ggame資產.html'>Next</a> >> ggame資產<br /><h1>事件</h1>
+<p><span>ggame事件是ggame系統由於某些用戶操作（鼠標，鍵盤）而創建的對象。如果ggame應用程序已調用 </span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.app.App.listenKeyEvent" title="ggame.app.App.listenKeyEvent"><code class="xref py py-meth docutils literal notranslate"><span class="pre">listenKeyEvent()</span></code></a><span>，</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.app.App.listenMouseEvent" title="ggame.app.App.listenMouseEvent"><code class="xref py py-meth docutils literal notranslate"><span class="pre">listenMouseEvent()</span></code></a><span>則ggame將實例化相應的Event對象並返回給用戶提供的處理函數。ggame用戶代碼應該檢查Event對象的屬性，以找出有關發生的事件的更多信息。</span></p>
+<dl class="class">
+<dt id="ggame.event.MouseEvent"><em class="property"><span>class </span></em><code class="descclassname">ggame.event.</code><code class="descname">MouseEvent</code><span class="sig-paren"><span>（</span></span><em><span>app</span></em><span>，</span><em><span>hwevent </span></em><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/event.html#MouseEvent"><span class="viewcode-link"><span>[來源]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.event.MouseEvent" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>MouseEvent對象封裝有關係統報告的用戶鼠標操作的信息。該類不是由ggame用戶實例化的。</span></p>
+<dl class="attribute">
+<dt id="ggame.event.MouseEvent.wheeldelta"><code class="descname">wheeldelta</code><em class="property"><span>=無</span></em><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.event.MouseEvent.wheeldelta" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>表示滾輪上/下運動的整數。</span></p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="ggame.event.MouseEvent.x"><code class="descname">x</code><em class="property"><span>=無</span></em><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.event.MouseEvent.x" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>事件發生時鼠標指​​針的窗口x坐標。</span></p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="ggame.event.MouseEvent.y"><code class="descname">y</code><em class="property"><span>=無</span></em><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.event.MouseEvent.y" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>事件發生時鼠標指​​針的窗口y坐標。</span></p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="ggame.event.MouseEvent.route"><code class="descname">route</code><span class="sig-paren"><span>（</span></span><em><span>evtlist </span></em><span class="sig-paren"><span>）</span></span><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.event.MouseEvent.route" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>執行為此事件配置的所有回調。</span></p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="class">
+<dt id="ggame.event.KeyEvent"><em class="property"><span>class </span></em><code class="descclassname">ggame.event.</code><code class="descname">KeyEvent</code><span class="sig-paren"><span>（</span></span><em><span>hwevent </span></em><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/event.html#KeyEvent"><span class="viewcode-link"><span>[來源]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.event.KeyEvent" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>KeyEvent對象封裝有關係統正在報告的用戶鍵盤操作的信息。該類不是由ggame用戶實例化的。</span></p>
+<dl class="method">
+<dt id="ggame.event.KeyEvent.route"><code class="descname">route</code><span class="sig-paren"><span>（</span></span><em><span>evtlist </span></em><span class="sig-paren"><span>）</span></span><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.event.KeyEvent.route" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>執行為此事件配置的所有回調。</span></p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="ggame.event.KeyEvent.keynum"><code class="descname">keynum</code><em class="property"><span>=無</span></em><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.event.KeyEvent.keynum" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>所述</span><cite><span>KEYNUM</span></cite><span>屬性標識一鍵碼（號碼）。</span></p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="ggame.event.KeyEvent.key"><code class="descname">key</code><em class="property"><span>=無</span></em><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.event.KeyEvent.key" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>在</span><cite><span>關鍵</span></cite><span>屬性identifes以文本形式（如“反斜杠”）的關鍵。</span></p>
+<p><span>密鑰號和描述字符串列表如下：</span></p>
+<div class="highlight-default notranslate">
+<div class="highlight">
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">8: 'backspace',
+9: 'tab',
+13: 'enter',
+16: 'shift',
+17: 'ctrl',
+18: 'alt',
+19: 'pause/break',
+20: 'caps lock',
+27: 'escape',
+32: 'space',
+33: 'page up',
+34: 'page down',
+35: 'end',
+36: 'home',
+37: 'left arrow',
+38: 'up arrow',
+39: 'right arrow',
+40: 'down arrow',
+45: 'insert',
+46: 'delete',
+48: '0',
+49: '1',
+50: '2',
+51: '3',
+52: '4',
+53: '5',
+54: '6',
+55: '7',
+56: '8',
+57: '9',
+65: 'a',
+66: 'b',
+67: 'c',
+68: 'd',
+69: 'e',
+70: 'f',
+71: 'g',
+72: 'h',
+73: 'i',
+74: 'j',
+75: 'k',
+76: 'l',
+77: 'm',
+78: 'n',
+79: 'o',
+80: 'p',
+81: 'q',
+82: 'r',
+83: 's',
+84: 't',
+85: 'u',
+86: 'v',
+87: 'w',
+88: 'x',
+89: 'y',
+90: 'z',
+91: 'left window key',
+92: 'right window key',
+93: 'select key',
+96: 'numpad 0',
+97: 'numpad 1',
+98: 'numpad 2',
+99: 'numpad 3',
+100: 'numpad 4',
+101: 'numpad 5',
+102: 'numpad 6',
+103: 'numpad 7',
+104: 'numpad 8',
+105: 'numpad 9',
+106: 'multiply',
+107: 'add',
+109: 'subtract',
+110: 'decimal point',
+111: 'divide',
+112: 'f1',
+113: 'f2',
+114: 'f3',
+115: 'f4',
+116: 'f5',
+117: 'f6',
+118: 'f7',
+119: 'f8',
+120: 'f9',
+121: 'f10',
+122: 'f11',
+123: 'f12',
+144: 'num lock',
+145: 'scroll lock',
+186: 'semicolon',
+187: 'equal sign',
+188: 'comma',
+189: 'dash',
+190: 'period',
+191: 'forward slash',
+192: 'grave accent',
+219: 'open bracket',
+220: 'back slash',
+221: 'close bracket',
+222: 'single quote'</pre>
+</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section"><span></span></div>
+<br />ggame應用程序類 << <a href='ggame應用程序類.html'>Previous</a> <a href='ggame資產.html'>Next</a> >> ggame資產</section></div></body></html>

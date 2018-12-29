@@ -70,9 +70,1274 @@
 <p>● 如果要進行下面的運算 a= a+b （用a+b的結果為a重新賦值）<br/>● 在python可以改寫成： a += b<br/>● 所以算術運算符號可以有<br/>        +=     -=     *=     /=     %=     **=     //=</p>
 <p><span><strong>Modules or package （也稱為library）</strong></span></p>
 <p>● ”modules” or “packages”：通常是其他人寫好的函數或指令，打包成一個「工具庫」<br/> 方便分享使用。（非python內建，可能會需要下載安裝）<br/>○     本課程會用到的library: numpy (array), matplotlib (基本繪圖), basemap (地圖),<br/>         netCDF (讀nc檔)<br/>● 使用方式：import module_name<br/>○     在執行工具庫內的指令之前，就要先把modules 引進來（不然python不會認得<br/>        非內建的指令）<br/>○     使用工具庫內的指令：module_name.function (or module_name.constant)<br/>○     可以使用import module_name as xxx (xxx是你自己取的縮寫）<br/>        使用指令的語法就簡化成xxx.function，例如:<br/>             import math as m<br/>             x=m.cos(m.pi)</p>
-<h1>Onshape</h1>
-<p></p>
-<h1>Independent Study</h1>
+<h1>Ggame-synopsis</h1>
+<p><strong><span style="color: #3366ff;">介紹</span></strong><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/introduction.html#introduction" title="永久鏈接到這個標題"><span></span></a></p>
+<p><span>Ggame </span><strong><span>並不是</span></strong><span>一個功能齊全的遊戲API，每一個鈴鐺和哨子。它主要是作為教授計算機編程的工具而設計的，認識到創建引人入勝的互動遊戲的能力是許多計劃學生的強大動力。因此，</span><em><span>可以</span></em><span>由用戶合理地實現的任何功能或性能增強被留作練習。</span></p>
+<div class="section" id="functionality-goals"><strong><span style="color: #3366ff;">功能目標</span></strong><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/introduction.html#functionality-goals" title="永久鏈接到這個標題"><span></span></a>
+<p><span>ggame庫旨在簡單易用。例如：</span></p>
+<div class="highlight-python notranslate">
+<div class="highlight">
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">"""
+Trivial example of a minimal ggame App with Sprite.
+"""
+from ggame import App, ImageAsset, Sprite
+
+# Create a displayed object at 100,100 using an image asset
+Sprite(ImageAsset("bunny.png"), (100, 100))
+# Create the app, with a default stage
+APP = App()
+# Run the app
+APP.run()</pre>
+</div>
+</div>
+</div>
+<div class="section" id="extensions"><strong><span style="color: #3366ff;">擴展</span></strong><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/introduction.html#extensions" title="永久鏈接到這個標題"><span></span></a>
+<p><span>Ggame正在以一種讓人聯想到Geogebra，數字邏輯模擬以及用於火箭和軌道模擬的工具和類的方式進行幾何探索。</span></p>
+</div>
+<div class="section" id="overview"><strong><span style="color: #3366ff;">概述</span></strong><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/introduction.html#overview" title="永久鏈接到這個標題"><span></span></a>
+<p><span>ggame應用程序中有三個主要部分：資產，精靈和應用程序本身。</span></p>
+<div class="section" id="assets"><strong><span style="color: #3366ff;">資產</span></strong><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/introduction.html#assets" title="永久鏈接到這個標題"><span></span></a>
+<p><span>資產對象（即</span><code class="docutils literal notranslate"><span class="pre">ImageAsset</span></code><span>等）通常表示由“藝術部門”提供的單獨文件。這些可能是背景圖像，用戶界面圖像或代表遊戲中對象的圖像。此外，</span><code class="docutils literal notranslate"><span class="pre">SoundAsset</span></code><span> 還用於表示可在遊戲中播放的聲音文件（.wav或.mp3格式）。</span></p>
+<p><span>Ggame還擴展了資產概念，以包括在運行時動態生成的圖形，例如幾何對象，例如矩形，線條等。</span></p>
+</div>
+<div class="section" id="sprites"><span style="color: #3366ff;"><strong>精靈</strong></span><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/introduction.html#sprites" title="永久鏈接到這個標題"><span></span></a>
+<p><span>遊戲的所有視覺方面都由它的實例</span><code class="docutils literal notranslate"><span class="pre">Sprite</span></code><span>或子類表示。</span></p>
+</div>
+<div class="section" id="app"><span style="color: #3366ff;"><strong>應用</strong></span><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/introduction.html#app" title="永久鏈接到這個標題"><span></span></a>
+<p><span>每個ggame應用程序都必須創建一個</span><code class="xref py py-class docutils literal notranslate"><span class="pre">App</span></code><span>類的實例（或它的子類）。創建</span><code class="xref py py-class docutils literal notranslate"><span class="pre">App</span></code><span>類的實例以在瀏覽器窗口中繪製圖形畫布。執行應用程序的</span><code class="xref py py-meth docutils literal notranslate"><span class="pre">run()</span></code><span>方法以開始刷新並重新繪製屏幕上的可視資源。</span></p>
+</div>
+<div class="section" id="events"><span style="color: #3366ff;"><strong>事件</strong></span><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/introduction.html#events" title="永久鏈接到這個標題"><span></span></a>
+<p><span>沒有玩家和玩家製作活動，遊戲就不會完整。您的代碼通過使用類</span><code class="xref py py-meth docutils literal notranslate"><span class="pre">listenKeyEvent()</span></code><span>和</span><code class="xref py py-meth docutils literal notranslate"><span class="pre">listenMouseEvent()</span></code><span>方法註冊接收鍵盤和鼠標事件來處理用戶輸入 </span><code class="xref py py-class docutils literal notranslate"><span class="pre">App</span></code><span>。</span></p>
+</div>
+</div>
+<div class="section" id="execution-environment"><span style="color: #3366ff;"><strong>執行環境</strong></span><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/introduction.html#execution-environment" title="永久鏈接到這個標題"><span></span></a>
+<p><span>Ggame旨在使用</span><a class="reference external" href="http://brython.info/"><span>Brython</span></a><span>， </span><a class="reference external" href="http://www.pixijs.com/"><span>Pixi.js</span></a><span>和</span><a class="reference external" href="http://buzz.jaysalvat.com/"><span>Buzz</span></a><span>在Web瀏覽器中執行。最簡單的方法是從</span><a class="reference external" href="https://runpython.org/"><span>runpython</span></a><span>執行 ，源代碼存儲在 </span><a class="reference external" href="http://github.com/"><span>github上</span></a><span>。當您在</span><a class="reference external" href="https://runpython.org/"><span>runpython中</span></a><span>使用ggame時 ，Github ggame存儲庫將自動放置在導入搜索路徑中。</span></p>
+</div>
+<div class="section" id="geometry"><span style="color: #3366ff;"><strong>幾何</strong></span><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/introduction.html#geometry" title="永久鏈接到這個標題"><span></span></a>
+<p><span>當提到屏幕坐標時，請注意計算機屏幕的x軸是</span><em><span>水平的</span></em><span>，屏幕左側的零位置。y軸是</span><em><span>垂直</span></em><span>的，屏幕</span><strong><span>頂部</span></strong><span>的零位置。</span></p>
+<p><span>增加正y坐標對應於計算機屏幕上的向下方向。請注意，這與您在數學課程中學習x和y坐標的方式</span><strong><span>不同</span></strong><span>！</span></p>
+<div class="section" id="module-ggame.app"><span id="ggame-application-classes"></span>
+<h2 class="section">ggame應用程序類</h2>
+<div class="section" id="app"><br/>應用<a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#app" title="永久鏈接到這個標題"><span></span></a>
+<dl class="class">
+<dt id="ggame.app.App"><em class="property"><span>class </span></em><code class="descclassname">ggame.app.</code><code class="descname">App</code><span class="sig-paren"><span>（</span></span><em><span>* args </span></em><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/app.html#App"><span class="viewcode-link"><span>[source]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.app.App" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>的</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.app.App" title="ggame.app.App"><code class="xref py py-class docutils literal notranslate"><span class="pre">App</span></code></a><span>類是一個封裝處理顯示系統的，和處理用戶事件（通常子類）的類。該</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.app.App" title="ggame.app.App"><code class="xref py py-class docutils literal notranslate"><span class="pre">App</span></code></a><span> 班還負責管理所有的列表</span><code class="xref py py-class docutils literal notranslate"><span class="pre">Sprite</span></code><span>中的應用實例。</span></p>
+<p><span>在子類</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.app.App" title="ggame.app.App"><code class="xref py py-class docutils literal notranslate"><span class="pre">App</span></code></a><span>化時，您可以選擇在初始化部分中實例化大多數精靈對象。</span></p>
+<p><span>必須通過覆蓋該</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.app.App.run" title="ggame.app.App.run"><code class="xref py py-meth docutils literal notranslate"><span class="pre">run()</span></code></a><span>方法來包括必須以每幀為基礎進行的處理。這也是為各種自定義精靈類調用類似“步驟”方法的合適位置。</span></p>
+<p><span>實例化應用程序類後，通過調用其</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.app.App.run" title="ggame.app.App.run"><code class="xref py py-meth docutils literal notranslate"><span class="pre">run()</span></code></a><span>方法開始框架繪製過程。</span></p>
+<p><span>的</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.app.App" title="ggame.app.App"><code class="xref py py-class docutils literal notranslate"><span class="pre">App</span></code></a><span>類是通過指定以像素為單位所希望的應用程序窗口大小，作為兩個實例化參數要么::</span></p>
+<div class="highlight-default notranslate">
+<div class="highlight">
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">myapp = App(640,480)</pre>
+</div>
+</div>
+<p><span>或者根本不提供尺寸參數::</span></p>
+<div class="highlight-default notranslate">
+<div class="highlight">
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">myapp = App()</pre>
+</div>
+</div>
+<p><span>在這種情況下，使用完整的瀏覽器窗口大小。</span></p>
+<p><span>注意：一次只能實例化一個類或子類的</span><strong><span>一個</span></strong><span>實例</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.app.App" title="ggame.app.App"><code class="xref py py-class docutils literal notranslate"><span class="pre">App</span></code></a><span>。</span></p>
+<dl class="attribute">
+<dt id="ggame.app.App.spritelist">
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">spritelist= [] </pre>
+</dt>
+<dd>
+<p><span>應用程序中當前活動的所有精靈的列表。</span></p>
+</dd>
+</dl>
+<dl class="classmethod">
+<dt id="ggame.app.App.getSpritesbyClass"><em class="property"><span>classmethod </span></em><code class="descname">getSpritesbyClass</code><span class="sig-paren"><span>（</span></span><em><span>sclass </span></em><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/app.html#App.getSpritesbyClass"><span class="viewcode-link"><span>[來源]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.app.App.getSpritesbyClass" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>返回給定類的所有活動精靈的列表。</span></p>
+<table class="docutils field-list" frame="void" rules="none"><colgroup><col class="field-name"/><col class="field-body"/></colgroup>
+<tbody valign="top">
+<tr class="field-odd field">
+<th class="field-name"><span>參數：</span></th>
+<td class="field-body"><strong><span>sclass</span></strong><span>（</span><em><span>class</span></em><span>） - 類名（例如'Sprite'）或子類。</span></td>
+</tr>
+<tr class="field-even field">
+<th class="field-name"><span>返回：</span></th>
+<td class="field-body"><span>一個（可能是空的）精靈引用列表。</span></td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<dl class="classmethod">
+<dt id="ggame.app.App.listenKeyEvent"><em class="property"><span>classmethod </span></em><code class="descname">listenKeyEvent</code><span class="sig-paren"><span>（</span></span><em><span>eventtype</span></em><span>，</span><em><span>key</span></em><span>，</span><em><span>callback </span></em><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/app.html#App.listenKeyEvent"><span class="viewcode-link"><span>[source]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.app.App.listenKeyEvent" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>註冊接收鍵盤事件。</span></p>
+<table class="docutils field-list" frame="void" rules="none"><colgroup><col class="field-name"/><col class="field-body"/></colgroup>
+<tbody valign="top">
+<tr class="field-odd field">
+<th class="field-name"><span>參數：</span></th>
+<td class="field-body">
+<ul class="first simple">
+<li><strong><span>eventtype</span></strong><span>（</span><em><span>str</span></em><span>） - 要接收的鍵事件的類型（值是以下之一：</span><cite><span>'keydown'</span></cite><span>，</span><cite><span>'keyup'</span></cite><span>或</span><cite><span>'keypress'</span></cite><span>）。</span></li>
+<li><strong><span>key</span></strong><span>（</span><em><span>str</span></em><span>） - 識別鍵盤鍵（例如</span><cite><span>“空格”</span></cite><span>， </span><cite><span>“左箭頭”</span></cite><span>等）以接收事件。</span></li>
+<li><strong><span>callback</span></strong><span>（</span><em><span>function</span></em><span>） - </span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.event.KeyEvent" title="ggame.event.KeyEvent"><code class="xref py py-class docutils literal notranslate"><span class="pre">KeyEvent</span></code></a><span>事件發生時將使用對象調用的函數或方法。</span></li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field">
+<th class="field-name"><span>返回：</span></th>
+<td class="field-body">
+<p class="first last"><span>沒有</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><span>有關</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.event.KeyEvent" title="ggame.event.KeyEvent"><code class="xref py py-class docutils literal notranslate"><span class="pre">KeyEvent</span></code></a><span>要與</span><cite><span>密鑰</span></cite><span>參數一起使用的密鑰名稱列表，請參閱源代碼。</span></p>
+</dd>
+</dl>
+<dl class="classmethod">
+<dt id="ggame.app.App.listenMouseEvent"><em class="property"><span>classmethod </span></em><code class="descname">listenMouseEvent</code><span class="sig-paren"><span>（</span></span><em><span>eventtype</span></em><span>，</span><em><span>callback </span></em><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/app.html#App.listenMouseEvent"><span class="viewcode-link"><span>[source]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.app.App.listenMouseEvent" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>註冊接收鼠標事件。</span></p>
+<table class="docutils field-list" frame="void" rules="none" style="height: 218px;"><colgroup><col class="field-name"/><col class="field-body"/></colgroup>
+<tbody valign="top">
+<tr class="field-odd field" style="height: 118px;">
+<th class="field-name" style="width: 44px; height: 118px;"><span>參數：</span></th>
+<td class="field-body" style="width: 530px; height: 118px;">
+<ul class="first simple">
+<li><strong><span>eventtype</span></strong><span>（</span><em><span>str</span></em><span>） - 要接收的鼠標事件的類型（值是以下之一：</span><cite><span>'mousemove'</span></cite><span>，</span><cite><span>'mousedown'</span></cite><span>，</span><cite><span>'mouseup'</span></cite><span>，</span><cite><span>'click'</span></cite><span>，</span><cite><span>'dblclick'</span></cite><span>或</span><cite><span>'mousewheel'</span></cite><span>）。</span></li>
+<li><strong><span>callback</span></strong><span>（</span><em><span>function</span></em><span>） - </span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.event.MouseEvent" title="ggame.event.MouseEvent"><code class="xref py py-class docutils literal notranslate"><span class="pre">ggame.event.MouseEvent</span></code></a><span>事件發生時將使用對象調用的函數或方法。</span></li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field" style="height: 100px;">
+<th class="field-name" style="width: 44px; height: 100px;"><span>返回：</span></th>
+<td class="field-body" style="width: 530px; height: 100px;">
+<p class="first last"><span>沒有</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<dl class="classmethod">
+<dt id="ggame.app.App.unlistenKeyEvent"><em class="property"><span>classmethod </span></em><code class="descname">unlistenKeyEvent</code><span class="sig-paren"><span>（</span></span><em><span>eventtype</span></em><span>，</span><em><span>key</span></em><span>，</span><em><span>callback </span></em><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/app.html#App.unlistenKeyEvent"><span class="viewcode-link"><span>[source]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.app.App.unlistenKeyEvent" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>使用此方法刪除註冊以接收特定鍵盤事件。參數必須與註冊事件時使用的參數完全匹配。</span></p>
+<table class="docutils field-list" frame="void" rules="none"><colgroup><col class="field-name"/><col class="field-body"/></colgroup>
+<tbody valign="top">
+<tr class="field-odd field">
+<th class="field-name"><span>參數：</span></th>
+<td class="field-body">
+<ul class="first simple">
+<li><strong><span>eventtype</span></strong><span>（</span><em><span>str</span></em><span>） - 要停止接收的鍵事件的類型（值是以下之一：</span><cite><span>'keydown'</span></cite><span>，</span><cite><span>'keyup'</span></cite><span>或</span><cite><span>'keypress'</span></cite><span>）。</span></li>
+<li><strong><span>key</span></strong><span>（</span><em><span>str</span></em><span>） - 用於停止接收事件的鍵盤鍵（例如</span><cite><span>“空格”</span></cite><span>， </span><cite><span>“左箭頭”</span></cite><span>等）。</span></li>
+<li><strong><span>callback</span></strong><span>（</span><em><span>function</span></em><span>） - </span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.event.KeyEvent" title="ggame.event.KeyEvent"><code class="xref py py-class docutils literal notranslate"><span class="pre">KeyEvent</span></code></a><span>事件發生時不再使用對象調用的函數或方法。</span></li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field">
+<th class="field-name"><span>返回：</span></th>
+<td class="field-body">
+<p class="first last"><span>沒有</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><span>有關</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.event.KeyEvent" title="ggame.event.KeyEvent"><code class="xref py py-class docutils literal notranslate"><span class="pre">KeyEvent</span></code></a><span>要與</span><cite><span>密鑰</span></cite><span>參數一起使用的密鑰名稱列表，請參閱源代碼。</span></p>
+</dd>
+</dl>
+<dl class="classmethod">
+<dt id="ggame.app.App.unlistenMouseEvent"><em class="property"><span>classmethod </span></em><code class="descname">unlistenMouseEvent</code><span class="sig-paren"><span>（</span></span><em><span>eventtype</span></em><span>，</span><em><span>callback </span></em><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/app.html#App.unlistenMouseEvent"><span class="viewcode-link"><span>[source]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.app.App.unlistenMouseEvent" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>使用此方法刪除註冊以接收特定鼠標事件。參數必須與註冊事件時使用的參數完全匹配。</span></p>
+<table class="docutils field-list" frame="void" rules="none"><colgroup><col class="field-name"/><col class="field-body"/></colgroup>
+<tbody valign="top">
+<tr class="field-odd field">
+<th class="field-name"><span>參數：</span></th>
+<td class="field-body">
+<ul class="first simple">
+<li><strong><span>eventtype</span></strong><span>（</span><em><span>str</span></em><span>） - 要停止接收事件的鼠標事件的類型（值是以下之一：</span><cite><span>'mousemove'</span></cite><span>，</span><cite><span>'mousedown'</span></cite><span>，</span><cite><span>'mouseup'</span></cite><span>，</span><cite><span>'click'</span></cite><span>，</span><cite><span>'dblclick'</span></cite><span>或</span><cite><span>'mousewheel'</span></cite><span>）。</span></li>
+<li><strong><span>callback</span></strong><span>（</span><em><span>function</span></em><span>） - </span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.event.MouseEvent" title="ggame.event.MouseEvent"><code class="xref py py-class docutils literal notranslate"><span class="pre">ggame.event.MouseEvent</span></code></a><span>事件發生時不再使用對象調用的函數或方法。</span></li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field">
+<th class="field-name"><span>返回：</span></th>
+<td class="field-body">
+<p class="first last"><span>沒有</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<dl class="method">
+<dt id="ggame.app.App.run"><code class="descname">run</code><span class="sig-paren"><span>（</span></span><em><span>userfunc = None </span></em><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/app.html#App.run"><span class="viewcode-link"><span>[來源]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.app.App.run" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>調用該</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.app.App.run" title="ggame.app.App.run"><code class="xref py py-meth docutils literal notranslate"><span class="pre">run()</span></code></a><span>方法開始動畫過程，</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.app.App.step" title="ggame.app.App.step"><code class="xref py py-meth docutils literal notranslate"><span class="pre">step()</span></code></a><span>每個動畫幀調用該方法一次。</span></p>
+<table class="docutils field-list" frame="void" rules="none"><colgroup><col class="field-name"/><col class="field-body"/></colgroup>
+<tbody valign="top">
+<tr class="field-odd field">
+<th class="field-name"><span>參數：</span></th>
+<td class="field-body"><strong><span>userfunc</span></strong><span>（</span><em><span>function</span></em><span>） - 每個動畫幀應調用一次的任何函數或方法。</span></td>
+</tr>
+<tr class="field-even field">
+<th class="field-name"><span>返回：</span></th>
+<td class="field-body"><span>沒有</span></td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<dl class="method">
+<dt id="ggame.app.App.step"><code class="descname">step</code><span class="sig-paren"><span>（</span></span><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/app.html#App.step"><span class="viewcode-link"><span>[來源]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.app.App.step" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.app.App.step" title="ggame.app.App.step"><code class="xref py py-meth docutils literal notranslate"><span class="pre">step()</span></code></a><span>每個動畫幀調用一次該方法。在您自己的子類中重寫此方法</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.app.App" title="ggame.app.App"><code class="xref py py-class docutils literal notranslate"><span class="pre">App</span></code></a><span>以執行定期計算，例如檢查sprite衝突，或在您自己的自定義Sprite類中調用“step”函數。</span></p>
+<p><span>基類</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.app.App.step" title="ggame.app.App.step"><code class="xref py py-meth docutils literal notranslate"><span class="pre">step()</span></code></a><span>方法為空，旨在覆蓋。</span></p>
+<table class="docutils field-list" frame="void" rules="none"><colgroup><col class="field-name"/><col class="field-body"/></colgroup>
+<tbody valign="top">
+<tr class="field-odd field">
+<th class="field-name"><span>返回：</span></th>
+<td class="field-body"><span>沒有</span></td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="section" id="module-ggame.event"><span id="events"></span>
+<h2><span>事件</span></h2>
+<p><span>ggame事件是ggame系統由於某些用戶操作（鼠標，鍵盤）而創建的對象。如果ggame應用程序已調用 </span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.app.App.listenKeyEvent" title="ggame.app.App.listenKeyEvent"><code class="xref py py-meth docutils literal notranslate"><span class="pre">listenKeyEvent()</span></code></a><span>，</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.app.App.listenMouseEvent" title="ggame.app.App.listenMouseEvent"><code class="xref py py-meth docutils literal notranslate"><span class="pre">listenMouseEvent()</span></code></a><span>則ggame將實例化相應的Event對象並返回給用戶提供的處理函數。ggame用戶代碼應該檢查Event對象的屬性，以找出有關發生的事件的更多信息。</span></p>
+<dl class="class">
+<dt id="ggame.event.MouseEvent"><em class="property"><span>class </span></em><code class="descclassname">ggame.event.</code><code class="descname">MouseEvent</code><span class="sig-paren"><span>（</span></span><em><span>app</span></em><span>，</span><em><span>hwevent </span></em><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/event.html#MouseEvent"><span class="viewcode-link"><span>[來源]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.event.MouseEvent" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>MouseEvent對象封裝有關係統報告的用戶鼠標操作的信息。該類不是由ggame用戶實例化的。</span></p>
+<dl class="attribute">
+<dt id="ggame.event.MouseEvent.wheeldelta"><code class="descname">wheeldelta</code><em class="property"><span>=無</span></em><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.event.MouseEvent.wheeldelta" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>表示滾輪上/下運動的整數。</span></p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="ggame.event.MouseEvent.x"><code class="descname">x</code><em class="property"><span>=無</span></em><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.event.MouseEvent.x" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>事件發生時鼠標指​​針的窗口x坐標。</span></p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="ggame.event.MouseEvent.y"><code class="descname">y</code><em class="property"><span>=無</span></em><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.event.MouseEvent.y" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>事件發生時鼠標指​​針的窗口y坐標。</span></p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="ggame.event.MouseEvent.route"><code class="descname">route</code><span class="sig-paren"><span>（</span></span><em><span>evtlist </span></em><span class="sig-paren"><span>）</span></span><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.event.MouseEvent.route" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>執行為此事件配置的所有回調。</span></p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="class">
+<dt id="ggame.event.KeyEvent"><em class="property"><span>class </span></em><code class="descclassname">ggame.event.</code><code class="descname">KeyEvent</code><span class="sig-paren"><span>（</span></span><em><span>hwevent </span></em><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/event.html#KeyEvent"><span class="viewcode-link"><span>[來源]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.event.KeyEvent" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>KeyEvent對象封裝有關係統正在報告的用戶鍵盤操作的信息。該類不是由ggame用戶實例化的。</span></p>
+<dl class="method">
+<dt id="ggame.event.KeyEvent.route"><code class="descname">route</code><span class="sig-paren"><span>（</span></span><em><span>evtlist </span></em><span class="sig-paren"><span>）</span></span><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.event.KeyEvent.route" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>執行為此事件配置的所有回調。</span></p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="ggame.event.KeyEvent.keynum"><code class="descname">keynum</code><em class="property"><span>=無</span></em><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.event.KeyEvent.keynum" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>所述</span><cite><span>KEYNUM</span></cite><span>屬性標識一鍵碼（號碼）。</span></p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="ggame.event.KeyEvent.key"><code class="descname">key</code><em class="property"><span>=無</span></em><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.event.KeyEvent.key" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>在</span><cite><span>關鍵</span></cite><span>屬性identifes以文本形式（如“反斜杠”）的關鍵。</span></p>
+<p><span>密鑰號和描述字符串列表如下：</span></p>
+<div class="highlight-default notranslate">
+<div class="highlight">
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">8: 'backspace',
+9: 'tab',
+13: 'enter',
+16: 'shift',
+17: 'ctrl',
+18: 'alt',
+19: 'pause/break',
+20: 'caps lock',
+27: 'escape',
+32: 'space',
+33: 'page up',
+34: 'page down',
+35: 'end',
+36: 'home',
+37: 'left arrow',
+38: 'up arrow',
+39: 'right arrow',
+40: 'down arrow',
+45: 'insert',
+46: 'delete',
+48: '0',
+49: '1',
+50: '2',
+51: '3',
+52: '4',
+53: '5',
+54: '6',
+55: '7',
+56: '8',
+57: '9',
+65: 'a',
+66: 'b',
+67: 'c',
+68: 'd',
+69: 'e',
+70: 'f',
+71: 'g',
+72: 'h',
+73: 'i',
+74: 'j',
+75: 'k',
+76: 'l',
+77: 'm',
+78: 'n',
+79: 'o',
+80: 'p',
+81: 'q',
+82: 'r',
+83: 's',
+84: 't',
+85: 'u',
+86: 'v',
+87: 'w',
+88: 'x',
+89: 'y',
+90: 'z',
+91: 'left window key',
+92: 'right window key',
+93: 'select key',
+96: 'numpad 0',
+97: 'numpad 1',
+98: 'numpad 2',
+99: 'numpad 3',
+100: 'numpad 4',
+101: 'numpad 5',
+102: 'numpad 6',
+103: 'numpad 7',
+104: 'numpad 8',
+105: 'numpad 9',
+106: 'multiply',
+107: 'add',
+109: 'subtract',
+110: 'decimal point',
+111: 'divide',
+112: 'f1',
+113: 'f2',
+114: 'f3',
+115: 'f4',
+116: 'f5',
+117: 'f6',
+118: 'f7',
+119: 'f8',
+120: 'f9',
+121: 'f10',
+122: 'f11',
+123: 'f12',
+144: 'num lock',
+145: 'scroll lock',
+186: 'semicolon',
+187: 'equal sign',
+188: 'comma',
+189: 'dash',
+190: 'period',
+191: 'forward slash',
+192: 'grave accent',
+219: 'open bracket',
+220: 'back slash',
+221: 'close bracket',
+222: 'single quote'</pre>
+</div>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section"><span></span></div>
+<h2 class="section">ggame資產</h2>
+<div class="section"></div>
+<div class="section" id="module-ggame.asset">ggame資產和相關對象（<a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.Color" title="ggame.asset.Color"><code class="xref py py-class docutils literal notranslate"><span class="pre">Color</span></code></a>和<a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.LineStyle" title="ggame.asset.LineStyle"><code class="xref py py-class docutils literal notranslate"><span class="pre">LineStyle</span></code></a>）是封裝和表示可顯示圖像的類。單個資產可以用於多個精靈中。可以從包含多個圖像的任何圖像（即精靈表）創建動畫資源。<br/><span id="ggame-assets"></span></div>
+<div class="section">
+<div class="section" id="frame"><br/><span style="color: #3366ff;">框架</span><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#frame" title="永久鏈接到這個標題"><span></span></a>
+<dl class="class">
+<dt id="ggame.asset.Frame"><em class="property"><span>class </span></em><code class="descclassname">ggame.asset.</code><code class="descname">Frame</code><span class="sig-paren"><span>（</span></span><em><span>x</span></em><span>，</span><em><span>y</span></em><span>，</span><em><span>w</span></em><span>，</span><em><span>h </span></em><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/asset.html#Frame"><span class="viewcode-link"><span>[來源]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.Frame" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>Frame是一個實用類，用於表達矩形區域的概念。</span></p>
+<p><span>初始化參數描述框架左上角的位置以及框架的寬度和高度。單位</span><em><span>通常</span></em><span> 以像素<em>為</em>單位，但幀可以是通用的。</span></p>
+<table class="docutils field-list" frame="void" rules="none"><colgroup><col class="field-name"/><col class="field-body"/></colgroup>
+<tbody valign="top">
+<tr class="field-odd field">
+<th class="field-name"><span>參數：</span></th>
+<td class="field-body">
+<ul class="first last simple">
+<li><strong><span>x</span></strong><span>（</span><em><span>int</span></em><span>） - 框架左上角的X坐標</span></li>
+<li><strong><span>y</span></strong><span>（</span><em><span>int</span></em><span>） - 框架左上角的Y坐標</span></li>
+<li><strong><span>w</span></strong><span>（</span><em><span>int</span></em><span>） - 幀的寬度</span></li>
+<li><strong><span>h</span></strong><span>（</span><em><span>int</span></em><span>） - 框架的高度</span></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="ggame.asset.Frame.x"><code class="descname">x</code><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.Frame.x" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>該幀左上角的X坐標。</span></p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="ggame.asset.Frame.y"><code class="descname">y</code><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.Frame.y" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>該框架左上角的Y坐標。</span></p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="ggame.asset.Frame.w"><code class="descname">w</code><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.Frame.w" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>框架的寬度。</span></p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="ggame.asset.Frame.h"><code class="descname">h</code><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.Frame.h" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>框架的高度。</span></p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="ggame.asset.Frame.center"><code class="descname">center</code><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.Frame.center" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>的</span><cite><span>中心</span></cite><span>屬性計算用於該幀的中心的坐標對（元組）。</span></p>
+<p><span>的</span><cite><span>中心</span></cite><span>屬性，設置時，重新定義了</span><cite><span>X</span></cite><span>和</span><cite><span>ÿ</span></cite><span>框架的屬性，以使中心與分配給它的坐標（元組）一致。</span></p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="section" id="color"><br/><span style="color: #3366ff;"><strong>顏色</strong></span><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#color" title="永久鏈接到這個標題"><span></span></a>
+<dl class="class">
+<dt id="ggame.asset.Color"><em class="property"><span>class </span></em><code class="descclassname">ggame.asset.</code><code class="descname">Color</code><span class="sig-paren"><span>（</span></span><em><span>color</span></em><span>，</span><em><span>alpha </span></em><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/asset.html#Color"><span class="viewcode-link"><span>[來源]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.Color" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>Color類用於表示具有透明度的顏色和/或顏色。</span></p>
+<table class="docutils field-list" frame="void" rules="none"><colgroup><col class="field-name"/><col class="field-body"/></colgroup>
+<tbody valign="top">
+<tr class="field-odd field">
+<th class="field-name"><span>參數：</span></th>
+<td class="field-body">
+<ul class="first last simple">
+<li><strong><span>color</span></strong><span>（</span><em><span>int</span></em><span>） - 傳統格式的整數（通常為十六進製文字，例如0xffbb33，表示三種顏色分量，紅色，綠色和藍色）</span></li>
+<li><strong><span>alpha</span></strong><span>（</span><em><span>float</span></em><span>） - 透明度值，或</span><cite><span>alpha</span></cite><span>作為浮點數，範圍為0.0到1.0，其中0.0表示完全透明，1.0表示完全不透明。</span></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p><span>例：</span></p>
+<div class="highlight-default notranslate">
+<div class="highlight">
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">"""
+Example of using Color class.
+"""
+from ggame import Color
+
+RED = Color(0xFF0000, 1.0)</pre>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+<div class="section" id="linestyle"><br/><strong><span style="color: #3366ff;">LineStyle </span></strong><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#linestyle" title="永久鏈接到這個標題"><span></span></a>
+<dl class="class">
+<dt id="ggame.asset.LineStyle"><em class="property"><span>class </span></em><code class="descclassname">ggame.asset.</code><code class="descname">LineStyle</code><span class="sig-paren"><span>（</span></span><em><span>寬度</span></em><span>，</span><em><span>顏色</span></em><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/asset.html#LineStyle"><span class="viewcode-link"><span>[來源]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.LineStyle" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>LineStyle類用於在繪製矩形，橢圓等幾何對象時表示線條樣式。</span></p>
+<table class="docutils field-list" frame="void" rules="none"><colgroup><col class="field-name"/><col class="field-body"/></colgroup>
+<tbody valign="top">
+<tr class="field-odd field">
+<th class="field-name"><span>參數：</span></th>
+<td class="field-body">
+<ul class="first last simple">
+<li><strong><span>width</span></strong><span>（</span><em><span>int</span></em><span>） - 以像素為單位的行</span><cite><span>寬</span></cite><span></span></li>
+<li><strong><span>color</span></strong><span>（</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.Color" title="ggame.asset.Color"><em><span>Color</span></em></a><span>） - </span><cite><span>顏色</span></cite><span>作為有效</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.Color" title="ggame.asset.Color"><code class="xref py py-class docutils literal notranslate"><span class="pre">Color</span></code></a><span>實例。</span></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p><span>例：</span></p>
+<div class="highlight-default notranslate">
+<div class="highlight">
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">"""
+Example of using LineStyle class.
+"""
+from ggame import LineStyle, Color
+
+LINE = LineStyle(3, Color(0x00FF00, 1.0))</pre>
+</div>
+</div>
+<p><span>這定義了一個3像素寬的綠線。</span></p>
+</dd>
+</dl>
+</div>
+<div class="section" id="predefined-colors-and-lines"><br/><span>預定義的顏色和線條</span><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#predefined-colors-and-lines" title="永久鏈接到這個標題"><span></span></a>
+<dl class="data">
+<dt id="ggame.asset.BLACK"><code class="descclassname">ggame.asset.</code><code class="descname">BLACK</code><em class="property"><span>=黑色</span></em><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.BLACK" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>默認黑色</span></p>
+</dd>
+</dl>
+<dl class="data">
+<dt id="ggame.asset.WHITE"><code class="descclassname">ggame.asset.</code><code class="descname">WHITE</code><em class="property"><span>=白</span></em><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.WHITE" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>默認白色</span></p>
+</dd>
+</dl>
+<dl class="data">
+<dt id="ggame.asset.BLACKLINE"><code class="descclassname">ggame.asset.</code><code class="descname">BLACKLINE</code><em class="property"><span>= LineStyle（1，BLACK）</span></em><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.BLACKLINE" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>默認細黑線</span></p>
+</dd>
+</dl>
+<dl class="data">
+<dt id="ggame.asset.WHITELINE"><code class="descclassname">ggame.asset.</code><code class="descname">WHITELINE</code><em class="property"><span>= LineStyle（1，WHITE）</span></em><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.WHITELINE" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>默認的細白線</span></p>
+</dd>
+</dl>
+</div>
+<div class="section" id="imageasset"><br/><span style="color: #3366ff;"><strong>ImageAsset </strong></span><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#imageasset" title="永久鏈接到這個標題"><span></span></a>
+<dl class="class">
+<dt id="ggame.asset.ImageAsset"><em class="property"><span>class </span></em><code class="descclassname">ggame.asset.</code><code class="descname">ImageAsset</code><span class="sig-paren"><span>（</span></span><em><span>url</span></em><span>，</span><em><span>frame = None</span></em><span>，</span><em><span>qty = 1</span></em><span>，</span><em><span>direction ='horizo​​ntal'</span></em><span>，</span><em><span>margin = 0 </span></em><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/asset.html#ImageAsset"><span class="viewcode-link"><span>[source]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.ImageAsset" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>ImageAsset類將ggame連接到特定的圖像</span><strong><span>文件</span></strong><span>。</span></p>
+<table class="docutils field-list" frame="void" rules="none"><colgroup><col class="field-name"/><col class="field-body"/></colgroup>
+<tbody valign="top">
+<tr class="field-odd field">
+<th class="field-name"><span>參數：</span></th>
+<td class="field-body">
+<ul class="first last simple">
+<li><strong><span>url</span></strong><span>（</span><em><span>str</span></em><span>） - 所有ImageAsset實例必須指定jpg或png圖像所在的文件名或URL。</span></li>
+<li><strong><span>frame</span></strong><span>（</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.Frame" title="ggame.asset.Frame"><em><span>Frame</span></em></a><span>） - 如果所需的精靈圖像僅存在於原始圖像的較小子部分中，則使用<cite>frame</cite>參數指定圖像中的區域</span><cite><span>，</span></cite><span>該參數必須是有效的 實例。</span><cite><span></span></cite><span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.Frame" title="ggame.asset.Frame"><code class="xref py py-class docutils literal notranslate"><span class="pre">Frame</span></code></a><span></span></li>
+<li><strong><span>qty = 0</span></strong><span>（</span><em><span>int</span></em><span>） - 如果圖像文件實際上是圖像的</span><em><span>集合</span></em><span>，例如所謂的</span><em><span>精靈表</span></em><span>，則ImageAsset類支持定義圖像列表，前提是它們在原始圖像中作為</span><strong><span>一行</span></strong><span>均勻存在間隔圖像或一</span><strong><span>列</span></strong><span>圖像。要指定此項，請在行或列中提供圖像的</span><cite><span>數量</span></cite><span>（數量）。</span></li>
+<li><strong><span>direction ='horizo​​ntal'</span></strong><span>（</span><em><span>str</span></em><span>） - 對於圖像</span><em><span>精靈表</span></em><span>，指定圖像是以</span><cite><span>“垂直”</span></cite><span>還是</span><cite><span>“水平”</span></cite><span> 排列方式。</span></li>
+<li><strong><span>margin = 0</span></strong><span>（</span><em><span>int</span></em><span>） - 如果圖像</span><em><span>精靈表</span></em><span>中的連續圖像之間存在間隙 ，則指定間隙的大小（以像素為單位）。當以這種方式使用時，</span><cite><span>frame</span></cite><span>參數必須僅定義集合中</span><strong><span>第一個</span></strong><span>圖像的區域; 假設列表中的所有後續圖像大小相同，但以</span><cite><span>邊距</span></cite><span>值分隔 。</span></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p><span>例：</span></p>
+<div class="highlight-default notranslate">
+<div class="highlight">
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">"""
+Example of using ImageAsset class.
+"""
+from ggame import ImageAsset
+
+IMG = ImageAsset("bunny.png")
+url=無</pre>
+<pre><br/><br/></pre>
+</div>
+</div>
+<dl class="attribute">
+<dd>
+<p><span>一個字符串，表示原始文件的路徑或URL。</span></p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="ggame.asset.ImageAsset.append"><code class="descname">append</code><span class="sig-paren"><span>（</span></span><em><span>url</span></em><span>，</span><em><span>frame = None</span></em><span>，</span><em><span>qty = 1</span></em><span>，</span><em><span>direction ='horizo​​ntal'</span></em><span>，</span><em><span>margin = 0 </span></em><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/asset.html#ImageAsset.append"><span class="viewcode-link"><span>[source]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.ImageAsset.append" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>從新圖像文件（或URL）附加紋理資源。此方法允許您將一組圖像構建到資源中（例如您可能需要動畫精靈），但不使用單個精靈圖像。</span></p>
+<p><span></span><cite><span>append</span></cite><span>方法的參數與提供給</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.ImageAsset" title="ggame.asset.ImageAsset"><code class="xref py py-class docutils literal notranslate"><span class="pre">ImageAsset</span></code></a><span>初始化方法的參數相同。</span></p>
+<p><span>此方法允許您在精靈表或工作表中構建由多行或多列圖像組成的資產。</span></p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="ggame.asset.ImageAsset.destroy"><code class="descname">destroy</code><span class="sig-paren"><span>（</span></span><span class="sig-paren"><span>）</span></span><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.ImageAsset.destroy" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>銷毀或取消分配資產使用的任何基礎圖形資源。在任何不再使用的資產上調用此方法。</span></p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="ggame.asset.ImageAsset.gfx"><code class="descname">gfx</code><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.ImageAsset.gfx" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><cite><span>gfx</span></cite><span>屬性表示用於表示此資產的基礎系統對象。如果此資產由多個資產組成，則第 </span><strong><span>一個</span></strong><span>資產由</span><cite><span>gfx</span></cite><span>引用。</span></p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="section" id="rectangleasset"><br/><span>RectangleAsset </span><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#rectangleasset" title="永久鏈接到這個標題"><span></span></a>
+<dl class="class">
+<dt id="ggame.asset.RectangleAsset"><em class="property"><span>class </span></em><code class="descclassname">ggame.asset.</code><code class="descname">RectangleAsset</code><span class="sig-paren"><span>（</span></span><em><span>width</span></em><span>，</span><em><span>height</span></em><span>，</span><em><span>line = LineStyle（1</span></em><span>，</span><em><span>BLACK）</span></em><span>，</span><em><span>fill = BLACK </span></em><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/asset.html#RectangleAsset"><span class="viewcode-link"><span>[source]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.RectangleAsset" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>RectangleAsset是一個動態創建的“虛擬”資產，無需創建圖像文件。</span></p>
+<table class="docutils field-list" frame="void" rules="none"><colgroup><col class="field-name"/><col class="field-body"/></colgroup>
+<tbody valign="top">
+<tr class="field-odd field">
+<th class="field-name"><span>參數：</span></th>
+<td class="field-body">
+<ul class="first last simple">
+<li><strong><span>width</span></strong><span>（</span><em><span>int</span></em><span>） - 矩形寬度（以像素為單位）</span></li>
+<li><strong><span>height</span></strong><span>（</span><em><span>int</span></em><span>） - 矩形高度，以像素為單位</span></li>
+<li><strong><span>line = BLACKLINE</span></strong><span>（</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.LineStyle" title="ggame.asset.LineStyle"><em><span>LineStyle</span></em></a><span>） - 矩形邊框的顏色和寬度</span></li>
+<li><strong><span>fill = BLACK</span></strong><span>（</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.Color" title="ggame.asset.Color"><em><span>Color</span></em></a><span>） - 矩形體的顏色</span></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="ggame.asset.RectangleAsset.gfx"><code class="descname">gfx</code><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.RectangleAsset.gfx" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>該</span><cite><span>GFX</span></cite><span>屬性表示底層系統對象。</span></p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="ggame.asset.RectangleAsset.destroy"><code class="descname">destroy</code><span class="sig-paren"><span>（</span></span><span class="sig-paren"><span>）</span></span><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.RectangleAsset.destroy" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>銷毀或取消分配資產使用的任何基礎圖形資源。在任何不再使用的資產上調用此方法。</span></p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="section" id="circleasset"><br/><span>CircleAsset </span><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#circleasset" title="永久鏈接到這個標題"><span></span></a>
+<dl class="class">
+<dt id="ggame.asset.CircleAsset"><em class="property"><span>class </span></em><code class="descclassname">ggame.asset.</code><code class="descname">CircleAsset</code><span class="sig-paren"><span>（</span></span><em><span>radius</span></em><span>，</span><em><span>line = LineStyle（1</span></em><span>，</span><em><span>BLACK）</span></em><span>，</span><em><span>fill = BLACK </span></em><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/asset.html#CircleAsset"><span class="viewcode-link"><span>[source]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.CircleAsset" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>該</span><cite><span>ggame.CircleAsset</span></cite><span>是動態創建，而不需要的圖像文件的創建一個“虛擬”的資產。</span></p>
+<table class="docutils field-list" frame="void" rules="none"><colgroup><col class="field-name"/><col class="field-body"/></colgroup>
+<tbody valign="top">
+<tr class="field-odd field">
+<th class="field-name"><span>參數：</span></th>
+<td class="field-body">
+<ul class="first last simple">
+<li><strong><span>radius</span></strong><span>（</span><em><span>int</span></em><span>） - 圓半徑，以像素為單位</span></li>
+<li><strong><span>line = BLACKLINE</span></strong><span>（</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.LineStyle" title="ggame.asset.LineStyle"><em><span>LineStyle</span></em></a><span>） - 圓邊框的顏色和寬度</span></li>
+<li><strong><span>fill = BLACK</span></strong><span>（</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.Color" title="ggame.asset.Color"><em><span>Color</span></em></a><span>） - 圓體的顏色</span></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="ggame.asset.CircleAsset.gfx"><code class="descname">gfx</code><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.CircleAsset.gfx" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>該</span><cite><span>GFX</span></cite><span>屬性表示底層系統對象。</span></p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="ggame.asset.CircleAsset.destroy"><code class="descname">destroy</code><span class="sig-paren"><span>（</span></span><span class="sig-paren"><span>）</span></span><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.CircleAsset.destroy" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>銷毀或取消分配資產使用的任何基礎圖形資源。在任何不再使用的資產上調用此方法。</span></p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="section" id="ellipseasset"><br/><span>EllipseAsset </span><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ellipseasset" title="永久鏈接到這個標題"><span></span></a>
+<dl class="class">
+<dt id="ggame.asset.EllipseAsset"><em class="property"><span>class </span></em><code class="descclassname">ggame.asset.</code><code class="descname">EllipseAsset</code><span class="sig-paren"><span>（</span></span><em><span>halfw</span></em><span>，</span><em><span>halfh</span></em><span>，</span><em><span>line = LineStyle（1</span></em><span>，</span><em><span>BLACK）</span></em><span>，</span><em><span>fill = BLACK </span></em><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/asset.html#EllipseAsset"><span class="viewcode-link"><span>[source]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.EllipseAsset" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>該</span><cite><span>ggame.EllipseAsset</span></cite><span>是動態創建，而不需要的圖像文件的創建一個“虛擬”的資產。</span></p>
+<table class="docutils field-list" frame="void" rules="none"><colgroup><col class="field-name"/><col class="field-body"/></colgroup>
+<tbody valign="top">
+<tr class="field-odd field">
+<th class="field-name"><span>參數：</span></th>
+<td class="field-body">
+<ul class="first last simple">
+<li><strong><span>halfw</span></strong><span>（</span><em><span>int</span></em><span>） - 水平方向上的橢圓半軸尺寸（橢圓寬度的一半），以像素為單位</span></li>
+<li><strong><span>halfh</span></strong><span>（</span><em><span>int</span></em><span>） - 垂直方向上的橢圓半軸尺寸（橢圓高度的一半），以像素為單位</span></li>
+<li><strong><span>line = BLACKLINE</span></strong><span>（</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.LineStyle" title="ggame.asset.LineStyle"><em><span>LineStyle</span></em></a><span>） - 橢圓邊框的顏色和寬度</span></li>
+<li><strong><span>fill = BLACK</span></strong><span>（</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.Color" title="ggame.asset.Color"><em><span>Color</span></em></a><span>） - 橢圓體的顏色</span></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="ggame.asset.EllipseAsset.destroy"><code class="descname">destroy</code><span class="sig-paren"><span>（</span></span><span class="sig-paren"><span>）</span></span><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.EllipseAsset.destroy" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>銷毀或取消分配資產使用的任何基礎圖形資源。在任何不再使用的資產上調用此方法。</span></p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="ggame.asset.EllipseAsset.gfx"><code class="descname">gfx</code><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.EllipseAsset.gfx" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>該</span><cite><span>GFX</span></cite><span>屬性表示底層系統對象。</span></p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="section" id="polygonasset"><br/><span>PolygonAsset </span><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#polygonasset" title="永久鏈接到這個標題"><span></span></a>
+<dl class="class">
+<dt id="ggame.asset.PolygonAsset"><em class="property"><span>class </span></em><code class="descclassname">ggame.asset.</code><code class="descname">PolygonAsset</code><span class="sig-paren"><span>（</span></span><em><span>path</span></em><span>，</span><em><span>line = LineStyle（1</span></em><span>，</span><em><span>BLACK）</span></em><span>，</span><em><span>fill = BLACK </span></em><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/asset.html#PolygonAsset"><span class="viewcode-link"><span>[source]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.PolygonAsset" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>PolygonAsset是一個動態創建的“虛擬”資產，無需創建圖像文件。</span></p>
+<p><span>注意：您不應該指定此資產的絕對屏幕坐標，因為您將使用該</span><code class="xref py py-class docutils literal notranslate"><span class="pre">Sprite</span></code><span>位置在屏幕上定位多邊形。</span></p>
+<table class="docutils field-list" frame="void" rules="none"><colgroup><col class="field-name"/><col class="field-body"/></colgroup>
+<tbody valign="top">
+<tr class="field-odd field">
+<th class="field-name"><span>參數：</span></th>
+<td class="field-body">
+<ul class="first last simple">
+<li><strong><span>path</span></strong><span>（</span><em><span>list</span></em><span>） - 像素坐標元組列表。這些坐標不應該在絕對屏幕坐標中，而應該相對於所得到的所需“中心” </span><code class="xref py py-class docutils literal notranslate"><span class="pre">Sprite</span></code><span>。列表中的最終坐標對必須與第一個坐標對相同。</span></li>
+<li><strong><span>line = BLACKLINE</span></strong><span>（</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.LineStyle" title="ggame.asset.LineStyle"><em><span>LineStyle</span></em></a><span>） - 橢圓邊框的顏色和寬度</span></li>
+<li><strong><span>fill = BLACK</span></strong><span>（</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.Color" title="ggame.asset.Color"><em><span>Color</span></em></a><span>） - 橢圓體的顏色</span></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p><span>例：</span></p>
+<div class="highlight-default notranslate">
+<div class="highlight">
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">"""
+Example of using the PolygonAsset class.
+"""
+
+from ggame import PolygonAsset, LineStyle, Color, BLACK
+
+POLY = PolygonAsset(
+    [(0, 0), (50, 50), (50, 100), (0, 0)], LineStyle(4, BLACK), Color(0x80FF00, 0.8)
+)
+destroy（）</pre>
+<pre><br/><br/></pre>
+</div>
+</div>
+<dl class="method">
+<dd>
+<p><span>銷毀或取消分配資產使用的任何基礎圖形資源。在任何不再使用的資產上調用此方法。</span></p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="ggame.asset.PolygonAsset.gfx"><code class="descname">gfx</code><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.PolygonAsset.gfx" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>該</span><cite><span>GFX</span></cite><span>屬性表示底層系統對象。</span></p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="section" id="lineasset"><br/><span>LineAsset </span><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#lineasset" title="永久鏈接到這個標題"><span></span></a>
+<dl class="class">
+<dt id="ggame.asset.LineAsset"><em class="property"><span>class </span></em><code class="descclassname">ggame.asset.</code><code class="descname">LineAsset</code><span class="sig-paren"><span>（</span></span><em><span>x</span></em><span>，</span><em><span>y</span></em><span>，</span><em><span>line = LineStyle（1</span></em><span>，</span><em><span>BLACK）</span></em><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/asset.html#LineAsset"><span class="viewcode-link"><span>[source]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.LineAsset" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>LineAsset是一個即時創建的“虛擬”資產，無需創建圖像文件。LineAsset實例表示單個線段。</span></p>
+<p><span>注意：您不應該指定此資產的絕對屏幕坐標，因為您將使用該</span><code class="xref py py-class docutils literal notranslate"><span class="pre">Sprite</span></code><span>位置在屏幕上找到您的線。線段將從像素坐標（0,0）開始，並將在下面給出的（x，y）坐標處結束。</span></p>
+<p><span>由於LineAsset未覆蓋區域，因此只能提供</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.LineStyle" title="ggame.asset.LineStyle"><code class="xref py py-class docutils literal notranslate"><span class="pre">LineStyle</span></code></a><span> 參數（</span><cite><span>線</span></cite><span>）來指定顏色。</span></p>
+<table class="docutils field-list" frame="void" rules="none"><colgroup><col class="field-name"/><col class="field-body"/></colgroup>
+<tbody valign="top">
+<tr class="field-odd field">
+<th class="field-name"><span>參數：</span></th>
+<td class="field-body">
+<ul class="first last simple">
+<li><strong><span>x</span></strong><span>（</span><em><span>int</span></em><span>） - 線端點的x坐標，以像素為單位</span></li>
+<li><strong><span>y</span></strong><span>（</span><em><span>int</span></em><span>） - 行終點的y坐標，以像素為單位</span></li>
+<li><strong><span>line = BLACKLINE</span></strong><span>（</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.LineStyle" title="ggame.asset.LineStyle"><em><span>LineStyle</span></em></a><span>） - 橢圓邊框的顏色和寬度</span></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="ggame.asset.LineAsset.destroy"><code class="descname">destroy</code><span class="sig-paren"><span>（</span></span><span class="sig-paren"><span>）</span></span><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.LineAsset.destroy" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>銷毀或取消分配資產使用的任何基礎圖形資源。在任何不再使用的資產上調用此方法。</span></p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="ggame.asset.LineAsset.delta_x"><code class="descname">delta_x</code><em class="property"><span>=無</span></em><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.LineAsset.delta_x" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>此屬性表示實例化期間提供的</span><cite><span>x</span></cite><span>參數。</span></p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="ggame.asset.LineAsset.delta_y"><code class="descname">delta_y</code><em class="property"><span>=無</span></em><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.LineAsset.delta_y" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>此屬性表示實例化期間提供的</span><cite><span>y</span></cite><span>參數。</span></p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="ggame.asset.LineAsset.gfx"><code class="descname">gfx</code><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.LineAsset.gfx" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>該</span><cite><span>GFX</span></cite><span>屬性表示底層系統對象。</span></p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="section" id="textasset"><br/><span><strong><span style="color: #3366ff;">TextAsset</span></strong> </span><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#textasset" title="永久鏈接到這個標題"><span></span></a>
+<dl class="class">
+<dt id="ggame.asset.TextAsset"><em class="property"><span>class </span></em><code class="descclassname">ggame.asset.</code><code class="descname">TextAsset</code><span class="sig-paren"><span>（</span></span><em><span>text</span></em><span>，</span><em><span>** kwargs </span></em><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/asset.html#TextAsset"><span class="viewcode-link"><span>[來源]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.TextAsset" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>TextAsset是一種即時創建的“虛擬”資產，無需創建圖像文件。TextAsset實例表示文本塊及其樣式（字體，顏色等）。</span></p>
+<table class="docutils field-list" frame="void" rules="none"><colgroup><col class="field-name"/><col class="field-body"/></colgroup>
+<tbody valign="top">
+<tr class="field-odd field">
+<th class="field-name"><span>參數：</span></th>
+<td class="field-body">
+<ul class="first last simple">
+<li><strong><span>text</span></strong><span>（</span><em><span>str</span></em><span>） - 應顯示的文本</span></li>
+<li><strong><span>** kwargs</span></strong><span> - 可選的格式和样式屬性（如下）</span></li>
+<li><strong><span>style ='20px Arial'</span></strong><span>（</span><em><span>str</span></em><span>） -</span>
+<p><span>文字樣式，大小和字體。例：</span></p>
+<div class="highlight-default notranslate">
+<div class="highlight">
+<pre><span></span><span class="s1">'italic 20pt Helvetica'</span>
+</pre>
+</div>
+</div>
+</li>
+<li><strong><span>width = 100</span></strong><span>（</span><em><span>int</span></em><span>） - 屏幕上文本塊的寬度，以像素為單位。</span></li>
+<li><strong><span>fill = BLACK</span></strong><span>（</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.Color" title="ggame.asset.Color"><em><span>Color</span></em></a><span>） - </span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.Color" title="ggame.asset.Color"><code class="xref py py-class docutils literal notranslate"><span class="pre">Color</span></code></a><span>指定文本顏色和透明度的實例。</span></li>
+<li><strong><span>align ='left'</span></strong><span>（</span><em><span>str</span></em><span>） - 塊的對齊方式。“左”，“中”或“右”之一。</span></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p><span>完整示例：</span></p>
+<div class="highlight-default notranslate">
+<div class="highlight">
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">"""
+Example of using TextAsset class.
+"""
+from ggame import TextAsset, Color
+
+TA = TextAsset(
+    "Sample Text", style="bold 40pt Arial", width=250, fill=Color(0x1122FF, 1.0)
+)
+destroy（）</pre>
+<pre><br/><br/></pre>
+</div>
+</div>
+<dl class="method">
+<dd>
+<p><span>銷毀或取消分配資產使用的任何基礎圖形資源。在任何不再使用的資產上調用此方法。</span></p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="ggame.asset.TextAsset.gfx"><code class="descname">gfx</code><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.TextAsset.gfx" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><cite><span>gfx</span></cite><span>屬性表示用於表示此資產的基礎系統對象。如果此資產由多個資產組成，則第 </span><strong><span>一個</span></strong><span>資產由</span><cite><span>gfx</span></cite><span>引用。</span></p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="ggame.asset.TextAsset.clone"><code class="descname">clone</code><span class="sig-paren"><span>（</span></span><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/asset.html#TextAsset.clone"><span class="viewcode-link"><span>[來源]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.TextAsset.clone" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>使用當前樣式設置創建重複資產。</span></p>
+<table class="docutils field-list" frame="void" rules="none"><colgroup><col class="field-name"/><col class="field-body"/></colgroup>
+<tbody valign="top">
+<tr class="field-odd field">
+<th class="field-name"><span>返回：</span></th>
+<td class="field-body"><span>與原始文本資產相同但具有當前樣式的文本資源。</span></td>
+</tr>
+<tr class="field-even field">
+<th class="field-name"><span>返回類型：</span></th>
+<td class="field-body"><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.TextAsset" title="ggame.asset.TextAsset"><span>TextAsset</span></a></td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="ggame.asset.TextAsset.width"><code class="descname">width</code><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.TextAsset.width" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>渲染文本資源的寬度（以像素為單位）</span></p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="ggame.asset.TextAsset.height"><code class="descname">height</code><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.TextAsset.height" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>渲染文本資源的高度（以像素為單位）</span></p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+</div>
+<h2 class="section">聲音</h2>
+<div class="section"><span></span></div>
+<div class="section" id="module-ggame.sound"><span id="sounds"></span><span>用於在ggame應用程序中加載和播放聲音資源的工具。</span>
+<div class="section" id="soundasset"><br/><span style="color: #3366ff;"><strong>SoundAsset </strong></span><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#soundasset" title="永久鏈接到這個標題"><span></span></a>
+<dl class="class">
+<dt id="ggame.sound.SoundAsset"><em class="property"><span>class </span></em><code class="descclassname">ggame.sound.</code><code class="descname">SoundAsset</code><span class="sig-paren"><span>（</span></span><em><span>url </span></em><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/sound.html#SoundAsset"><span class="viewcode-link"><span>[source]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sound.SoundAsset" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>表示單個聲音資源的類（聲音文件，例如.mp3或.wav）。</span></p>
+<table class="docutils field-list" frame="void" rules="none"><colgroup><col class="field-name"/><col class="field-body"/></colgroup>
+<tbody valign="top">
+<tr class="field-odd field">
+<th class="field-name"><span>參數：</span></th>
+<td class="field-body"><strong><span>url</span></strong><span>（</span><em><span>str</span></em><span>） - 所需聲音的URL或文件名。聲音文件格式可能包括</span><cite><span>.wav</span></cite><span>或</span><cite><span>.mp3</span></cite><span>，具體取決於瀏覽器兼容性。</span></td>
+</tr>
+<tr class="field-even field">
+<th class="field-name"><span>返回：</span></th>
+<td class="field-body"><span>資產實例</span></td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="ggame.sound.SoundAsset.url"><code class="descname">url</code><em class="property"><span>=無</span></em><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sound.SoundAsset.url" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>包含資產文件的URL或名稱的字符串。</span></p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="section" id="sound"><br/><span>聲音</span><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#sound" title="永久鏈接到這個標題"><span></span></a>
+<dl class="class">
+<dt id="ggame.sound.Sound"><em class="property"><span>class </span></em><code class="descclassname">ggame.sound.</code><code class="descname">Sound</code><span class="sig-paren"><span>（</span></span><em><span>資產</span></em><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/sound.html#Sound"><span class="viewcode-link"><span>[來源]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sound.Sound" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>Sound類表示聲音，具有控制聲音在應用程序中播放的時間和方式的方法。</span></p>
+<table class="docutils field-list" frame="void" rules="none"><colgroup><col class="field-name"/><col class="field-body"/></colgroup>
+<tbody valign="top">
+<tr class="field-odd field">
+<th class="field-name"><span>參數：</span></th>
+<td class="field-body"><strong><span>asset</span></strong><span>（</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sound.SoundAsset" title="ggame.sound.SoundAsset"><em><span>SoundAsset</span></em></a><span>） - 有效的</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sound.SoundAsset" title="ggame.sound.SoundAsset"><code class="xref py py-class docutils literal notranslate"><span class="pre">SoundAsset</span></code></a><span>實例。</span></td>
+</tr>
+<tr class="field-even field">
+<th class="field-name"><span>返回：</span></th>
+<td class="field-body"><span>聲音實例</span></td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="ggame.sound.Sound.play"><code class="descname">play</code><span class="sig-paren"><span>（</span></span><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/sound.html#Sound.play"><span class="viewcode-link"><span>[來源]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sound.Sound.play" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>播放一次聲音。</span></p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="ggame.sound.Sound.loop"><code class="descname">loop</code><span class="sig-paren"><span>（</span></span><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/sound.html#Sound.loop"><span class="viewcode-link"><span>[來源]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sound.Sound.loop" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>持續播放聲音，永遠循環播放。</span></p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="ggame.sound.Sound.stop"><code class="descname">stop</code><span class="sig-paren"><span>（</span></span><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/sound.html#Sound.stop"><span class="viewcode-link"><span>[來源]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sound.Sound.stop" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>停止播放聲音。</span></p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="ggame.sound.Sound.volume"><code class="descname">volume</code><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sound.Sound.volume" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>音量屬性是一個0-100範圍內的數字，表示播放時聲音的音量或強度。</span></p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+</div>
+<div class="section" id="module-ggame.sprite"><span id="sprites"></span>
+<h2><span>精靈</span></h2>
+<p><span>用於封裝ggame應用程序中所有可見對象的Sprite類。</span></p>
+<div class="section" id="sprite"><br/><strong><span style="color: #3366ff;">精靈</span></strong><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#sprite" title="永久鏈接到這個標題"><span></span></a>
+<dl class="class">
+<dt id="ggame.sprite.Sprite"><em class="property"><span>類</span></em><code class="descclassname">ggame.sprite.</code><code class="descname">Sprite</code><span class="sig-paren"><span>（</span></span><em><span>資產</span></em><span>，</span><em><span>POS =（0</span></em><span>，</span><em><span>0） </span></em><span>，</span><em><span>edgedef =無</span></em><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/sprite.html#Sprite"><span class="viewcode-link"><span>[源]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sprite.Sprite" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>Sprite類結合了可視/圖形資產的概念，屏幕上的位置和</span><em><span>行為</span></em><span>。雖然Sprite可以按原樣使用，但它通常是子類，以給它一些所需的行為。</span></p>
+<p><span>在子類化Sprite類時，您可以自定義初始化代碼以使用特定資產。可以添加“步驟”或“輪詢”方法來處理每幀動作（例如，檢查衝突）。</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.app.App" title="ggame.app.App"><code class="xref py py-class docutils literal notranslate"><span class="pre">App</span></code></a><span>類不會自動調用步或輪詢函數，但您可以為</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.app.App" title="ggame.app.App"><code class="xref py py-class docutils literal notranslate"><span class="pre">App</span></code></a><span>該類創建子類。</span></p>
+<p><span>此外，您可能希望在自定義的sprite類中定義事件回調方法。通過自定義創建，事件處理和定期處理，您可以實現精靈對象的完全自主行為。</span></p>
+<table class="docutils field-list" frame="void" rules="none"><colgroup><col class="field-name"/><col class="field-body"/></colgroup>
+<tbody valign="top">
+<tr class="field-odd field">
+<th class="field-name"><span>參數：</span></th>
+<td class="field-body">
+<ul class="first simple">
+<li><strong><span>asset</span></strong><span>（</span><em><span>asset</span></em><span>） - 現有的圖形資產</span></li>
+<li><strong><span>pos</span></strong><span>（</span><em><span>tuple </span></em><em><span>（</span></em><em><span>int </span></em><em><span>，</span></em><em><span>int </span></em><em><span>）</span></em><span>） - 可以提供精靈位置，它指定屏幕上精靈的起始（x，y）坐標。默認情況下，精靈的位置定義其左上角的位置。可以通過自定義此行為來修改此行為 </span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sprite.Sprite.center" title="ggame.sprite.Sprite.center"><code class="xref py py-data docutils literal notranslate"><span class="pre">center</span></code></a><span>。</span></li>
+<li><strong><span>edgedef</span></strong><span>（</span><em><span>資產</span></em><span>） - 可以提供邊緣定義資產，其指定將用於定義精靈的邊界以用於衝突檢測的資產。如果沒有 給出</span><cite><span>edgedef</span></cite><span>資產，則使用所需資產，在圖像紋理的情況下，該資產將是矩形資產。此選項通常用於為具有透明紋理圖像背景的基於紋理的精靈定義可見圖像輪廓。</span></li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field">
+<th class="field-name"><span>返回：</span></th>
+<td class="field-body">
+<p class="first last"><span>沒有。如果位置在屏幕上，精靈將顯示在瀏覽器中。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><span>例：</span></p>
+<div class="highlight-default notranslate">
+<div class="highlight">
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from ggame.sprite import Sprite
+from ggame.asset import ImageAsset, CircleAsset
+from ggame.app import App
+
+player = Sprite(
+    ImageAsset("bunny.png",
+    (100,100),
+    CircleAsset(50))
+
+App().run()</pre>
+</div>
+</div>
+<p><span>這將使用'player.png'圖像創建一個精靈，該圖像的左上角位於坐標（100,100）處，並且具有50像素半徑的圓形碰撞邊界。</span></p>
+<dl class="method">
+<dt id="ggame.sprite.Sprite.setExtents"><code class="descname">setExtents</code><span class="sig-paren"><span>（</span></span><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/sprite.html#Sprite.setExtents"><span class="viewcode-link"><span>[來源]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sprite.Sprite.setExtents" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>根據位置，中心，寬度，高度更新最小/最大x和y</span></p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="ggame.sprite.Sprite.firstImage"><code class="descname">firstImage</code><span class="sig-paren"><span>（</span></span><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/sprite.html#Sprite.firstImage"><span class="viewcode-link"><span>[來源]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sprite.Sprite.firstImage" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>選擇並顯示此精靈使用的</span><em><span>第一個</span></em><span>圖像。如果資產是</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.ImageAsset" title="ggame.asset.ImageAsset"><code class="xref py py-class docutils literal notranslate"><span class="pre">ImageAsset</span></code></a><span> 使用多個圖像定義的，那麼這只會有用。</span></p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="ggame.sprite.Sprite.lastImage"><code class="descname">lastImage</code><span class="sig-paren"><span>（</span></span><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/sprite.html#Sprite.lastImage"><span class="viewcode-link"><span>[來源]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sprite.Sprite.lastImage" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>選擇並顯示此精靈使用的</span><em><span>最後一個</span></em><span>圖像。如果資產是</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.ImageAsset" title="ggame.asset.ImageAsset"><code class="xref py py-class docutils literal notranslate"><span class="pre">ImageAsset</span></code></a><span> 使用多個圖像定義的，那麼這只會有用。</span></p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="ggame.sprite.Sprite.nextImage"><code class="descname">nextImage</code><span class="sig-paren"><span>（</span></span><em><span>wrap = False </span></em><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/sprite.html#Sprite.nextImage"><span class="viewcode-link"><span>[來源]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sprite.Sprite.nextImage" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>選擇並顯示此精靈使用的</span><em><span>下一個</span></em><span>圖像。如果當前圖像已經是</span><em><span>最後一張</span></em><span>圖像，則圖像不會前進。</span></p>
+<table class="docutils field-list" frame="void" rules="none"><colgroup><col class="field-name"/><col class="field-body"/></colgroup>
+<tbody valign="top">
+<tr class="field-odd field">
+<th class="field-name"><span>參數：</span></th>
+<td class="field-body"><strong><span>wrap</span></strong><span>（</span><em><span>boolean</span></em><span>） - 如果為</span><cite><span>True</span></cite><span>，則調用 </span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sprite.Sprite.nextImage" title="ggame.sprite.Sprite.nextImage"><code class="xref py py-meth docutils literal notranslate"><span class="pre">nextImage()</span></code></a><span>最後一個圖像將導致 加載</span><em><span>第一個</span></em><span>圖像。</span></td>
+</tr>
+</tbody>
+</table>
+<p><span>如果資產是</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.ImageAsset" title="ggame.asset.ImageAsset"><code class="xref py py-class docutils literal notranslate"><span class="pre">ImageAsset</span></code></a><span>使用多個圖像定義的，那麼這只會有用 。</span></p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="ggame.sprite.Sprite.prevImage"><code class="descname">prevImage</code><span class="sig-paren"><span>（</span></span><em><span>wrap = False </span></em><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/sprite.html#Sprite.prevImage"><span class="viewcode-link"><span>[來源]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sprite.Sprite.prevImage" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>選擇並顯示此精靈使用的</span><em><span>上一個</span></em><span>圖像。如果當前圖像已經是</span><em><span>第一張</span></em><span>圖像，則圖像不會改變。</span></p>
+<table class="docutils field-list" frame="void" rules="none"><colgroup><col class="field-name"/><col class="field-body"/></colgroup>
+<tbody valign="top">
+<tr class="field-odd field">
+<th class="field-name"><span>參數：</span></th>
+<td class="field-body"><strong><span>wrap</span></strong><span>（</span><em><span>boolean</span></em><span>） - 如果為</span><cite><span>True</span></cite><span>，則調用 </span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sprite.Sprite.prevImage" title="ggame.sprite.Sprite.prevImage"><code class="xref py py-meth docutils literal notranslate"><span class="pre">prevImage()</span></code></a><span>第一個圖像將導致加載</span><em><span>最後一個</span></em><span>圖像。</span></td>
+</tr>
+</tbody>
+</table>
+<p><span>如果資產是</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.ImageAsset" title="ggame.asset.ImageAsset"><code class="xref py py-class docutils literal notranslate"><span class="pre">ImageAsset</span></code></a><span>使用多個圖像定義的，那麼這只會有用 。</span></p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="ggame.sprite.Sprite.setImage"><code class="descname">setImage</code><span class="sig-paren"><span>（</span></span><em><span>index = 0 </span></em><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/sprite.html#Sprite.setImage"><span class="viewcode-link"><span>[來源]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sprite.Sprite.setImage" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>通過給出</span><cite><span>索引</span></cite><span>來選擇要顯示的圖像。</span></p>
+<table class="docutils field-list" frame="void" rules="none"><colgroup><col class="field-name"/><col class="field-body"/></colgroup>
+<tbody valign="top">
+<tr class="field-odd field">
+<th class="field-name"><span>參數：</span></th>
+<td class="field-body"><strong><span>index</span></strong><span>（</span><em><span>int</span></em><span>） - 指定要顯示的圖像的索引。值為零表示資產中的</span><em><span>第一個</span></em><span>圖像。</span></td>
+</tr>
+</tbody>
+</table>
+<p><span>這相當於</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sprite.Sprite.index" title="ggame.sprite.Sprite.index"><code class="xref py py-data docutils literal notranslate"><span class="pre">index</span></code></a><span>直接設置屬性。</span></p>
+<p><span>如果資產是</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.ImageAsset" title="ggame.asset.ImageAsset"><code class="xref py py-class docutils literal notranslate"><span class="pre">ImageAsset</span></code></a><span>使用多個圖像定義的，那麼這只會有用 。</span></p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="ggame.sprite.Sprite.index"><code class="descname">index</code><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sprite.Sprite.index" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>這是此精靈可用圖像列表的整數索引。</span></p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="ggame.sprite.Sprite.width"><code class="descname">width</code><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sprite.Sprite.width" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>這是一個表示精靈的顯示寬度的整數。為寬度分配值將水平縮放圖像。</span></p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="ggame.sprite.Sprite.height"><code class="descname">height</code><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sprite.Sprite.height" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>這是一個表示精靈顯示高度的整數。為高度指定值將垂直縮放圖像。</span></p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="ggame.sprite.Sprite.x"><code class="descname">x</code><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sprite.Sprite.x" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>這表示屏幕上精靈的x坐標。為此屬性賦值將水平移動精靈。</span></p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="ggame.sprite.Sprite.y"><code class="descname">y</code><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sprite.Sprite.y" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>這表示屏幕上精靈的y坐標。為此屬性賦值將垂直移動精靈。</span></p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="ggame.sprite.Sprite.position"><code class="descname">position</code><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sprite.Sprite.position" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>元組指示精靈在屏幕上的位置。</span></p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="ggame.sprite.Sprite.fxcenter"><code class="descname">fxcenter</code><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sprite.Sprite.fxcenter" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>這表示精靈“中心”的水平位置，作為0.0到1.0之間的浮點數。值0.0表示精靈的x坐標指的是左手邊緣。值1.0表示其右邊緣。可以指定其間的任何值。可以將值分配給此屬性。</span></p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="ggame.sprite.Sprite.fycenter"><code class="descname">fycenter</code><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sprite.Sprite.fycenter" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>這表示精靈“中心”的垂直位置，作為0.0到1.0之間的浮點數。值0.0表示精靈的x坐標指的是其上邊緣。值1.0表示其下邊緣。可以指定其間的任何值。可以將值分配給此屬性。</span></p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="ggame.sprite.Sprite.center"><code class="descname">center</code><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sprite.Sprite.center" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>該屬性將精靈“center”的水平和垂直位置表示為浮點數的元組。見描述的</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sprite.Sprite.fxcenter" title="ggame.sprite.Sprite.fxcenter"><code class="xref py py-data docutils literal notranslate"><span class="pre">fxcenter</span></code></a><span>和</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sprite.Sprite.fycenter" title="ggame.sprite.Sprite.fycenter"><code class="xref py py-data docutils literal notranslate"><span class="pre">fycenter</span></code></a><span>更多的細節。</span></p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="ggame.sprite.Sprite.visible"><code class="descname">visible</code><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sprite.Sprite.visible" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>此佈爾屬性可用於更改精靈的可見性。將</span><cite><span>~ggame.Sprite.visible</span></cite><span>設置為</span><cite><span>False</span></cite><span>將阻止精靈在屏幕上呈現。</span></p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="ggame.sprite.Sprite.scale"><code class="descname">scale</code><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sprite.Sprite.scale" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>此屬性可用於更改屏幕上精靈的大小（“縮放”它）。值可以是浮點數。值為1.0表示精靈圖像將保持其原始大小。值為2.0會使其加倍，等等。</span></p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="ggame.sprite.Sprite.rotation"><code class="descname">rotation</code><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sprite.Sprite.rotation" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>此屬性可用於更改屏幕上精靈的旋轉。值可以是浮點數。值0.0表示無旋轉。值1.0表示逆時針方向旋轉1弧度。一個弧度為180 / pi或約57.3度。</span></p>
+</dd>
+</dl>
+<dl class="classmethod">
+<dt id="ggame.sprite.Sprite.collidingCircleWithPoly"><em class="property"><span>classmethod </span></em><code class="descname">collidingCircleWithPoly</code><span class="sig-paren"><span>（</span></span><em><span>circ</span></em><span>，</span><em><span>poly </span></em><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/sprite.html#Sprite.collidingCircleWithPoly"><span class="viewcode-link"><span>[來源]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sprite.Sprite.collidingCircleWithPoly" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>確定CircleAsset精靈是否與PolygonAsset精靈重疊。在確定兩個對像在其整個範圍中重疊之後調用此方法。</span></p>
+<table class="docutils field-list" frame="void" rules="none"><colgroup><col class="field-name"/><col class="field-body"/></colgroup>
+<tbody valign="top">
+<tr class="field-odd field">
+<th class="field-name"><span>參數：</span></th>
+<td class="field-body">
+<ul class="first simple">
+<li><strong><span>circ</span></strong><span>（</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sprite.Sprite" title="ggame.sprite.Sprite"><em><span>Sprite</span></em></a><span>） - 一個基於CircleAsset的精靈。</span></li>
+<li><strong><span>poly</span></strong><span>（</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sprite.Sprite" title="ggame.sprite.Sprite"><em><span>Sprite</span></em></a><span>） - 基於PolygonAsset的精靈。</span></li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field">
+<th class="field-name"><span>返回：</span></th>
+<td class="field-body">
+<p class="first"><span>如果精靈重疊則為真，否則為假。</span></p>
+</td>
+</tr>
+<tr class="field-odd field">
+<th class="field-name"><span>返回類型：</span></th>
+<td class="field-body">
+<p class="first last"><span>布爾</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<dl class="method">
+<dt id="ggame.sprite.Sprite.collidingPolyWithPoly"><code class="descname">collidingPolyWithPoly</code><span class="sig-paren"><span>（</span></span><em><span>obj </span></em><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/sprite.html#Sprite.collidingPolyWithPoly"><span class="viewcode-link"><span>[來源]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sprite.Sprite.collidingPolyWithPoly" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>確定一對基於PolygonAsset的精靈是否重疊。在確定兩個對像在其整個範圍中重疊之後調用此方法。如果</span><cite><span>self</span></cite><span>是基於PolygonAsset的sprite，則只應調用此方法。</span></p>
+<table class="docutils field-list" frame="void" rules="none"><colgroup><col class="field-name"/><col class="field-body"/></colgroup>
+<tbody valign="top">
+<tr class="field-odd field">
+<th class="field-name"><span>參數：</span></th>
+<td class="field-body"><strong><span>obj</span></strong><span>（</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sprite.Sprite" title="ggame.sprite.Sprite"><em><span>Sprite</span></em></a><span>） - 一個基於PolygonAsset的精靈。</span></td>
+</tr>
+<tr class="field-even field">
+<th class="field-name"><span>返回：</span></th>
+<td class="field-body"><span>如果slef與obj重疊，則為True，否則為False。</span></td>
+</tr>
+<tr class="field-odd field">
+<th class="field-name"><span>返回類型：</span></th>
+<td class="field-body"><span>布爾</span></td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<dl class="method">
+<dt id="ggame.sprite.Sprite.collidingWith"><code class="descname">collidingWith</code><span class="sig-paren"><span>（</span></span><em><span>obj </span></em><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/sprite.html#Sprite.collidingWith"><span class="viewcode-link"><span>[來源]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sprite.Sprite.collidingWith" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>確定此精靈當前是否與另一個精靈對象重疊。</span></p>
+<table class="docutils field-list" frame="void" rules="none"><colgroup><col class="field-name"/><col class="field-body"/></colgroup>
+<tbody valign="top">
+<tr class="field-odd field">
+<th class="field-name"><span>參數：</span></th>
+<td class="field-body"><strong><span>obj</span></strong><span>（</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sprite.Sprite" title="ggame.sprite.Sprite"><em><span>Sprite</span></em></a><span>） - 對另一個Sprite對象的引用。</span></td>
+</tr>
+<tr class="field-even field">
+<th class="field-name"><span>返回類型：</span></th>
+<td class="field-body"><span>布爾</span></td>
+</tr>
+<tr class="field-odd field">
+<th class="field-name"><span>返回：</span></th>
+<td class="field-body"><cite><span></span></cite><span>如果精靈重疊，則為<cite>真</cite>，否則為</span><cite><span>假</span></cite><span>。</span></td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<dl class="method">
+<dt id="ggame.sprite.Sprite.collidingWithSprites"><code class="descname">collidingWithSprites</code><span class="sig-paren"><span>（</span></span><em><span>sclass = None </span></em><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/sprite.html#Sprite.collidingWithSprites"><span class="viewcode-link"><span>[來源]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sprite.Sprite.collidingWithSprites" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>確定此精靈是否與某個類的任何其他精靈發生碰撞。</span></p>
+<table class="docutils field-list" frame="void" rules="none"><colgroup><col class="field-name"/><col class="field-body"/></colgroup>
+<tbody valign="top">
+<tr class="field-odd field">
+<th class="field-name"><span>參數：</span></th>
+<td class="field-body"><strong><span>sclass</span></strong><span>（</span><em><span>class</span></em><span>） - 一個類標識符，它是</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sprite.Sprite" title="ggame.sprite.Sprite"><code class="xref py py-class docutils literal notranslate"><span class="pre">Sprite</span></code></a><span> 或者是它的子類，用於標識要檢查衝突的sprite類。如果為</span><cite><span>None，</span></cite><span>則</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sprite.Sprite" title="ggame.sprite.Sprite"><code class="xref py py-class docutils literal notranslate"><span class="pre">Sprite</span></code></a><span>檢查從類中子類化的所有對象。</span></td>
+</tr>
+<tr class="field-even field">
+<th class="field-name"><span>返回類型：</span></th>
+<td class="field-body"><span>名單</span></td>
+</tr>
+<tr class="field-odd field">
+<th class="field-name"><span>返回：</span></th>
+<td class="field-body"><span>與此sprite重疊的給定類的sprite對象的（可能為空）列表。</span></td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<dl class="method">
+<dt id="ggame.sprite.Sprite.destroy"><code class="descname">destroy</code><span class="sig-paren"><span>（</span></span><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/sprite.html#Sprite.destroy"><span class="viewcode-link"><span>[來源]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sprite.Sprite.destroy" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>防止在碰撞檢測中顯示或檢查精靈。一旦調用它，就不能再顯示或使用精靈了。如果您只想阻止顯示精靈，請將該</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sprite.Sprite.visible" title="ggame.sprite.Sprite.visible"><code class="xref py py-data docutils literal notranslate"><span class="pre">visible</span></code></a><span>屬性設置為</span><cite><span>False</span></cite><span>。</span></p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+</div>
+</div><h1>Independent Study</h1>
 <p><a href="https://mdecp2018.github.io/finalproject-bg3/content/Group%20Member%20Operation%20video.html">Group Member Operation video</a></p>
 <p><a href="https://mdecp2018.github.io/finalproject-bg3/content/Operation%20history.html">Operation history</a></p>
 <h2>Group Member Operation video</h2>

@@ -1,0 +1,574 @@
+<!doctype html>
+<html><head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
+<title>期末分組專案</title> <link rel="stylesheet" type="text/css" href="./../static/cmsimply.css">
+
+<script type="text/javascript" src="./../static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushLua.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushCSharp.js"></script>
+<link type="text/css" rel="stylesheet" href="./../static/syntaxhighlighter/css/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+
+<!-- for LaTeX equations 暫時不用
+<script src="https://scrum-3.github.io/web/math/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script>
+<script type="text/javascript">
+init_mathjax = function() {
+    if (window.MathJax) {
+        // MathJax loaded
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+            },
+            displayAlign: 'left', // Change this to 'center' to center equations.
+            "HTML-CSS": {
+                styles: {'.MathJax_Display': {"margin": 0}}
+            }
+        });
+        MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+    }
+}
+init_mathjax();
+</script>
+-->
+<!-- 暫時不用
+<script src="./../static/fengari-web.js"></script>
+<script type="text/javascript" src="./../static/Cango-13v08-min.js"></script>
+<script type="text/javascript" src="./../static/CangoAxes-4v01-min.js"></script>
+<script type="text/javascript" src="./../static/gearUtils-05.js"></script>
+-->
+<!-- for Brython 暫時不用
+<script src="https://scrum-3.github.io/web/brython/brython.js"></script>
+<script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
+-->
+
+<script src="./../static/jquery.js"></script>
+<script type="text/javascript">
+$(function(){
+    $("ul.topmenu> li:has(ul) > a").append('<div class="arrow-right"></div>');
+    $("ul.topmenu > li ul li:has(ul) > a").append('<div class="arrow-right"></div>');
+});
+</script>
+
+</head><header><h1>第三組 期末分組網站</h1> <confmenu>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="sitemap.html">Site Map</a></li>
+<li><a href="./../reveal/index.html">reveal</a></li>
+<li><a href="./../blog/index.html">blog</a></li>
+
+</ul>
+</confmenu></header>
+<div class='container'><nav><ul id='css3menu1' class='topmenu'><li><a href='Introduction.html'>Introduction</a><li><a href='Course.html'>Course</a><ul><li><a href='git基本指令.html'>git基本指令</a><li><a href='python基本語法.html'>python基本語法</a></li></ul><li><a href='Ggame-synopsis.html'>Ggame-synopsis</a><ul><li><a href='ggame應用程序類.html'>ggame應用程序類</a><li><a href='事件.html'>事件</a><li><a href='ggame資產.html'>ggame資產</a><li><a href='聲音.html'>聲音</a><li><a href='精靈.html'>精靈</a></li></ul><li><a href='Independent Study.html'>Independent Study</a><ul><li><a href='Group Member Operation video.html'>Group Member Operation video</a><ul><li><a href='Week10.html'>Week10</a><li><a href='Week11.html'>Week11</a><li><a href='Week12.html'>Week12</a><li><a href='Week13.html'>Week13</a><li><a href='Week14.html'>Week14</a><li><a href='Week15.html'>Week15</a><li><a href='Week16.html'>Week16</a><li><a href='Week17.html'>Week17</a><li><a href='Week18.html'>Week18</a></li></ul><li><a href='Operation history.html'>Operation history</a><ul><li><a href='W10 progress.html'>W10 progress</a><li><a href='W11 progress.html'>W11 progress</a><li><a href='W12 progress.html'>W12 progress</a><li><a href='W13 progress.html'>W13 progress</a><li><a href='W14 progress.html'>W14 progress</a><li><a href='W15 progress.html'>W15 progress</a><li><a href='W16 progress.html'>W16 progress</a><li><a href='W17 progress.html'>W17 progress</a><li><a href='W18 progress.html'>W18 progress</a></li></li></ul></ul><li><a href='Issue＆Solution.html'>Issue＆Solution</a><li><a href='Experience.html'>Experience</a><ul><li><a href='W10.html'>W10</a><li><a href='W11.html'>W11</a><li><a href='W12.html'>W12</a><li><a href='W13.html'>W13</a><li><a href='W14.html'>W14</a><li><a href='W15.html'>W15</a><li><a href='W16.html'>W16</a><li><a href='W17.html'>W17</a><li><a href='W18.html'>W18</a></li></ul><li><a href='Final Report.html'>Final Report</a><li><a href='Attend＆Absence.html'>Attend＆Absence</a></li></ul></nav><section>事件 << <a href='事件.html'>Previous</a> <a href='聲音.html'>Next</a> >> 聲音<br /><h1>ggame資產</h1>
+<div class="section"></div>
+<div class="section" id="module-ggame.asset">ggame資產和相關對象（<a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.Color" title="ggame.asset.Color"><code class="xref py py-class docutils literal notranslate"><span class="pre">Color</span></code></a>和<a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.LineStyle" title="ggame.asset.LineStyle"><code class="xref py py-class docutils literal notranslate"><span class="pre">LineStyle</span></code></a>）是封裝和表示可顯示圖像的類。單個資產可以用於多個精靈中。可以從包含多個圖像的任何圖像（即精靈表）創建動畫資源。<br/><span id="ggame-assets"></span></div>
+<div class="section">
+<div class="section" id="frame"><br/><span style="color: #3366ff;">框架</span><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#frame" title="永久鏈接到這個標題"><span></span></a>
+<dl class="class">
+<dt id="ggame.asset.Frame"><em class="property"><span>class </span></em><code class="descclassname">ggame.asset.</code><code class="descname">Frame</code><span class="sig-paren"><span>（</span></span><em><span>x</span></em><span>，</span><em><span>y</span></em><span>，</span><em><span>w</span></em><span>，</span><em><span>h </span></em><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/asset.html#Frame"><span class="viewcode-link"><span>[來源]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.Frame" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>Frame是一個實用類，用於表達矩形區域的概念。</span></p>
+<p><span>初始化參數描述框架左上角的位置以及框架的寬度和高度。單位</span><em><span>通常</span></em><span> 以像素<em>為</em>單位，但幀可以是通用的。</span></p>
+<table class="docutils field-list" frame="void" rules="none"><colgroup><col class="field-name"/><col class="field-body"/></colgroup>
+<tbody valign="top">
+<tr class="field-odd field">
+<th class="field-name"><span>參數：</span></th>
+<td class="field-body">
+<ul class="first last simple">
+<li><strong><span>x</span></strong><span>（</span><em><span>int</span></em><span>） - 框架左上角的X坐標</span></li>
+<li><strong><span>y</span></strong><span>（</span><em><span>int</span></em><span>） - 框架左上角的Y坐標</span></li>
+<li><strong><span>w</span></strong><span>（</span><em><span>int</span></em><span>） - 幀的寬度</span></li>
+<li><strong><span>h</span></strong><span>（</span><em><span>int</span></em><span>） - 框架的高度</span></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="ggame.asset.Frame.x"><code class="descname">x</code><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.Frame.x" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>該幀左上角的X坐標。</span></p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="ggame.asset.Frame.y"><code class="descname">y</code><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.Frame.y" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>該框架左上角的Y坐標。</span></p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="ggame.asset.Frame.w"><code class="descname">w</code><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.Frame.w" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>框架的寬度。</span></p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="ggame.asset.Frame.h"><code class="descname">h</code><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.Frame.h" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>框架的高度。</span></p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="ggame.asset.Frame.center"><code class="descname">center</code><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.Frame.center" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>的</span><cite><span>中心</span></cite><span>屬性計算用於該幀的中心的坐標對（元組）。</span></p>
+<p><span>的</span><cite><span>中心</span></cite><span>屬性，設置時，重新定義了</span><cite><span>X</span></cite><span>和</span><cite><span>ÿ</span></cite><span>框架的屬性，以使中心與分配給它的坐標（元組）一致。</span></p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="section" id="color"><br/><span style="color: #3366ff;"><strong>顏色</strong></span><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#color" title="永久鏈接到這個標題"><span></span></a>
+<dl class="class">
+<dt id="ggame.asset.Color"><em class="property"><span>class </span></em><code class="descclassname">ggame.asset.</code><code class="descname">Color</code><span class="sig-paren"><span>（</span></span><em><span>color</span></em><span>，</span><em><span>alpha </span></em><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/asset.html#Color"><span class="viewcode-link"><span>[來源]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.Color" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>Color類用於表示具有透明度的顏色和/或顏色。</span></p>
+<table class="docutils field-list" frame="void" rules="none"><colgroup><col class="field-name"/><col class="field-body"/></colgroup>
+<tbody valign="top">
+<tr class="field-odd field">
+<th class="field-name"><span>參數：</span></th>
+<td class="field-body">
+<ul class="first last simple">
+<li><strong><span>color</span></strong><span>（</span><em><span>int</span></em><span>） - 傳統格式的整數（通常為十六進製文字，例如0xffbb33，表示三種顏色分量，紅色，綠色和藍色）</span></li>
+<li><strong><span>alpha</span></strong><span>（</span><em><span>float</span></em><span>） - 透明度值，或</span><cite><span>alpha</span></cite><span>作為浮點數，範圍為0.0到1.0，其中0.0表示完全透明，1.0表示完全不透明。</span></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p><span>例：</span></p>
+<div class="highlight-default notranslate">
+<div class="highlight">
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">"""
+Example of using Color class.
+"""
+from ggame import Color
+
+RED = Color(0xFF0000, 1.0)</pre>
+</div>
+</div>
+</dd>
+</dl>
+</div>
+<div class="section" id="linestyle"><br/><strong><span style="color: #3366ff;">LineStyle </span></strong><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#linestyle" title="永久鏈接到這個標題"><span></span></a>
+<dl class="class">
+<dt id="ggame.asset.LineStyle"><em class="property"><span>class </span></em><code class="descclassname">ggame.asset.</code><code class="descname">LineStyle</code><span class="sig-paren"><span>（</span></span><em><span>寬度</span></em><span>，</span><em><span>顏色</span></em><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/asset.html#LineStyle"><span class="viewcode-link"><span>[來源]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.LineStyle" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>LineStyle類用於在繪製矩形，橢圓等幾何對象時表示線條樣式。</span></p>
+<table class="docutils field-list" frame="void" rules="none"><colgroup><col class="field-name"/><col class="field-body"/></colgroup>
+<tbody valign="top">
+<tr class="field-odd field">
+<th class="field-name"><span>參數：</span></th>
+<td class="field-body">
+<ul class="first last simple">
+<li><strong><span>width</span></strong><span>（</span><em><span>int</span></em><span>） - 以像素為單位的行</span><cite><span>寬</span></cite><span></span></li>
+<li><strong><span>color</span></strong><span>（</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.Color" title="ggame.asset.Color"><em><span>Color</span></em></a><span>） - </span><cite><span>顏色</span></cite><span>作為有效</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.Color" title="ggame.asset.Color"><code class="xref py py-class docutils literal notranslate"><span class="pre">Color</span></code></a><span>實例。</span></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p><span>例：</span></p>
+<div class="highlight-default notranslate">
+<div class="highlight">
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">"""
+Example of using LineStyle class.
+"""
+from ggame import LineStyle, Color
+
+LINE = LineStyle(3, Color(0x00FF00, 1.0))</pre>
+</div>
+</div>
+<p><span>這定義了一個3像素寬的綠線。</span></p>
+</dd>
+</dl>
+</div>
+<div class="section" id="predefined-colors-and-lines"><br/><span>預定義的顏色和線條</span><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#predefined-colors-and-lines" title="永久鏈接到這個標題"><span></span></a>
+<dl class="data">
+<dt id="ggame.asset.BLACK"><code class="descclassname">ggame.asset.</code><code class="descname">BLACK</code><em class="property"><span>=黑色</span></em><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.BLACK" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>默認黑色</span></p>
+</dd>
+</dl>
+<dl class="data">
+<dt id="ggame.asset.WHITE"><code class="descclassname">ggame.asset.</code><code class="descname">WHITE</code><em class="property"><span>=白</span></em><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.WHITE" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>默認白色</span></p>
+</dd>
+</dl>
+<dl class="data">
+<dt id="ggame.asset.BLACKLINE"><code class="descclassname">ggame.asset.</code><code class="descname">BLACKLINE</code><em class="property"><span>= LineStyle（1，BLACK）</span></em><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.BLACKLINE" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>默認細黑線</span></p>
+</dd>
+</dl>
+<dl class="data">
+<dt id="ggame.asset.WHITELINE"><code class="descclassname">ggame.asset.</code><code class="descname">WHITELINE</code><em class="property"><span>= LineStyle（1，WHITE）</span></em><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.WHITELINE" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>默認的細白線</span></p>
+</dd>
+</dl>
+</div>
+<div class="section" id="imageasset"><br/><span style="color: #3366ff;"><strong>ImageAsset </strong></span><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#imageasset" title="永久鏈接到這個標題"><span></span></a>
+<dl class="class">
+<dt id="ggame.asset.ImageAsset"><em class="property"><span>class </span></em><code class="descclassname">ggame.asset.</code><code class="descname">ImageAsset</code><span class="sig-paren"><span>（</span></span><em><span>url</span></em><span>，</span><em><span>frame = None</span></em><span>，</span><em><span>qty = 1</span></em><span>，</span><em><span>direction ='horizo​​ntal'</span></em><span>，</span><em><span>margin = 0 </span></em><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/asset.html#ImageAsset"><span class="viewcode-link"><span>[source]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.ImageAsset" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>ImageAsset類將ggame連接到特定的圖像</span><strong><span>文件</span></strong><span>。</span></p>
+<table class="docutils field-list" frame="void" rules="none"><colgroup><col class="field-name"/><col class="field-body"/></colgroup>
+<tbody valign="top">
+<tr class="field-odd field">
+<th class="field-name"><span>參數：</span></th>
+<td class="field-body">
+<ul class="first last simple">
+<li><strong><span>url</span></strong><span>（</span><em><span>str</span></em><span>） - 所有ImageAsset實例必須指定jpg或png圖像所在的文件名或URL。</span></li>
+<li><strong><span>frame</span></strong><span>（</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.Frame" title="ggame.asset.Frame"><em><span>Frame</span></em></a><span>） - 如果所需的精靈圖像僅存在於原始圖像的較小子部分中，則使用<cite>frame</cite>參數指定圖像中的區域</span><cite><span>，</span></cite><span>該參數必須是有效的 實例。</span><cite><span></span></cite><span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.Frame" title="ggame.asset.Frame"><code class="xref py py-class docutils literal notranslate"><span class="pre">Frame</span></code></a><span></span></li>
+<li><strong><span>qty = 0</span></strong><span>（</span><em><span>int</span></em><span>） - 如果圖像文件實際上是圖像的</span><em><span>集合</span></em><span>，例如所謂的</span><em><span>精靈表</span></em><span>，則ImageAsset類支持定義圖像列表，前提是它們在原始圖像中作為</span><strong><span>一行</span></strong><span>均勻存在間隔圖像或一</span><strong><span>列</span></strong><span>圖像。要指定此項，請在行或列中提供圖像的</span><cite><span>數量</span></cite><span>（數量）。</span></li>
+<li><strong><span>direction ='horizo​​ntal'</span></strong><span>（</span><em><span>str</span></em><span>） - 對於圖像</span><em><span>精靈表</span></em><span>，指定圖像是以</span><cite><span>“垂直”</span></cite><span>還是</span><cite><span>“水平”</span></cite><span> 排列方式。</span></li>
+<li><strong><span>margin = 0</span></strong><span>（</span><em><span>int</span></em><span>） - 如果圖像</span><em><span>精靈表</span></em><span>中的連續圖像之間存在間隙 ，則指定間隙的大小（以像素為單位）。當以這種方式使用時，</span><cite><span>frame</span></cite><span>參數必須僅定義集合中</span><strong><span>第一個</span></strong><span>圖像的區域; 假設列表中的所有後續圖像大小相同，但以</span><cite><span>邊距</span></cite><span>值分隔 。</span></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p><span>例：</span></p>
+<div class="highlight-default notranslate">
+<div class="highlight">
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">"""
+Example of using ImageAsset class.
+"""
+from ggame import ImageAsset
+
+IMG = ImageAsset("bunny.png")
+url=無</pre>
+<pre><br/><br/></pre>
+</div>
+</div>
+<dl class="attribute">
+<dd>
+<p><span>一個字符串，表示原始文件的路徑或URL。</span></p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="ggame.asset.ImageAsset.append"><code class="descname">append</code><span class="sig-paren"><span>（</span></span><em><span>url</span></em><span>，</span><em><span>frame = None</span></em><span>，</span><em><span>qty = 1</span></em><span>，</span><em><span>direction ='horizo​​ntal'</span></em><span>，</span><em><span>margin = 0 </span></em><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/asset.html#ImageAsset.append"><span class="viewcode-link"><span>[source]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.ImageAsset.append" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>從新圖像文件（或URL）附加紋理資源。此方法允許您將一組圖像構建到資源中（例如您可能需要動畫精靈），但不使用單個精靈圖像。</span></p>
+<p><span></span><cite><span>append</span></cite><span>方法的參數與提供給</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.ImageAsset" title="ggame.asset.ImageAsset"><code class="xref py py-class docutils literal notranslate"><span class="pre">ImageAsset</span></code></a><span>初始化方法的參數相同。</span></p>
+<p><span>此方法允許您在精靈表或工作表中構建由多行或多列圖像組成的資產。</span></p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="ggame.asset.ImageAsset.destroy"><code class="descname">destroy</code><span class="sig-paren"><span>（</span></span><span class="sig-paren"><span>）</span></span><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.ImageAsset.destroy" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>銷毀或取消分配資產使用的任何基礎圖形資源。在任何不再使用的資產上調用此方法。</span></p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="ggame.asset.ImageAsset.gfx"><code class="descname">gfx</code><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.ImageAsset.gfx" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><cite><span>gfx</span></cite><span>屬性表示用於表示此資產的基礎系統對象。如果此資產由多個資產組成，則第 </span><strong><span>一個</span></strong><span>資產由</span><cite><span>gfx</span></cite><span>引用。</span></p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="section" id="rectangleasset"><br/><span>RectangleAsset </span><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#rectangleasset" title="永久鏈接到這個標題"><span></span></a>
+<dl class="class">
+<dt id="ggame.asset.RectangleAsset"><em class="property"><span>class </span></em><code class="descclassname">ggame.asset.</code><code class="descname">RectangleAsset</code><span class="sig-paren"><span>（</span></span><em><span>width</span></em><span>，</span><em><span>height</span></em><span>，</span><em><span>line = LineStyle（1</span></em><span>，</span><em><span>BLACK）</span></em><span>，</span><em><span>fill = BLACK </span></em><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/asset.html#RectangleAsset"><span class="viewcode-link"><span>[source]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.RectangleAsset" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>RectangleAsset是一個動態創建的“虛擬”資產，無需創建圖像文件。</span></p>
+<table class="docutils field-list" frame="void" rules="none"><colgroup><col class="field-name"/><col class="field-body"/></colgroup>
+<tbody valign="top">
+<tr class="field-odd field">
+<th class="field-name"><span>參數：</span></th>
+<td class="field-body">
+<ul class="first last simple">
+<li><strong><span>width</span></strong><span>（</span><em><span>int</span></em><span>） - 矩形寬度（以像素為單位）</span></li>
+<li><strong><span>height</span></strong><span>（</span><em><span>int</span></em><span>） - 矩形高度，以像素為單位</span></li>
+<li><strong><span>line = BLACKLINE</span></strong><span>（</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.LineStyle" title="ggame.asset.LineStyle"><em><span>LineStyle</span></em></a><span>） - 矩形邊框的顏色和寬度</span></li>
+<li><strong><span>fill = BLACK</span></strong><span>（</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.Color" title="ggame.asset.Color"><em><span>Color</span></em></a><span>） - 矩形體的顏色</span></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="ggame.asset.RectangleAsset.gfx"><code class="descname">gfx</code><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.RectangleAsset.gfx" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>該</span><cite><span>GFX</span></cite><span>屬性表示底層系統對象。</span></p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="ggame.asset.RectangleAsset.destroy"><code class="descname">destroy</code><span class="sig-paren"><span>（</span></span><span class="sig-paren"><span>）</span></span><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.RectangleAsset.destroy" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>銷毀或取消分配資產使用的任何基礎圖形資源。在任何不再使用的資產上調用此方法。</span></p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="section" id="circleasset"><br/><span>CircleAsset </span><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#circleasset" title="永久鏈接到這個標題"><span></span></a>
+<dl class="class">
+<dt id="ggame.asset.CircleAsset"><em class="property"><span>class </span></em><code class="descclassname">ggame.asset.</code><code class="descname">CircleAsset</code><span class="sig-paren"><span>（</span></span><em><span>radius</span></em><span>，</span><em><span>line = LineStyle（1</span></em><span>，</span><em><span>BLACK）</span></em><span>，</span><em><span>fill = BLACK </span></em><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/asset.html#CircleAsset"><span class="viewcode-link"><span>[source]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.CircleAsset" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>該</span><cite><span>ggame.CircleAsset</span></cite><span>是動態創建，而不需要的圖像文件的創建一個“虛擬”的資產。</span></p>
+<table class="docutils field-list" frame="void" rules="none"><colgroup><col class="field-name"/><col class="field-body"/></colgroup>
+<tbody valign="top">
+<tr class="field-odd field">
+<th class="field-name"><span>參數：</span></th>
+<td class="field-body">
+<ul class="first last simple">
+<li><strong><span>radius</span></strong><span>（</span><em><span>int</span></em><span>） - 圓半徑，以像素為單位</span></li>
+<li><strong><span>line = BLACKLINE</span></strong><span>（</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.LineStyle" title="ggame.asset.LineStyle"><em><span>LineStyle</span></em></a><span>） - 圓邊框的顏色和寬度</span></li>
+<li><strong><span>fill = BLACK</span></strong><span>（</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.Color" title="ggame.asset.Color"><em><span>Color</span></em></a><span>） - 圓體的顏色</span></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="attribute">
+<dt id="ggame.asset.CircleAsset.gfx"><code class="descname">gfx</code><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.CircleAsset.gfx" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>該</span><cite><span>GFX</span></cite><span>屬性表示底層系統對象。</span></p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="ggame.asset.CircleAsset.destroy"><code class="descname">destroy</code><span class="sig-paren"><span>（</span></span><span class="sig-paren"><span>）</span></span><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.CircleAsset.destroy" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>銷毀或取消分配資產使用的任何基礎圖形資源。在任何不再使用的資產上調用此方法。</span></p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="section" id="ellipseasset"><br/><span>EllipseAsset </span><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ellipseasset" title="永久鏈接到這個標題"><span></span></a>
+<dl class="class">
+<dt id="ggame.asset.EllipseAsset"><em class="property"><span>class </span></em><code class="descclassname">ggame.asset.</code><code class="descname">EllipseAsset</code><span class="sig-paren"><span>（</span></span><em><span>halfw</span></em><span>，</span><em><span>halfh</span></em><span>，</span><em><span>line = LineStyle（1</span></em><span>，</span><em><span>BLACK）</span></em><span>，</span><em><span>fill = BLACK </span></em><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/asset.html#EllipseAsset"><span class="viewcode-link"><span>[source]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.EllipseAsset" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>該</span><cite><span>ggame.EllipseAsset</span></cite><span>是動態創建，而不需要的圖像文件的創建一個“虛擬”的資產。</span></p>
+<table class="docutils field-list" frame="void" rules="none"><colgroup><col class="field-name"/><col class="field-body"/></colgroup>
+<tbody valign="top">
+<tr class="field-odd field">
+<th class="field-name"><span>參數：</span></th>
+<td class="field-body">
+<ul class="first last simple">
+<li><strong><span>halfw</span></strong><span>（</span><em><span>int</span></em><span>） - 水平方向上的橢圓半軸尺寸（橢圓寬度的一半），以像素為單位</span></li>
+<li><strong><span>halfh</span></strong><span>（</span><em><span>int</span></em><span>） - 垂直方向上的橢圓半軸尺寸（橢圓高度的一半），以像素為單位</span></li>
+<li><strong><span>line = BLACKLINE</span></strong><span>（</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.LineStyle" title="ggame.asset.LineStyle"><em><span>LineStyle</span></em></a><span>） - 橢圓邊框的顏色和寬度</span></li>
+<li><strong><span>fill = BLACK</span></strong><span>（</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.Color" title="ggame.asset.Color"><em><span>Color</span></em></a><span>） - 橢圓體的顏色</span></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="ggame.asset.EllipseAsset.destroy"><code class="descname">destroy</code><span class="sig-paren"><span>（</span></span><span class="sig-paren"><span>）</span></span><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.EllipseAsset.destroy" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>銷毀或取消分配資產使用的任何基礎圖形資源。在任何不再使用的資產上調用此方法。</span></p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="ggame.asset.EllipseAsset.gfx"><code class="descname">gfx</code><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.EllipseAsset.gfx" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>該</span><cite><span>GFX</span></cite><span>屬性表示底層系統對象。</span></p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="section" id="polygonasset"><br/><span>PolygonAsset </span><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#polygonasset" title="永久鏈接到這個標題"><span></span></a>
+<dl class="class">
+<dt id="ggame.asset.PolygonAsset"><em class="property"><span>class </span></em><code class="descclassname">ggame.asset.</code><code class="descname">PolygonAsset</code><span class="sig-paren"><span>（</span></span><em><span>path</span></em><span>，</span><em><span>line = LineStyle（1</span></em><span>，</span><em><span>BLACK）</span></em><span>，</span><em><span>fill = BLACK </span></em><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/asset.html#PolygonAsset"><span class="viewcode-link"><span>[source]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.PolygonAsset" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>PolygonAsset是一個動態創建的“虛擬”資產，無需創建圖像文件。</span></p>
+<p><span>注意：您不應該指定此資產的絕對屏幕坐標，因為您將使用該</span><code class="xref py py-class docutils literal notranslate"><span class="pre">Sprite</span></code><span>位置在屏幕上定位多邊形。</span></p>
+<table class="docutils field-list" frame="void" rules="none"><colgroup><col class="field-name"/><col class="field-body"/></colgroup>
+<tbody valign="top">
+<tr class="field-odd field">
+<th class="field-name"><span>參數：</span></th>
+<td class="field-body">
+<ul class="first last simple">
+<li><strong><span>path</span></strong><span>（</span><em><span>list</span></em><span>） - 像素坐標元組列表。這些坐標不應該在絕對屏幕坐標中，而應該相對於所得到的所需“中心” </span><code class="xref py py-class docutils literal notranslate"><span class="pre">Sprite</span></code><span>。列表中的最終坐標對必須與第一個坐標對相同。</span></li>
+<li><strong><span>line = BLACKLINE</span></strong><span>（</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.LineStyle" title="ggame.asset.LineStyle"><em><span>LineStyle</span></em></a><span>） - 橢圓邊框的顏色和寬度</span></li>
+<li><strong><span>fill = BLACK</span></strong><span>（</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.Color" title="ggame.asset.Color"><em><span>Color</span></em></a><span>） - 橢圓體的顏色</span></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p><span>例：</span></p>
+<div class="highlight-default notranslate">
+<div class="highlight">
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">"""
+Example of using the PolygonAsset class.
+"""
+
+from ggame import PolygonAsset, LineStyle, Color, BLACK
+
+POLY = PolygonAsset(
+    [(0, 0), (50, 50), (50, 100), (0, 0)], LineStyle(4, BLACK), Color(0x80FF00, 0.8)
+)
+destroy（）</pre>
+<pre><br/><br/></pre>
+</div>
+</div>
+<dl class="method">
+<dd>
+<p><span>銷毀或取消分配資產使用的任何基礎圖形資源。在任何不再使用的資產上調用此方法。</span></p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="ggame.asset.PolygonAsset.gfx"><code class="descname">gfx</code><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.PolygonAsset.gfx" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>該</span><cite><span>GFX</span></cite><span>屬性表示底層系統對象。</span></p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="section" id="lineasset"><br/><span>LineAsset </span><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#lineasset" title="永久鏈接到這個標題"><span></span></a>
+<dl class="class">
+<dt id="ggame.asset.LineAsset"><em class="property"><span>class </span></em><code class="descclassname">ggame.asset.</code><code class="descname">LineAsset</code><span class="sig-paren"><span>（</span></span><em><span>x</span></em><span>，</span><em><span>y</span></em><span>，</span><em><span>line = LineStyle（1</span></em><span>，</span><em><span>BLACK）</span></em><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/asset.html#LineAsset"><span class="viewcode-link"><span>[source]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.LineAsset" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>LineAsset是一個即時創建的“虛擬”資產，無需創建圖像文件。LineAsset實例表示單個線段。</span></p>
+<p><span>注意：您不應該指定此資產的絕對屏幕坐標，因為您將使用該</span><code class="xref py py-class docutils literal notranslate"><span class="pre">Sprite</span></code><span>位置在屏幕上找到您的線。線段將從像素坐標（0,0）開始，並將在下面給出的（x，y）坐標處結束。</span></p>
+<p><span>由於LineAsset未覆蓋區域，因此只能提供</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.LineStyle" title="ggame.asset.LineStyle"><code class="xref py py-class docutils literal notranslate"><span class="pre">LineStyle</span></code></a><span> 參數（</span><cite><span>線</span></cite><span>）來指定顏色。</span></p>
+<table class="docutils field-list" frame="void" rules="none"><colgroup><col class="field-name"/><col class="field-body"/></colgroup>
+<tbody valign="top">
+<tr class="field-odd field">
+<th class="field-name"><span>參數：</span></th>
+<td class="field-body">
+<ul class="first last simple">
+<li><strong><span>x</span></strong><span>（</span><em><span>int</span></em><span>） - 線端點的x坐標，以像素為單位</span></li>
+<li><strong><span>y</span></strong><span>（</span><em><span>int</span></em><span>） - 行終點的y坐標，以像素為單位</span></li>
+<li><strong><span>line = BLACKLINE</span></strong><span>（</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.LineStyle" title="ggame.asset.LineStyle"><em><span>LineStyle</span></em></a><span>） - 橢圓邊框的顏色和寬度</span></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="method">
+<dt id="ggame.asset.LineAsset.destroy"><code class="descname">destroy</code><span class="sig-paren"><span>（</span></span><span class="sig-paren"><span>）</span></span><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.LineAsset.destroy" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>銷毀或取消分配資產使用的任何基礎圖形資源。在任何不再使用的資產上調用此方法。</span></p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="ggame.asset.LineAsset.delta_x"><code class="descname">delta_x</code><em class="property"><span>=無</span></em><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.LineAsset.delta_x" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>此屬性表示實例化期間提供的</span><cite><span>x</span></cite><span>參數。</span></p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="ggame.asset.LineAsset.delta_y"><code class="descname">delta_y</code><em class="property"><span>=無</span></em><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.LineAsset.delta_y" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>此屬性表示實例化期間提供的</span><cite><span>y</span></cite><span>參數。</span></p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="ggame.asset.LineAsset.gfx"><code class="descname">gfx</code><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.LineAsset.gfx" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>該</span><cite><span>GFX</span></cite><span>屬性表示底層系統對象。</span></p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+<div class="section" id="textasset"><br/><span><strong><span style="color: #3366ff;">TextAsset</span></strong> </span><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#textasset" title="永久鏈接到這個標題"><span></span></a>
+<dl class="class">
+<dt id="ggame.asset.TextAsset"><em class="property"><span>class </span></em><code class="descclassname">ggame.asset.</code><code class="descname">TextAsset</code><span class="sig-paren"><span>（</span></span><em><span>text</span></em><span>，</span><em><span>** kwargs </span></em><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/asset.html#TextAsset"><span class="viewcode-link"><span>[來源]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.TextAsset" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>TextAsset是一種即時創建的“虛擬”資產，無需創建圖像文件。TextAsset實例表示文本塊及其樣式（字體，顏色等）。</span></p>
+<table class="docutils field-list" frame="void" rules="none"><colgroup><col class="field-name"/><col class="field-body"/></colgroup>
+<tbody valign="top">
+<tr class="field-odd field">
+<th class="field-name"><span>參數：</span></th>
+<td class="field-body">
+<ul class="first last simple">
+<li><strong><span>text</span></strong><span>（</span><em><span>str</span></em><span>） - 應顯示的文本</span></li>
+<li><strong><span>** kwargs</span></strong><span> - 可選的格式和样式屬性（如下）</span></li>
+<li><strong><span>style ='20px Arial'</span></strong><span>（</span><em><span>str</span></em><span>） -</span>
+<p><span>文字樣式，大小和字體。例：</span></p>
+<div class="highlight-default notranslate">
+<div class="highlight">
+<pre><span></span><span class="s1">'italic 20pt Helvetica'</span>
+</pre>
+</div>
+</div>
+</li>
+<li><strong><span>width = 100</span></strong><span>（</span><em><span>int</span></em><span>） - 屏幕上文本塊的寬度，以像素為單位。</span></li>
+<li><strong><span>fill = BLACK</span></strong><span>（</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.Color" title="ggame.asset.Color"><em><span>Color</span></em></a><span>） - </span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.Color" title="ggame.asset.Color"><code class="xref py py-class docutils literal notranslate"><span class="pre">Color</span></code></a><span>指定文本顏色和透明度的實例。</span></li>
+<li><strong><span>align ='left'</span></strong><span>（</span><em><span>str</span></em><span>） - 塊的對齊方式。“左”，“中”或“右”之一。</span></li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p><span>完整示例：</span></p>
+<div class="highlight-default notranslate">
+<div class="highlight">
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">"""
+Example of using TextAsset class.
+"""
+from ggame import TextAsset, Color
+
+TA = TextAsset(
+    "Sample Text", style="bold 40pt Arial", width=250, fill=Color(0x1122FF, 1.0)
+)
+destroy（）</pre>
+<pre><br/><br/></pre>
+</div>
+</div>
+<dl class="method">
+<dd>
+<p><span>銷毀或取消分配資產使用的任何基礎圖形資源。在任何不再使用的資產上調用此方法。</span></p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="ggame.asset.TextAsset.gfx"><code class="descname">gfx</code><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.TextAsset.gfx" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><cite><span>gfx</span></cite><span>屬性表示用於表示此資產的基礎系統對象。如果此資產由多個資產組成，則第 </span><strong><span>一個</span></strong><span>資產由</span><cite><span>gfx</span></cite><span>引用。</span></p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="ggame.asset.TextAsset.clone"><code class="descname">clone</code><span class="sig-paren"><span>（</span></span><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/asset.html#TextAsset.clone"><span class="viewcode-link"><span>[來源]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.TextAsset.clone" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>使用當前樣式設置創建重複資產。</span></p>
+<table class="docutils field-list" frame="void" rules="none"><colgroup><col class="field-name"/><col class="field-body"/></colgroup>
+<tbody valign="top">
+<tr class="field-odd field">
+<th class="field-name"><span>返回：</span></th>
+<td class="field-body"><span>與原始文本資產相同但具有當前樣式的文本資源。</span></td>
+</tr>
+<tr class="field-even field">
+<th class="field-name"><span>返回類型：</span></th>
+<td class="field-body"><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.TextAsset" title="ggame.asset.TextAsset"><span>TextAsset</span></a></td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="ggame.asset.TextAsset.width"><code class="descname">width</code><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.TextAsset.width" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>渲染文本資源的寬度（以像素為單位）</span></p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="ggame.asset.TextAsset.height"><code class="descname">height</code><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.TextAsset.height" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>渲染文本資源的高度（以像素為單位）</span></p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+</div>
+<br />事件 << <a href='事件.html'>Previous</a> <a href='聲音.html'>Next</a> >> 聲音</section></div></body></html>

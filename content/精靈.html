@@ -1,0 +1,358 @@
+<!doctype html>
+<html><head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
+<title>期末分組專案</title> <link rel="stylesheet" type="text/css" href="./../static/cmsimply.css">
+
+<script type="text/javascript" src="./../static/syntaxhighlighter/shCore.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushJScript.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushJava.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushPython.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushSql.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushXml.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushPhp.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushLua.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushCpp.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushCss.js"></script>
+<script type="text/javascript" src="./../static/syntaxhighlighter/shBrushCSharp.js"></script>
+<link type="text/css" rel="stylesheet" href="./../static/syntaxhighlighter/css/shCoreDefault.css"/>
+<script type="text/javascript">SyntaxHighlighter.all();</script>
+
+<!-- for LaTeX equations 暫時不用
+<script src="https://scrum-3.github.io/web/math/MathJax.js?config=TeX-MML-AM_CHTML" type="text/javascript"></script>
+<script type="text/javascript">
+init_mathjax = function() {
+    if (window.MathJax) {
+        // MathJax loaded
+        MathJax.Hub.Config({
+            tex2jax: {
+                inlineMath: [ ['$','$'], ["\\(","\\)"] ],
+                displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+            },
+            displayAlign: 'left', // Change this to 'center' to center equations.
+            "HTML-CSS": {
+                styles: {'.MathJax_Display': {"margin": 0}}
+            }
+        });
+        MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+    }
+}
+init_mathjax();
+</script>
+-->
+<!-- 暫時不用
+<script src="./../static/fengari-web.js"></script>
+<script type="text/javascript" src="./../static/Cango-13v08-min.js"></script>
+<script type="text/javascript" src="./../static/CangoAxes-4v01-min.js"></script>
+<script type="text/javascript" src="./../static/gearUtils-05.js"></script>
+-->
+<!-- for Brython 暫時不用
+<script src="https://scrum-3.github.io/web/brython/brython.js"></script>
+<script src="https://scrum-3.github.io/web/brython/brython_stdlib.js"></script>
+-->
+
+<script src="./../static/jquery.js"></script>
+<script type="text/javascript">
+$(function(){
+    $("ul.topmenu> li:has(ul) > a").append('<div class="arrow-right"></div>');
+    $("ul.topmenu > li ul li:has(ul) > a").append('<div class="arrow-right"></div>');
+});
+</script>
+
+</head><header><h1>第三組 期末分組網站</h1> <confmenu>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="sitemap.html">Site Map</a></li>
+<li><a href="./../reveal/index.html">reveal</a></li>
+<li><a href="./../blog/index.html">blog</a></li>
+
+</ul>
+</confmenu></header>
+<div class='container'><nav><ul id='css3menu1' class='topmenu'><li><a href='Introduction.html'>Introduction</a><li><a href='Course.html'>Course</a><ul><li><a href='git基本指令.html'>git基本指令</a><li><a href='python基本語法.html'>python基本語法</a></li></ul><li><a href='Ggame-synopsis.html'>Ggame-synopsis</a><ul><li><a href='ggame應用程序類.html'>ggame應用程序類</a><li><a href='事件.html'>事件</a><li><a href='ggame資產.html'>ggame資產</a><li><a href='聲音.html'>聲音</a><li><a href='精靈.html'>精靈</a></li></ul><li><a href='Independent Study.html'>Independent Study</a><ul><li><a href='Group Member Operation video.html'>Group Member Operation video</a><ul><li><a href='Week10.html'>Week10</a><li><a href='Week11.html'>Week11</a><li><a href='Week12.html'>Week12</a><li><a href='Week13.html'>Week13</a><li><a href='Week14.html'>Week14</a><li><a href='Week15.html'>Week15</a><li><a href='Week16.html'>Week16</a><li><a href='Week17.html'>Week17</a><li><a href='Week18.html'>Week18</a></li></ul><li><a href='Operation history.html'>Operation history</a><ul><li><a href='W10 progress.html'>W10 progress</a><li><a href='W11 progress.html'>W11 progress</a><li><a href='W12 progress.html'>W12 progress</a><li><a href='W13 progress.html'>W13 progress</a><li><a href='W14 progress.html'>W14 progress</a><li><a href='W15 progress.html'>W15 progress</a><li><a href='W16 progress.html'>W16 progress</a><li><a href='W17 progress.html'>W17 progress</a><li><a href='W18 progress.html'>W18 progress</a></li></li></ul></ul><li><a href='Issue＆Solution.html'>Issue＆Solution</a><li><a href='Experience.html'>Experience</a><ul><li><a href='W10.html'>W10</a><li><a href='W11.html'>W11</a><li><a href='W12.html'>W12</a><li><a href='W13.html'>W13</a><li><a href='W14.html'>W14</a><li><a href='W15.html'>W15</a><li><a href='W16.html'>W16</a><li><a href='W17.html'>W17</a><li><a href='W18.html'>W18</a></li></ul><li><a href='Final Report.html'>Final Report</a><li><a href='Attend＆Absence.html'>Attend＆Absence</a></li></ul></nav><section>聲音 << <a href='聲音.html'>Previous</a> <a href='Independent Study.html'>Next</a> >> Independent Study<br /><h1>精靈</h1>
+<p><span>用於封裝ggame應用程序中所有可見對象的Sprite類。</span></p>
+<div class="section" id="sprite"><br/><strong><span style="color: #3366ff;">精靈</span></strong><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#sprite" title="永久鏈接到這個標題"><span></span></a>
+<dl class="class">
+<dt id="ggame.sprite.Sprite"><em class="property"><span>類</span></em><code class="descclassname">ggame.sprite.</code><code class="descname">Sprite</code><span class="sig-paren"><span>（</span></span><em><span>資產</span></em><span>，</span><em><span>POS =（0</span></em><span>，</span><em><span>0） </span></em><span>，</span><em><span>edgedef =無</span></em><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/sprite.html#Sprite"><span class="viewcode-link"><span>[源]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sprite.Sprite" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>Sprite類結合了可視/圖形資產的概念，屏幕上的位置和</span><em><span>行為</span></em><span>。雖然Sprite可以按原樣使用，但它通常是子類，以給它一些所需的行為。</span></p>
+<p><span>在子類化Sprite類時，您可以自定義初始化代碼以使用特定資產。可以添加“步驟”或“輪詢”方法來處理每幀動作（例如，檢查衝突）。</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.app.App" title="ggame.app.App"><code class="xref py py-class docutils literal notranslate"><span class="pre">App</span></code></a><span>類不會自動調用步或輪詢函數，但您可以為</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.app.App" title="ggame.app.App"><code class="xref py py-class docutils literal notranslate"><span class="pre">App</span></code></a><span>該類創建子類。</span></p>
+<p><span>此外，您可能希望在自定義的sprite類中定義事件回調方法。通過自定義創建，事件處理和定期處理，您可以實現精靈對象的完全自主行為。</span></p>
+<table class="docutils field-list" frame="void" rules="none"><colgroup><col class="field-name"/><col class="field-body"/></colgroup>
+<tbody valign="top">
+<tr class="field-odd field">
+<th class="field-name"><span>參數：</span></th>
+<td class="field-body">
+<ul class="first simple">
+<li><strong><span>asset</span></strong><span>（</span><em><span>asset</span></em><span>） - 現有的圖形資產</span></li>
+<li><strong><span>pos</span></strong><span>（</span><em><span>tuple </span></em><em><span>（</span></em><em><span>int </span></em><em><span>，</span></em><em><span>int </span></em><em><span>）</span></em><span>） - 可以提供精靈位置，它指定屏幕上精靈的起始（x，y）坐標。默認情況下，精靈的位置定義其左上角的位置。可以通過自定義此行為來修改此行為 </span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sprite.Sprite.center" title="ggame.sprite.Sprite.center"><code class="xref py py-data docutils literal notranslate"><span class="pre">center</span></code></a><span>。</span></li>
+<li><strong><span>edgedef</span></strong><span>（</span><em><span>資產</span></em><span>） - 可以提供邊緣定義資產，其指定將用於定義精靈的邊界以用於衝突檢測的資產。如果沒有 給出</span><cite><span>edgedef</span></cite><span>資產，則使用所需資產，在圖像紋理的情況下，該資產將是矩形資產。此選項通常用於為具有透明紋理圖像背景的基於紋理的精靈定義可見圖像輪廓。</span></li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field">
+<th class="field-name"><span>返回：</span></th>
+<td class="field-body">
+<p class="first last"><span>沒有。如果位置在屏幕上，精靈將顯示在瀏覽器中。</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p><span>例：</span></p>
+<div class="highlight-default notranslate">
+<div class="highlight">
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from ggame.sprite import Sprite
+from ggame.asset import ImageAsset, CircleAsset
+from ggame.app import App
+
+player = Sprite(
+    ImageAsset("bunny.png",
+    (100,100),
+    CircleAsset(50))
+
+App().run()</pre>
+</div>
+</div>
+<p><span>這將使用'player.png'圖像創建一個精靈，該圖像的左上角位於坐標（100,100）處，並且具有50像素半徑的圓形碰撞邊界。</span></p>
+<dl class="method">
+<dt id="ggame.sprite.Sprite.setExtents"><code class="descname">setExtents</code><span class="sig-paren"><span>（</span></span><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/sprite.html#Sprite.setExtents"><span class="viewcode-link"><span>[來源]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sprite.Sprite.setExtents" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>根據位置，中心，寬度，高度更新最小/最大x和y</span></p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="ggame.sprite.Sprite.firstImage"><code class="descname">firstImage</code><span class="sig-paren"><span>（</span></span><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/sprite.html#Sprite.firstImage"><span class="viewcode-link"><span>[來源]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sprite.Sprite.firstImage" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>選擇並顯示此精靈使用的</span><em><span>第一個</span></em><span>圖像。如果資產是</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.ImageAsset" title="ggame.asset.ImageAsset"><code class="xref py py-class docutils literal notranslate"><span class="pre">ImageAsset</span></code></a><span> 使用多個圖像定義的，那麼這只會有用。</span></p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="ggame.sprite.Sprite.lastImage"><code class="descname">lastImage</code><span class="sig-paren"><span>（</span></span><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/sprite.html#Sprite.lastImage"><span class="viewcode-link"><span>[來源]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sprite.Sprite.lastImage" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>選擇並顯示此精靈使用的</span><em><span>最後一個</span></em><span>圖像。如果資產是</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.ImageAsset" title="ggame.asset.ImageAsset"><code class="xref py py-class docutils literal notranslate"><span class="pre">ImageAsset</span></code></a><span> 使用多個圖像定義的，那麼這只會有用。</span></p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="ggame.sprite.Sprite.nextImage"><code class="descname">nextImage</code><span class="sig-paren"><span>（</span></span><em><span>wrap = False </span></em><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/sprite.html#Sprite.nextImage"><span class="viewcode-link"><span>[來源]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sprite.Sprite.nextImage" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>選擇並顯示此精靈使用的</span><em><span>下一個</span></em><span>圖像。如果當前圖像已經是</span><em><span>最後一張</span></em><span>圖像，則圖像不會前進。</span></p>
+<table class="docutils field-list" frame="void" rules="none"><colgroup><col class="field-name"/><col class="field-body"/></colgroup>
+<tbody valign="top">
+<tr class="field-odd field">
+<th class="field-name"><span>參數：</span></th>
+<td class="field-body"><strong><span>wrap</span></strong><span>（</span><em><span>boolean</span></em><span>） - 如果為</span><cite><span>True</span></cite><span>，則調用 </span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sprite.Sprite.nextImage" title="ggame.sprite.Sprite.nextImage"><code class="xref py py-meth docutils literal notranslate"><span class="pre">nextImage()</span></code></a><span>最後一個圖像將導致 加載</span><em><span>第一個</span></em><span>圖像。</span></td>
+</tr>
+</tbody>
+</table>
+<p><span>如果資產是</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.ImageAsset" title="ggame.asset.ImageAsset"><code class="xref py py-class docutils literal notranslate"><span class="pre">ImageAsset</span></code></a><span>使用多個圖像定義的，那麼這只會有用 。</span></p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="ggame.sprite.Sprite.prevImage"><code class="descname">prevImage</code><span class="sig-paren"><span>（</span></span><em><span>wrap = False </span></em><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/sprite.html#Sprite.prevImage"><span class="viewcode-link"><span>[來源]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sprite.Sprite.prevImage" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>選擇並顯示此精靈使用的</span><em><span>上一個</span></em><span>圖像。如果當前圖像已經是</span><em><span>第一張</span></em><span>圖像，則圖像不會改變。</span></p>
+<table class="docutils field-list" frame="void" rules="none"><colgroup><col class="field-name"/><col class="field-body"/></colgroup>
+<tbody valign="top">
+<tr class="field-odd field">
+<th class="field-name"><span>參數：</span></th>
+<td class="field-body"><strong><span>wrap</span></strong><span>（</span><em><span>boolean</span></em><span>） - 如果為</span><cite><span>True</span></cite><span>，則調用 </span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sprite.Sprite.prevImage" title="ggame.sprite.Sprite.prevImage"><code class="xref py py-meth docutils literal notranslate"><span class="pre">prevImage()</span></code></a><span>第一個圖像將導致加載</span><em><span>最後一個</span></em><span>圖像。</span></td>
+</tr>
+</tbody>
+</table>
+<p><span>如果資產是</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.ImageAsset" title="ggame.asset.ImageAsset"><code class="xref py py-class docutils literal notranslate"><span class="pre">ImageAsset</span></code></a><span>使用多個圖像定義的，那麼這只會有用 。</span></p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="ggame.sprite.Sprite.setImage"><code class="descname">setImage</code><span class="sig-paren"><span>（</span></span><em><span>index = 0 </span></em><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/sprite.html#Sprite.setImage"><span class="viewcode-link"><span>[來源]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sprite.Sprite.setImage" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>通過給出</span><cite><span>索引</span></cite><span>來選擇要顯示的圖像。</span></p>
+<table class="docutils field-list" frame="void" rules="none"><colgroup><col class="field-name"/><col class="field-body"/></colgroup>
+<tbody valign="top">
+<tr class="field-odd field">
+<th class="field-name"><span>參數：</span></th>
+<td class="field-body"><strong><span>index</span></strong><span>（</span><em><span>int</span></em><span>） - 指定要顯示的圖像的索引。值為零表示資產中的</span><em><span>第一個</span></em><span>圖像。</span></td>
+</tr>
+</tbody>
+</table>
+<p><span>這相當於</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sprite.Sprite.index" title="ggame.sprite.Sprite.index"><code class="xref py py-data docutils literal notranslate"><span class="pre">index</span></code></a><span>直接設置屬性。</span></p>
+<p><span>如果資產是</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.ImageAsset" title="ggame.asset.ImageAsset"><code class="xref py py-class docutils literal notranslate"><span class="pre">ImageAsset</span></code></a><span>使用多個圖像定義的，那麼這只會有用 。</span></p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="ggame.sprite.Sprite.index"><code class="descname">index</code><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sprite.Sprite.index" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>這是此精靈可用圖像列表的整數索引。</span></p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="ggame.sprite.Sprite.width"><code class="descname">width</code><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sprite.Sprite.width" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>這是一個表示精靈的顯示寬度的整數。為寬度分配值將水平縮放圖像。</span></p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="ggame.sprite.Sprite.height"><code class="descname">height</code><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sprite.Sprite.height" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>這是一個表示精靈顯示高度的整數。為高度指定值將垂直縮放圖像。</span></p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="ggame.sprite.Sprite.x"><code class="descname">x</code><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sprite.Sprite.x" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>這表示屏幕上精靈的x坐標。為此屬性賦值將水平移動精靈。</span></p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="ggame.sprite.Sprite.y"><code class="descname">y</code><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sprite.Sprite.y" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>這表示屏幕上精靈的y坐標。為此屬性賦值將垂直移動精靈。</span></p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="ggame.sprite.Sprite.position"><code class="descname">position</code><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sprite.Sprite.position" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>元組指示精靈在屏幕上的位置。</span></p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="ggame.sprite.Sprite.fxcenter"><code class="descname">fxcenter</code><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sprite.Sprite.fxcenter" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>這表示精靈“中心”的水平位置，作為0.0到1.0之間的浮點數。值0.0表示精靈的x坐標指的是左手邊緣。值1.0表示其右邊緣。可以指定其間的任何值。可以將值分配給此屬性。</span></p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="ggame.sprite.Sprite.fycenter"><code class="descname">fycenter</code><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sprite.Sprite.fycenter" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>這表示精靈“中心”的垂直位置，作為0.0到1.0之間的浮點數。值0.0表示精靈的x坐標指的是其上邊緣。值1.0表示其下邊緣。可以指定其間的任何值。可以將值分配給此屬性。</span></p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="ggame.sprite.Sprite.center"><code class="descname">center</code><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sprite.Sprite.center" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>該屬性將精靈“center”的水平和垂直位置表示為浮點數的元組。見描述的</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sprite.Sprite.fxcenter" title="ggame.sprite.Sprite.fxcenter"><code class="xref py py-data docutils literal notranslate"><span class="pre">fxcenter</span></code></a><span>和</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sprite.Sprite.fycenter" title="ggame.sprite.Sprite.fycenter"><code class="xref py py-data docutils literal notranslate"><span class="pre">fycenter</span></code></a><span>更多的細節。</span></p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="ggame.sprite.Sprite.visible"><code class="descname">visible</code><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sprite.Sprite.visible" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>此佈爾屬性可用於更改精靈的可見性。將</span><cite><span>~ggame.Sprite.visible</span></cite><span>設置為</span><cite><span>False</span></cite><span>將阻止精靈在屏幕上呈現。</span></p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="ggame.sprite.Sprite.scale"><code class="descname">scale</code><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sprite.Sprite.scale" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>此屬性可用於更改屏幕上精靈的大小（“縮放”它）。值可以是浮點數。值為1.0表示精靈圖像將保持其原始大小。值為2.0會使其加倍，等等。</span></p>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="ggame.sprite.Sprite.rotation"><code class="descname">rotation</code><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sprite.Sprite.rotation" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>此屬性可用於更改屏幕上精靈的旋轉。值可以是浮點數。值0.0表示無旋轉。值1.0表示逆時針方向旋轉1弧度。一個弧度為180 / pi或約57.3度。</span></p>
+</dd>
+</dl>
+<dl class="classmethod">
+<dt id="ggame.sprite.Sprite.collidingCircleWithPoly"><em class="property"><span>classmethod </span></em><code class="descname">collidingCircleWithPoly</code><span class="sig-paren"><span>（</span></span><em><span>circ</span></em><span>，</span><em><span>poly </span></em><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/sprite.html#Sprite.collidingCircleWithPoly"><span class="viewcode-link"><span>[來源]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sprite.Sprite.collidingCircleWithPoly" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>確定CircleAsset精靈是否與PolygonAsset精靈重疊。在確定兩個對像在其整個範圍中重疊之後調用此方法。</span></p>
+<table class="docutils field-list" frame="void" rules="none"><colgroup><col class="field-name"/><col class="field-body"/></colgroup>
+<tbody valign="top">
+<tr class="field-odd field">
+<th class="field-name"><span>參數：</span></th>
+<td class="field-body">
+<ul class="first simple">
+<li><strong><span>circ</span></strong><span>（</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sprite.Sprite" title="ggame.sprite.Sprite"><em><span>Sprite</span></em></a><span>） - 一個基於CircleAsset的精靈。</span></li>
+<li><strong><span>poly</span></strong><span>（</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sprite.Sprite" title="ggame.sprite.Sprite"><em><span>Sprite</span></em></a><span>） - 基於PolygonAsset的精靈。</span></li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field">
+<th class="field-name"><span>返回：</span></th>
+<td class="field-body">
+<p class="first"><span>如果精靈重疊則為真，否則為假。</span></p>
+</td>
+</tr>
+<tr class="field-odd field">
+<th class="field-name"><span>返回類型：</span></th>
+<td class="field-body">
+<p class="first last"><span>布爾</span></p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<dl class="method">
+<dt id="ggame.sprite.Sprite.collidingPolyWithPoly"><code class="descname">collidingPolyWithPoly</code><span class="sig-paren"><span>（</span></span><em><span>obj </span></em><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/sprite.html#Sprite.collidingPolyWithPoly"><span class="viewcode-link"><span>[來源]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sprite.Sprite.collidingPolyWithPoly" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>確定一對基於PolygonAsset的精靈是否重疊。在確定兩個對像在其整個範圍中重疊之後調用此方法。如果</span><cite><span>self</span></cite><span>是基於PolygonAsset的sprite，則只應調用此方法。</span></p>
+<table class="docutils field-list" frame="void" rules="none"><colgroup><col class="field-name"/><col class="field-body"/></colgroup>
+<tbody valign="top">
+<tr class="field-odd field">
+<th class="field-name"><span>參數：</span></th>
+<td class="field-body"><strong><span>obj</span></strong><span>（</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sprite.Sprite" title="ggame.sprite.Sprite"><em><span>Sprite</span></em></a><span>） - 一個基於PolygonAsset的精靈。</span></td>
+</tr>
+<tr class="field-even field">
+<th class="field-name"><span>返回：</span></th>
+<td class="field-body"><span>如果slef與obj重疊，則為True，否則為False。</span></td>
+</tr>
+<tr class="field-odd field">
+<th class="field-name"><span>返回類型：</span></th>
+<td class="field-body"><span>布爾</span></td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<dl class="method">
+<dt id="ggame.sprite.Sprite.collidingWith"><code class="descname">collidingWith</code><span class="sig-paren"><span>（</span></span><em><span>obj </span></em><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/sprite.html#Sprite.collidingWith"><span class="viewcode-link"><span>[來源]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sprite.Sprite.collidingWith" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>確定此精靈當前是否與另一個精靈對象重疊。</span></p>
+<table class="docutils field-list" frame="void" rules="none"><colgroup><col class="field-name"/><col class="field-body"/></colgroup>
+<tbody valign="top">
+<tr class="field-odd field">
+<th class="field-name"><span>參數：</span></th>
+<td class="field-body"><strong><span>obj</span></strong><span>（</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sprite.Sprite" title="ggame.sprite.Sprite"><em><span>Sprite</span></em></a><span>） - 對另一個Sprite對象的引用。</span></td>
+</tr>
+<tr class="field-even field">
+<th class="field-name"><span>返回類型：</span></th>
+<td class="field-body"><span>布爾</span></td>
+</tr>
+<tr class="field-odd field">
+<th class="field-name"><span>返回：</span></th>
+<td class="field-body"><cite><span></span></cite><span>如果精靈重疊，則為<cite>真</cite>，否則為</span><cite><span>假</span></cite><span>。</span></td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<dl class="method">
+<dt id="ggame.sprite.Sprite.collidingWithSprites"><code class="descname">collidingWithSprites</code><span class="sig-paren"><span>（</span></span><em><span>sclass = None </span></em><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/sprite.html#Sprite.collidingWithSprites"><span class="viewcode-link"><span>[來源]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sprite.Sprite.collidingWithSprites" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>確定此精靈是否與某個類的任何其他精靈發生碰撞。</span></p>
+<table class="docutils field-list" frame="void" rules="none"><colgroup><col class="field-name"/><col class="field-body"/></colgroup>
+<tbody valign="top">
+<tr class="field-odd field">
+<th class="field-name"><span>參數：</span></th>
+<td class="field-body"><strong><span>sclass</span></strong><span>（</span><em><span>class</span></em><span>） - 一個類標識符，它是</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sprite.Sprite" title="ggame.sprite.Sprite"><code class="xref py py-class docutils literal notranslate"><span class="pre">Sprite</span></code></a><span> 或者是它的子類，用於標識要檢查衝突的sprite類。如果為</span><cite><span>None，</span></cite><span>則</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sprite.Sprite" title="ggame.sprite.Sprite"><code class="xref py py-class docutils literal notranslate"><span class="pre">Sprite</span></code></a><span>檢查從類中子類化的所有對象。</span></td>
+</tr>
+<tr class="field-even field">
+<th class="field-name"><span>返回類型：</span></th>
+<td class="field-body"><span>名單</span></td>
+</tr>
+<tr class="field-odd field">
+<th class="field-name"><span>返回：</span></th>
+<td class="field-body"><span>與此sprite重疊的給定類的sprite對象的（可能為空）列表。</span></td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<dl class="method">
+<dt id="ggame.sprite.Sprite.destroy"><code class="descname">destroy</code><span class="sig-paren"><span>（</span></span><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/sprite.html#Sprite.destroy"><span class="viewcode-link"><span>[來源]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sprite.Sprite.destroy" title="這個定義的固定鏈接"><span></span></a></dt>
+<dd>
+<p><span>防止在碰撞檢測中顯示或檢查精靈。一旦調用它，就不能再顯示或使用精靈了。如果您只想阻止顯示精靈，請將該</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sprite.Sprite.visible" title="ggame.sprite.Sprite.visible"><code class="xref py py-data docutils literal notranslate"><span class="pre">visible</span></code></a><span>屬性設置為</span><cite><span>False</span></cite><span>。</span></p>
+</dd>
+</dl>
+</dd>
+</dl>
+</div>
+</div>
+</div><br />聲音 << <a href='聲音.html'>Previous</a> <a href='Independent Study.html'>Next</a> >> Independent Study</section></div></body></html>
