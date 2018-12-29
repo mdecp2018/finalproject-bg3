@@ -117,7 +117,7 @@ APP.run()</pre>
 <p><span>當提到屏幕坐標時，請注意計算機屏幕的x軸是</span><em><span>水平的</span></em><span>，屏幕左側的零位置。y軸是</span><em><span>垂直</span></em><span>的，屏幕</span><strong><span>頂部</span></strong><span>的零位置。</span></p>
 <p><span>增加正y坐標對應於計算機屏幕上的向下方向。請注意，這與您在數學課程中學習x和y坐標的方式</span><strong><span>不同</span></strong><span>！</span></p>
 <div class="section" id="module-ggame.app"><span id="ggame-application-classes"></span>
-<h2 class="section">ggame應用程序類</h2>
+<h2>ggame應用程序類</h2>
 <div class="section" id="app"><br/>應用<a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#app" title="永久鏈接到這個標題"><span></span></a>
 <dl class="class">
 <dt id="ggame.app.App"><em class="property"><span>class </span></em><code class="descclassname">ggame.app.</code><code class="descname">App</code><span class="sig-paren"><span>（</span></span><em><span>* args </span></em><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/app.html#App"><span class="viewcode-link"><span>[source]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.app.App" title="這個定義的固定鏈接"><span></span></a></dt>
@@ -307,7 +307,7 @@ APP.run()</pre>
 </dl>
 </div>
 <div class="section" id="module-ggame.event"><span id="events"></span>
-<h2><span>事件</span></h2>
+<h2>事件</h2>
 <p><span>ggame事件是ggame系統由於某些用戶操作（鼠標，鍵盤）而創建的對象。如果ggame應用程序已調用 </span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.app.App.listenKeyEvent" title="ggame.app.App.listenKeyEvent"><code class="xref py py-meth docutils literal notranslate"><span class="pre">listenKeyEvent()</span></code></a><span>，</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.app.App.listenMouseEvent" title="ggame.app.App.listenMouseEvent"><code class="xref py py-meth docutils literal notranslate"><span class="pre">listenMouseEvent()</span></code></a><span>則ggame將實例化相應的Event對象並返回給用戶提供的處理函數。ggame用戶代碼應該檢查Event對象的屬性，以找出有關發生的事件的更多信息。</span></p>
 <dl class="class">
 <dt id="ggame.event.MouseEvent"><em class="property"><span>class </span></em><code class="descclassname">ggame.event.</code><code class="descname">MouseEvent</code><span class="sig-paren"><span>（</span></span><em><span>app</span></em><span>，</span><em><span>hwevent </span></em><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/event.html#MouseEvent"><span class="viewcode-link"><span>[來源]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.event.MouseEvent" title="這個定義的固定鏈接"><span></span></a></dt>
@@ -470,7 +470,7 @@ APP.run()</pre>
 </div>
 </div>
 <div class="section"><span></span></div>
-<h2 class="section">ggame資產</h2>
+<h2>ggame資產</h2>
 <div class="section"></div>
 <div class="section" id="module-ggame.asset">ggame資產和相關對象（<a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.Color" title="ggame.asset.Color"><code class="xref py py-class docutils literal notranslate"><span class="pre">Color</span></code></a>和<a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.LineStyle" title="ggame.asset.LineStyle"><code class="xref py py-class docutils literal notranslate"><span class="pre">LineStyle</span></code></a>）是封裝和表示可顯示圖像的類。單個資產可以用於多個精靈中。可以從包含多個圖像的任何圖像（即精靈表）創建動畫資源。<br/><span id="ggame-assets"></span></div>
 <div class="section">
@@ -974,7 +974,7 @@ destroy（）</pre>
 </dl>
 </div>
 </div>
-<h2 class="section">聲音</h2>
+<h2>聲音</h2>
 <div class="section"><span></span></div>
 <div class="section" id="module-ggame.sound"><span id="sounds"></span><span>用於在ggame應用程序中加載和播放聲音資源的工具。</span>
 <div class="section" id="soundasset"><br/><span style="color: #3366ff;"><strong>SoundAsset </strong></span><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#soundasset" title="永久鏈接到這個標題"><span></span></a>
@@ -1049,7 +1049,7 @@ destroy（）</pre>
 </div>
 </div>
 <div class="section" id="module-ggame.sprite"><span id="sprites"></span>
-<h2><span>精靈</span></h2>
+<h2>精靈</h2>
 <p><span>用於封裝ggame應用程序中所有可見對象的Sprite類。</span></p>
 <div class="section" id="sprite"><br/><strong><span style="color: #3366ff;">精靈</span></strong><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#sprite" title="永久鏈接到這個標題"><span></span></a>
 <dl class="class">
@@ -1431,7 +1431,8 @@ App().run()</pre>
 <p><strong>40723207:</strong></p>
 <p><span>       這個禮拜我們開始要使用heroku，將可攜式的heroku程式放入p37裡，更新一下start.bat，重開後邊可以使用heroku的指令了。雖然感覺跟git原本的指令差不多，不過還是得記下來。</span></p>
 <p><strong>40723209:</strong></p>
-<p><strong>40723210:<br/><br/></strong>今天老師教的是把我們的隨身系統更新一個heroku指令，在為什麼加入這個軟件呢，因為我們之後每一組，都會用到heroku的網站，要上傳到heroku的網站指令是不同的，所以需要下載新的heroku的插件，雖然跟git指令有一點類似，只是heroku網站可以在線上改，下禮拜才會開始用heroku網站，所以我很期待這個功能。<strong></strong></p>
+<p><strong>40723210:</strong></p>
+<p>今天老師教的是把我們的隨身系統更新一個heroku指令，在為什麼加入這個軟件呢，因為我們之後每一組，都會用到heroku的網站，要上傳到heroku的網站指令是不同的，所以需要下載新的heroku的插件，雖然跟git指令有一點類似，只是heroku網站可以在線上改，下禮拜才會開始用heroku網站，所以我很期待這個功能。<strong></strong></p>
 <p><strong>40723245:</strong></p>
 <p><strong>40723246:</strong></p><h2>W12</h2>
 <p><strong>40723206:</strong></p>
@@ -1457,7 +1458,7 @@ App().run()</pre>
 <p><span>　　這次也是leo-editor的應用，如何在登入系統輸入特定文字時，跑出所想的結果，雖然之前已經看過if判斷式的運用，但是要我們這些沒底子的直接就變新增條件，還是有點難，看了結果後發現，新增的程式碼與一開始想的大有不同，得好好學習。</span></p>
 <p><strong>40723209:</strong></p>
 <p><strong>40723210:</strong></p>
-<p>目前我有把一些kmolgame的範例，改成我想做的小遊戲，可是有很多指令是範例裡面沒有的，剛好今天是交python語法，我們學到的東西是if判斷，當我們在密碼輸入bg3時會出現hellow world，有多寫一個else，就是用來判斷輸入的，在遊戲可以做出猜數字的程式，有一點用不太到呢。</p>
+<p>目前我有把一些kmolgame的範例，改成我想做的小遊戲，可是有很多指令是範例裡面沒有的，剛好今天是交python語法，我們學到的東西是if判斷，當我們在密碼輸入bg3時會出現hellow world，有多寫一個else，就是用來判斷輸入的，在遊戲可以做出猜數字的程式，<span style="text-decoration: line-through;">有一點用不太到呢</span>。</p>
 <p><strong>40723245:</strong></p>
 <p>這禮拜做的是登入系統，登入失敗會出現錯誤訊息並回到登入頁面，在將來可以用在網頁登入的作業。</p>
 <p><strong>40723246:</strong></p>

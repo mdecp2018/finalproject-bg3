@@ -117,9 +117,8 @@ APP.run()</pre>
 <p><span>當提到屏幕坐標時，請注意計算機屏幕的x軸是</span><em><span>水平的</span></em><span>，屏幕左側的零位置。y軸是</span><em><span>垂直</span></em><span>的，屏幕</span><strong><span>頂部</span></strong><span>的零位置。</span></p>
 <p><span>增加正y坐標對應於計算機屏幕上的向下方向。請注意，這與您在數學課程中學習x和y坐標的方式</span><strong><span>不同</span></strong><span>！</span></p>
 <div class="section" id="module-ggame.app"><span id="ggame-application-classes"></span>
-<br/><span>ggame應用程序類</span><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#module-ggame.app" title="永久鏈接到這個標題"><span></span></a>
-<div class="section" id="app">
-<br/><span>應用</span><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#app" title="永久鏈接到這個標題"><span></span></a>
+<h2>ggame應用程序類</h2>
+<div class="section" id="app"><br/>應用<a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#app" title="永久鏈接到這個標題"><span></span></a>
 <dl class="class">
 <dt id="ggame.app.App"><em class="property"><span>class </span></em><code class="descclassname">ggame.app.</code><code class="descname">App</code><span class="sig-paren"><span>（</span></span><em><span>* args </span></em><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/app.html#App"><span class="viewcode-link"><span>[source]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.app.App" title="這個定義的固定鏈接"><span></span></a></dt>
 <dd>
@@ -130,21 +129,21 @@ APP.run()</pre>
 <p><span>的</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.app.App" title="ggame.app.App"><code class="xref py py-class docutils literal notranslate"><span class="pre">App</span></code></a><span>類是通過指定以像素為單位所希望的應用程序窗口大小，作為兩個實例化參數要么::</span></p>
 <div class="highlight-default notranslate">
 <div class="highlight">
-<pre><span></span><span class="n">myapp</span> <span class="o">=</span> <span class="n">App</span><span class="p">(</span><span class="mi">640</span><span class="p">,</span><span class="mi">480</span><span class="p">)</span>
-</pre>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">myapp = App(640,480)</pre>
 </div>
 </div>
 <p><span>或者根本不提供尺寸參數::</span></p>
 <div class="highlight-default notranslate">
 <div class="highlight">
-<pre><span></span><span class="n">myapp</span> <span class="o">=</span> <span class="n">App</span><span class="p">()</span>
-</pre>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">myapp = App()</pre>
 </div>
 </div>
 <p><span>在這種情況下，使用完整的瀏覽器窗口大小。</span></p>
 <p><span>注意：一次只能實例化一個類或子類的</span><strong><span>一個</span></strong><span>實例</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.app.App" title="ggame.app.App"><code class="xref py py-class docutils literal notranslate"><span class="pre">App</span></code></a><span>。</span></p>
 <dl class="attribute">
-<dt id="ggame.app.App.spritelist"><code class="descname">spritelist</code><em class="property"><span>= [] </span></em><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.app.App.spritelist" title="這個定義的固定鏈接"><span></span></a></dt>
+<dt id="ggame.app.App.spritelist">
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">spritelist= [] </pre>
+</dt>
 <dd>
 <p><span>應用程序中當前活動的所有精靈的列表。</span></p>
 </dd>
@@ -198,20 +197,20 @@ APP.run()</pre>
 <dt id="ggame.app.App.listenMouseEvent"><em class="property"><span>classmethod </span></em><code class="descname">listenMouseEvent</code><span class="sig-paren"><span>（</span></span><em><span>eventtype</span></em><span>，</span><em><span>callback </span></em><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/app.html#App.listenMouseEvent"><span class="viewcode-link"><span>[source]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.app.App.listenMouseEvent" title="這個定義的固定鏈接"><span></span></a></dt>
 <dd>
 <p><span>註冊接收鼠標事件。</span></p>
-<table class="docutils field-list" frame="void" rules="none"><colgroup><col class="field-name"/><col class="field-body"/></colgroup>
+<table class="docutils field-list" frame="void" rules="none" style="height: 218px;"><colgroup><col class="field-name"/><col class="field-body"/></colgroup>
 <tbody valign="top">
-<tr class="field-odd field">
-<th class="field-name"><span>參數：</span></th>
-<td class="field-body">
+<tr class="field-odd field" style="height: 118px;">
+<th class="field-name" style="width: 44px; height: 118px;"><span>參數：</span></th>
+<td class="field-body" style="width: 530px; height: 118px;">
 <ul class="first simple">
 <li><strong><span>eventtype</span></strong><span>（</span><em><span>str</span></em><span>） - 要接收的鼠標事件的類型（值是以下之一：</span><cite><span>'mousemove'</span></cite><span>，</span><cite><span>'mousedown'</span></cite><span>，</span><cite><span>'mouseup'</span></cite><span>，</span><cite><span>'click'</span></cite><span>，</span><cite><span>'dblclick'</span></cite><span>或</span><cite><span>'mousewheel'</span></cite><span>）。</span></li>
 <li><strong><span>callback</span></strong><span>（</span><em><span>function</span></em><span>） - </span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.event.MouseEvent" title="ggame.event.MouseEvent"><code class="xref py py-class docutils literal notranslate"><span class="pre">ggame.event.MouseEvent</span></code></a><span>事件發生時將使用對象調用的函數或方法。</span></li>
 </ul>
 </td>
 </tr>
-<tr class="field-even field">
-<th class="field-name"><span>返回：</span></th>
-<td class="field-body">
+<tr class="field-even field" style="height: 100px;">
+<th class="field-name" style="width: 44px; height: 100px;"><span>返回：</span></th>
+<td class="field-body" style="width: 530px; height: 100px;">
 <p class="first last"><span>沒有</span></p>
 </td>
 </tr>
@@ -308,7 +307,7 @@ APP.run()</pre>
 </dl>
 </div>
 <div class="section" id="module-ggame.event"><span id="events"></span>
-<br/><span>事件</span><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#module-ggame.event" title="永久鏈接到這個標題"><span></span></a>
+<h2>事件</h2>
 <p><span>ggame事件是ggame系統由於某些用戶操作（鼠標，鍵盤）而創建的對象。如果ggame應用程序已調用 </span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.app.App.listenKeyEvent" title="ggame.app.App.listenKeyEvent"><code class="xref py py-meth docutils literal notranslate"><span class="pre">listenKeyEvent()</span></code></a><span>，</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.app.App.listenMouseEvent" title="ggame.app.App.listenMouseEvent"><code class="xref py py-meth docutils literal notranslate"><span class="pre">listenMouseEvent()</span></code></a><span>則ggame將實例化相應的Event對象並返回給用戶提供的處理函數。ggame用戶代碼應該檢查Event對象的屬性，以找出有關發生的事件的更多信息。</span></p>
 <dl class="class">
 <dt id="ggame.event.MouseEvent"><em class="property"><span>class </span></em><code class="descclassname">ggame.event.</code><code class="descname">MouseEvent</code><span class="sig-paren"><span>（</span></span><em><span>app</span></em><span>，</span><em><span>hwevent </span></em><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/event.html#MouseEvent"><span class="viewcode-link"><span>[來源]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.event.MouseEvent" title="這個定義的固定鏈接"><span></span></a></dt>
@@ -363,106 +362,105 @@ APP.run()</pre>
 <p><span>密鑰號和描述字符串列表如下：</span></p>
 <div class="highlight-default notranslate">
 <div class="highlight">
-<pre><span></span><span class="mi">8</span><span class="p">:</span> <span class="s1">'backspace'</span><span class="p">,</span>
-<span class="mi">9</span><span class="p">:</span> <span class="s1">'tab'</span><span class="p">,</span>
-<span class="mi">13</span><span class="p">:</span> <span class="s1">'enter'</span><span class="p">,</span>
-<span class="mi">16</span><span class="p">:</span> <span class="s1">'shift'</span><span class="p">,</span>
-<span class="mi">17</span><span class="p">:</span> <span class="s1">'ctrl'</span><span class="p">,</span>
-<span class="mi">18</span><span class="p">:</span> <span class="s1">'alt'</span><span class="p">,</span>
-<span class="mi">19</span><span class="p">:</span> <span class="s1">'pause/break'</span><span class="p">,</span>
-<span class="mi">20</span><span class="p">:</span> <span class="s1">'caps lock'</span><span class="p">,</span>
-<span class="mi">27</span><span class="p">:</span> <span class="s1">'escape'</span><span class="p">,</span>
-<span class="mi">32</span><span class="p">:</span> <span class="s1">'space'</span><span class="p">,</span>
-<span class="mi">33</span><span class="p">:</span> <span class="s1">'page up'</span><span class="p">,</span>
-<span class="mi">34</span><span class="p">:</span> <span class="s1">'page down'</span><span class="p">,</span>
-<span class="mi">35</span><span class="p">:</span> <span class="s1">'end'</span><span class="p">,</span>
-<span class="mi">36</span><span class="p">:</span> <span class="s1">'home'</span><span class="p">,</span>
-<span class="mi">37</span><span class="p">:</span> <span class="s1">'left arrow'</span><span class="p">,</span>
-<span class="mi">38</span><span class="p">:</span> <span class="s1">'up arrow'</span><span class="p">,</span>
-<span class="mi">39</span><span class="p">:</span> <span class="s1">'right arrow'</span><span class="p">,</span>
-<span class="mi">40</span><span class="p">:</span> <span class="s1">'down arrow'</span><span class="p">,</span>
-<span class="mi">45</span><span class="p">:</span> <span class="s1">'insert'</span><span class="p">,</span>
-<span class="mi">46</span><span class="p">:</span> <span class="s1">'delete'</span><span class="p">,</span>
-<span class="mi">48</span><span class="p">:</span> <span class="s1">'0'</span><span class="p">,</span>
-<span class="mi">49</span><span class="p">:</span> <span class="s1">'1'</span><span class="p">,</span>
-<span class="mi">50</span><span class="p">:</span> <span class="s1">'2'</span><span class="p">,</span>
-<span class="mi">51</span><span class="p">:</span> <span class="s1">'3'</span><span class="p">,</span>
-<span class="mi">52</span><span class="p">:</span> <span class="s1">'4'</span><span class="p">,</span>
-<span class="mi">53</span><span class="p">:</span> <span class="s1">'5'</span><span class="p">,</span>
-<span class="mi">54</span><span class="p">:</span> <span class="s1">'6'</span><span class="p">,</span>
-<span class="mi">55</span><span class="p">:</span> <span class="s1">'7'</span><span class="p">,</span>
-<span class="mi">56</span><span class="p">:</span> <span class="s1">'8'</span><span class="p">,</span>
-<span class="mi">57</span><span class="p">:</span> <span class="s1">'9'</span><span class="p">,</span>
-<span class="mi">65</span><span class="p">:</span> <span class="s1">'a'</span><span class="p">,</span>
-<span class="mi">66</span><span class="p">:</span> <span class="s1">'b'</span><span class="p">,</span>
-<span class="mi">67</span><span class="p">:</span> <span class="s1">'c'</span><span class="p">,</span>
-<span class="mi">68</span><span class="p">:</span> <span class="s1">'d'</span><span class="p">,</span>
-<span class="mi">69</span><span class="p">:</span> <span class="s1">'e'</span><span class="p">,</span>
-<span class="mi">70</span><span class="p">:</span> <span class="s1">'f'</span><span class="p">,</span>
-<span class="mi">71</span><span class="p">:</span> <span class="s1">'g'</span><span class="p">,</span>
-<span class="mi">72</span><span class="p">:</span> <span class="s1">'h'</span><span class="p">,</span>
-<span class="mi">73</span><span class="p">:</span> <span class="s1">'i'</span><span class="p">,</span>
-<span class="mi">74</span><span class="p">:</span> <span class="s1">'j'</span><span class="p">,</span>
-<span class="mi">75</span><span class="p">:</span> <span class="s1">'k'</span><span class="p">,</span>
-<span class="mi">76</span><span class="p">:</span> <span class="s1">'l'</span><span class="p">,</span>
-<span class="mi">77</span><span class="p">:</span> <span class="s1">'m'</span><span class="p">,</span>
-<span class="mi">78</span><span class="p">:</span> <span class="s1">'n'</span><span class="p">,</span>
-<span class="mi">79</span><span class="p">:</span> <span class="s1">'o'</span><span class="p">,</span>
-<span class="mi">80</span><span class="p">:</span> <span class="s1">'p'</span><span class="p">,</span>
-<span class="mi">81</span><span class="p">:</span> <span class="s1">'q'</span><span class="p">,</span>
-<span class="mi">82</span><span class="p">:</span> <span class="s1">'r'</span><span class="p">,</span>
-<span class="mi">83</span><span class="p">:</span> <span class="s1">'s'</span><span class="p">,</span>
-<span class="mi">84</span><span class="p">:</span> <span class="s1">'t'</span><span class="p">,</span>
-<span class="mi">85</span><span class="p">:</span> <span class="s1">'u'</span><span class="p">,</span>
-<span class="mi">86</span><span class="p">:</span> <span class="s1">'v'</span><span class="p">,</span>
-<span class="mi">87</span><span class="p">:</span> <span class="s1">'w'</span><span class="p">,</span>
-<span class="mi">88</span><span class="p">:</span> <span class="s1">'x'</span><span class="p">,</span>
-<span class="mi">89</span><span class="p">:</span> <span class="s1">'y'</span><span class="p">,</span>
-<span class="mi">90</span><span class="p">:</span> <span class="s1">'z'</span><span class="p">,</span>
-<span class="mi">91</span><span class="p">:</span> <span class="s1">'left window key'</span><span class="p">,</span>
-<span class="mi">92</span><span class="p">:</span> <span class="s1">'right window key'</span><span class="p">,</span>
-<span class="mi">93</span><span class="p">:</span> <span class="s1">'select key'</span><span class="p">,</span>
-<span class="mi">96</span><span class="p">:</span> <span class="s1">'numpad 0'</span><span class="p">,</span>
-<span class="mi">97</span><span class="p">:</span> <span class="s1">'numpad 1'</span><span class="p">,</span>
-<span class="mi">98</span><span class="p">:</span> <span class="s1">'numpad 2'</span><span class="p">,</span>
-<span class="mi">99</span><span class="p">:</span> <span class="s1">'numpad 3'</span><span class="p">,</span>
-<span class="mi">100</span><span class="p">:</span> <span class="s1">'numpad 4'</span><span class="p">,</span>
-<span class="mi">101</span><span class="p">:</span> <span class="s1">'numpad 5'</span><span class="p">,</span>
-<span class="mi">102</span><span class="p">:</span> <span class="s1">'numpad 6'</span><span class="p">,</span>
-<span class="mi">103</span><span class="p">:</span> <span class="s1">'numpad 7'</span><span class="p">,</span>
-<span class="mi">104</span><span class="p">:</span> <span class="s1">'numpad 8'</span><span class="p">,</span>
-<span class="mi">105</span><span class="p">:</span> <span class="s1">'numpad 9'</span><span class="p">,</span>
-<span class="mi">106</span><span class="p">:</span> <span class="s1">'multiply'</span><span class="p">,</span>
-<span class="mi">107</span><span class="p">:</span> <span class="s1">'add'</span><span class="p">,</span>
-<span class="mi">109</span><span class="p">:</span> <span class="s1">'subtract'</span><span class="p">,</span>
-<span class="mi">110</span><span class="p">:</span> <span class="s1">'decimal point'</span><span class="p">,</span>
-<span class="mi">111</span><span class="p">:</span> <span class="s1">'divide'</span><span class="p">,</span>
-<span class="mi">112</span><span class="p">:</span> <span class="s1">'f1'</span><span class="p">,</span>
-<span class="mi">113</span><span class="p">:</span> <span class="s1">'f2'</span><span class="p">,</span>
-<span class="mi">114</span><span class="p">:</span> <span class="s1">'f3'</span><span class="p">,</span>
-<span class="mi">115</span><span class="p">:</span> <span class="s1">'f4'</span><span class="p">,</span>
-<span class="mi">116</span><span class="p">:</span> <span class="s1">'f5'</span><span class="p">,</span>
-<span class="mi">117</span><span class="p">:</span> <span class="s1">'f6'</span><span class="p">,</span>
-<span class="mi">118</span><span class="p">:</span> <span class="s1">'f7'</span><span class="p">,</span>
-<span class="mi">119</span><span class="p">:</span> <span class="s1">'f8'</span><span class="p">,</span>
-<span class="mi">120</span><span class="p">:</span> <span class="s1">'f9'</span><span class="p">,</span>
-<span class="mi">121</span><span class="p">:</span> <span class="s1">'f10'</span><span class="p">,</span>
-<span class="mi">122</span><span class="p">:</span> <span class="s1">'f11'</span><span class="p">,</span>
-<span class="mi">123</span><span class="p">:</span> <span class="s1">'f12'</span><span class="p">,</span>
-<span class="mi">144</span><span class="p">:</span> <span class="s1">'num lock'</span><span class="p">,</span>
-<span class="mi">145</span><span class="p">:</span> <span class="s1">'scroll lock'</span><span class="p">,</span>
-<span class="mi">186</span><span class="p">:</span> <span class="s1">'semicolon'</span><span class="p">,</span>
-<span class="mi">187</span><span class="p">:</span> <span class="s1">'equal sign'</span><span class="p">,</span>
-<span class="mi">188</span><span class="p">:</span> <span class="s1">'comma'</span><span class="p">,</span>
-<span class="mi">189</span><span class="p">:</span> <span class="s1">'dash'</span><span class="p">,</span>
-<span class="mi">190</span><span class="p">:</span> <span class="s1">'period'</span><span class="p">,</span>
-<span class="mi">191</span><span class="p">:</span> <span class="s1">'forward slash'</span><span class="p">,</span>
-<span class="mi">192</span><span class="p">:</span> <span class="s1">'grave accent'</span><span class="p">,</span>
-<span class="mi">219</span><span class="p">:</span> <span class="s1">'open bracket'</span><span class="p">,</span>
-<span class="mi">220</span><span class="p">:</span> <span class="s1">'back slash'</span><span class="p">,</span>
-<span class="mi">221</span><span class="p">:</span> <span class="s1">'close bracket'</span><span class="p">,</span>
-<span class="mi">222</span><span class="p">:</span> <span class="s1">'single quote'</span>
-</pre>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">8: 'backspace',
+9: 'tab',
+13: 'enter',
+16: 'shift',
+17: 'ctrl',
+18: 'alt',
+19: 'pause/break',
+20: 'caps lock',
+27: 'escape',
+32: 'space',
+33: 'page up',
+34: 'page down',
+35: 'end',
+36: 'home',
+37: 'left arrow',
+38: 'up arrow',
+39: 'right arrow',
+40: 'down arrow',
+45: 'insert',
+46: 'delete',
+48: '0',
+49: '1',
+50: '2',
+51: '3',
+52: '4',
+53: '5',
+54: '6',
+55: '7',
+56: '8',
+57: '9',
+65: 'a',
+66: 'b',
+67: 'c',
+68: 'd',
+69: 'e',
+70: 'f',
+71: 'g',
+72: 'h',
+73: 'i',
+74: 'j',
+75: 'k',
+76: 'l',
+77: 'm',
+78: 'n',
+79: 'o',
+80: 'p',
+81: 'q',
+82: 'r',
+83: 's',
+84: 't',
+85: 'u',
+86: 'v',
+87: 'w',
+88: 'x',
+89: 'y',
+90: 'z',
+91: 'left window key',
+92: 'right window key',
+93: 'select key',
+96: 'numpad 0',
+97: 'numpad 1',
+98: 'numpad 2',
+99: 'numpad 3',
+100: 'numpad 4',
+101: 'numpad 5',
+102: 'numpad 6',
+103: 'numpad 7',
+104: 'numpad 8',
+105: 'numpad 9',
+106: 'multiply',
+107: 'add',
+109: 'subtract',
+110: 'decimal point',
+111: 'divide',
+112: 'f1',
+113: 'f2',
+114: 'f3',
+115: 'f4',
+116: 'f5',
+117: 'f6',
+118: 'f7',
+119: 'f8',
+120: 'f9',
+121: 'f10',
+122: 'f11',
+123: 'f12',
+144: 'num lock',
+145: 'scroll lock',
+186: 'semicolon',
+187: 'equal sign',
+188: 'comma',
+189: 'dash',
+190: 'period',
+191: 'forward slash',
+192: 'grave accent',
+219: 'open bracket',
+220: 'back slash',
+221: 'close bracket',
+222: 'single quote'</pre>
 </div>
 </div>
 </dd>
@@ -471,11 +469,12 @@ APP.run()</pre>
 </dl>
 </div>
 </div>
-<div class="section" id="module-ggame.asset"><span id="ggame-assets"></span>
-<br/><span>ggame資產</span><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#module-ggame.asset" title="永久鏈接到這個標題"><span></span></a>
-<p><span>ggame資產和相關對象（</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.Color" title="ggame.asset.Color"><code class="xref py py-class docutils literal notranslate"><span class="pre">Color</span></code></a><span>和</span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.LineStyle" title="ggame.asset.LineStyle"><code class="xref py py-class docutils literal notranslate"><span class="pre">LineStyle</span></code></a><span>）是封裝和表示可顯示圖像的類。單個資產可以用於多個精靈中。可以從包含多個圖像的任何圖像（即精靈表）創建動畫資源。</span></p>
-<div class="section" id="frame">
-<br/><span>框架</span><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#frame" title="永久鏈接到這個標題"><span></span></a>
+<div class="section"><span></span></div>
+<h2>ggame資產</h2>
+<div class="section"></div>
+<div class="section" id="module-ggame.asset">ggame資產和相關對象（<a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.Color" title="ggame.asset.Color"><code class="xref py py-class docutils literal notranslate"><span class="pre">Color</span></code></a>和<a class="reference internal" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.LineStyle" title="ggame.asset.LineStyle"><code class="xref py py-class docutils literal notranslate"><span class="pre">LineStyle</span></code></a>）是封裝和表示可顯示圖像的類。單個資產可以用於多個精靈中。可以從包含多個圖像的任何圖像（即精靈表）創建動畫資源。<br/><span id="ggame-assets"></span></div>
+<div class="section">
+<div class="section" id="frame"><br/><span style="color: #3366ff;">框架</span><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#frame" title="永久鏈接到這個標題"><span></span></a>
 <dl class="class">
 <dt id="ggame.asset.Frame"><em class="property"><span>class </span></em><code class="descclassname">ggame.asset.</code><code class="descname">Frame</code><span class="sig-paren"><span>（</span></span><em><span>x</span></em><span>，</span><em><span>y</span></em><span>，</span><em><span>w</span></em><span>，</span><em><span>h </span></em><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/asset.html#Frame"><span class="viewcode-link"><span>[來源]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.Frame" title="這個定義的固定鏈接"><span></span></a></dt>
 <dd>
@@ -530,8 +529,7 @@ APP.run()</pre>
 </dd>
 </dl>
 </div>
-<div class="section" id="color">
-<br/><span>顏色</span><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#color" title="永久鏈接到這個標題"><span></span></a>
+<div class="section" id="color"><br/><span style="color: #3366ff;"><strong>顏色</strong></span><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#color" title="永久鏈接到這個標題"><span></span></a>
 <dl class="class">
 <dt id="ggame.asset.Color"><em class="property"><span>class </span></em><code class="descclassname">ggame.asset.</code><code class="descname">Color</code><span class="sig-paren"><span>（</span></span><em><span>color</span></em><span>，</span><em><span>alpha </span></em><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/asset.html#Color"><span class="viewcode-link"><span>[來源]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.Color" title="這個定義的固定鏈接"><span></span></a></dt>
 <dd>
@@ -552,20 +550,18 @@ APP.run()</pre>
 <p><span>例：</span></p>
 <div class="highlight-default notranslate">
 <div class="highlight">
-<pre><span></span><span class="sd">"""</span>
-<span class="sd">Example of using Color class.</span>
-<span class="sd">"""</span>
-<span class="kn">from</span> <span class="nn">ggame</span> <span class="k">import</span> <span class="n">Color</span>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">"""
+Example of using Color class.
+"""
+from ggame import Color
 
-<span class="n">RED</span> <span class="o">=</span> <span class="n">Color</span><span class="p">(</span><span class="mh">0xFF0000</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
-</pre>
+RED = Color(0xFF0000, 1.0)</pre>
 </div>
 </div>
 </dd>
 </dl>
 </div>
-<div class="section" id="linestyle">
-<br/><span>的LineStyle </span><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#linestyle" title="永久鏈接到這個標題"><span></span></a>
+<div class="section" id="linestyle"><br/><strong><span style="color: #3366ff;">LineStyle </span></strong><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#linestyle" title="永久鏈接到這個標題"><span></span></a>
 <dl class="class">
 <dt id="ggame.asset.LineStyle"><em class="property"><span>class </span></em><code class="descclassname">ggame.asset.</code><code class="descname">LineStyle</code><span class="sig-paren"><span>（</span></span><em><span>寬度</span></em><span>，</span><em><span>顏色</span></em><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/asset.html#LineStyle"><span class="viewcode-link"><span>[來源]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.LineStyle" title="這個定義的固定鏈接"><span></span></a></dt>
 <dd>
@@ -586,21 +582,19 @@ APP.run()</pre>
 <p><span>例：</span></p>
 <div class="highlight-default notranslate">
 <div class="highlight">
-<pre><span></span><span class="sd">"""</span>
-<span class="sd">Example of using LineStyle class.</span>
-<span class="sd">"""</span>
-<span class="kn">from</span> <span class="nn">ggame</span> <span class="k">import</span> <span class="n">LineStyle</span><span class="p">,</span> <span class="n">Color</span>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">"""
+Example of using LineStyle class.
+"""
+from ggame import LineStyle, Color
 
-<span class="n">LINE</span> <span class="o">=</span> <span class="n">LineStyle</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">Color</span><span class="p">(</span><span class="mh">0x00FF00</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">))</span>
-</pre>
+LINE = LineStyle(3, Color(0x00FF00, 1.0))</pre>
 </div>
 </div>
 <p><span>這定義了一個3像素寬的綠線。</span></p>
 </dd>
 </dl>
 </div>
-<div class="section" id="predefined-colors-and-lines">
-<br/><span>預定義的顏色和線條</span><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#predefined-colors-and-lines" title="永久鏈接到這個標題"><span></span></a>
+<div class="section" id="predefined-colors-and-lines"><br/><span>預定義的顏色和線條</span><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#predefined-colors-and-lines" title="永久鏈接到這個標題"><span></span></a>
 <dl class="data">
 <dt id="ggame.asset.BLACK"><code class="descclassname">ggame.asset.</code><code class="descname">BLACK</code><em class="property"><span>=黑色</span></em><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.BLACK" title="這個定義的固定鏈接"><span></span></a></dt>
 <dd>
@@ -626,8 +620,7 @@ APP.run()</pre>
 </dd>
 </dl>
 </div>
-<div class="section" id="imageasset">
-<br/><span>的ImageAsset </span><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#imageasset" title="永久鏈接到這個標題"><span></span></a>
+<div class="section" id="imageasset"><br/><span style="color: #3366ff;"><strong>ImageAsset </strong></span><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#imageasset" title="永久鏈接到這個標題"><span></span></a>
 <dl class="class">
 <dt id="ggame.asset.ImageAsset"><em class="property"><span>class </span></em><code class="descclassname">ggame.asset.</code><code class="descname">ImageAsset</code><span class="sig-paren"><span>（</span></span><em><span>url</span></em><span>，</span><em><span>frame = None</span></em><span>，</span><em><span>qty = 1</span></em><span>，</span><em><span>direction ='horizo​​ntal'</span></em><span>，</span><em><span>margin = 0 </span></em><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/asset.html#ImageAsset"><span class="viewcode-link"><span>[source]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.ImageAsset" title="這個定義的固定鏈接"><span></span></a></dt>
 <dd>
@@ -651,17 +644,17 @@ APP.run()</pre>
 <p><span>例：</span></p>
 <div class="highlight-default notranslate">
 <div class="highlight">
-<pre><span></span><span class="sd">"""</span>
-<span class="sd">Example of using ImageAsset class.</span>
-<span class="sd">"""</span>
-<span class="kn">from</span> <span class="nn">ggame</span> <span class="k">import</span> <span class="n">ImageAsset</span>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">"""
+Example of using ImageAsset class.
+"""
+from ggame import ImageAsset
 
-<span class="n">IMG</span> <span class="o">=</span> <span class="n">ImageAsset</span><span class="p">(</span><span class="s2">"bunny.png"</span><span class="p">)</span>
-</pre>
+IMG = ImageAsset("bunny.png")
+url=無</pre>
+<pre><br/><br/></pre>
 </div>
 </div>
 <dl class="attribute">
-<dt id="ggame.asset.ImageAsset.url"><code class="descname">url</code><em class="property"><span>=無</span></em><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.ImageAsset.url" title="這個定義的固定鏈接"><span></span></a></dt>
 <dd>
 <p><span>一個字符串，表示原始文件的路徑或URL。</span></p>
 </dd>
@@ -689,8 +682,7 @@ APP.run()</pre>
 </dd>
 </dl>
 </div>
-<div class="section" id="rectangleasset">
-<br/><span>RectangleAsset </span><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#rectangleasset" title="永久鏈接到這個標題"><span></span></a>
+<div class="section" id="rectangleasset"><br/><span>RectangleAsset </span><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#rectangleasset" title="永久鏈接到這個標題"><span></span></a>
 <dl class="class">
 <dt id="ggame.asset.RectangleAsset"><em class="property"><span>class </span></em><code class="descclassname">ggame.asset.</code><code class="descname">RectangleAsset</code><span class="sig-paren"><span>（</span></span><em><span>width</span></em><span>，</span><em><span>height</span></em><span>，</span><em><span>line = LineStyle（1</span></em><span>，</span><em><span>BLACK）</span></em><span>，</span><em><span>fill = BLACK </span></em><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/asset.html#RectangleAsset"><span class="viewcode-link"><span>[source]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.RectangleAsset" title="這個定義的固定鏈接"><span></span></a></dt>
 <dd>
@@ -725,8 +717,7 @@ APP.run()</pre>
 </dd>
 </dl>
 </div>
-<div class="section" id="circleasset">
-<br/><span>CircleAsset </span><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#circleasset" title="永久鏈接到這個標題"><span></span></a>
+<div class="section" id="circleasset"><br/><span>CircleAsset </span><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#circleasset" title="永久鏈接到這個標題"><span></span></a>
 <dl class="class">
 <dt id="ggame.asset.CircleAsset"><em class="property"><span>class </span></em><code class="descclassname">ggame.asset.</code><code class="descname">CircleAsset</code><span class="sig-paren"><span>（</span></span><em><span>radius</span></em><span>，</span><em><span>line = LineStyle（1</span></em><span>，</span><em><span>BLACK）</span></em><span>，</span><em><span>fill = BLACK </span></em><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/asset.html#CircleAsset"><span class="viewcode-link"><span>[source]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.CircleAsset" title="這個定義的固定鏈接"><span></span></a></dt>
 <dd>
@@ -760,8 +751,7 @@ APP.run()</pre>
 </dd>
 </dl>
 </div>
-<div class="section" id="ellipseasset">
-<br/><span>EllipseAsset </span><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ellipseasset" title="永久鏈接到這個標題"><span></span></a>
+<div class="section" id="ellipseasset"><br/><span>EllipseAsset </span><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ellipseasset" title="永久鏈接到這個標題"><span></span></a>
 <dl class="class">
 <dt id="ggame.asset.EllipseAsset"><em class="property"><span>class </span></em><code class="descclassname">ggame.asset.</code><code class="descname">EllipseAsset</code><span class="sig-paren"><span>（</span></span><em><span>halfw</span></em><span>，</span><em><span>halfh</span></em><span>，</span><em><span>line = LineStyle（1</span></em><span>，</span><em><span>BLACK）</span></em><span>，</span><em><span>fill = BLACK </span></em><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/asset.html#EllipseAsset"><span class="viewcode-link"><span>[source]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.EllipseAsset" title="這個定義的固定鏈接"><span></span></a></dt>
 <dd>
@@ -796,8 +786,7 @@ APP.run()</pre>
 </dd>
 </dl>
 </div>
-<div class="section" id="polygonasset">
-<br/><span>PolygonAsset </span><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#polygonasset" title="永久鏈接到這個標題"><span></span></a>
+<div class="section" id="polygonasset"><br/><span>PolygonAsset </span><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#polygonasset" title="永久鏈接到這個標題"><span></span></a>
 <dl class="class">
 <dt id="ggame.asset.PolygonAsset"><em class="property"><span>class </span></em><code class="descclassname">ggame.asset.</code><code class="descname">PolygonAsset</code><span class="sig-paren"><span>（</span></span><em><span>path</span></em><span>，</span><em><span>line = LineStyle（1</span></em><span>，</span><em><span>BLACK）</span></em><span>，</span><em><span>fill = BLACK </span></em><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/asset.html#PolygonAsset"><span class="viewcode-link"><span>[source]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.PolygonAsset" title="這個定義的固定鏈接"><span></span></a></dt>
 <dd>
@@ -820,20 +809,20 @@ APP.run()</pre>
 <p><span>例：</span></p>
 <div class="highlight-default notranslate">
 <div class="highlight">
-<pre><span></span><span class="sd">"""</span>
-<span class="sd">Example of using the PolygonAsset class.</span>
-<span class="sd">"""</span>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">"""
+Example of using the PolygonAsset class.
+"""
 
-<span class="kn">from</span> <span class="nn">ggame</span> <span class="k">import</span> <span class="n">PolygonAsset</span><span class="p">,</span> <span class="n">LineStyle</span><span class="p">,</span> <span class="n">Color</span><span class="p">,</span> <span class="n">BLACK</span>
+from ggame import PolygonAsset, LineStyle, Color, BLACK
 
-<span class="n">POLY</span> <span class="o">=</span> <span class="n">PolygonAsset</span><span class="p">(</span>
-    <span class="p">[(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span> <span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">),</span> <span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">100</span><span class="p">),</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)],</span> <span class="n">LineStyle</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="n">BLACK</span><span class="p">),</span> <span class="n">Color</span><span class="p">(</span><span class="mh">0x80FF00</span><span class="p">,</span> <span class="mf">0.8</span><span class="p">)</span>
-<span class="p">)</span>
-</pre>
+POLY = PolygonAsset(
+    [(0, 0), (50, 50), (50, 100), (0, 0)], LineStyle(4, BLACK), Color(0x80FF00, 0.8)
+)
+destroy（）</pre>
+<pre><br/><br/></pre>
 </div>
 </div>
 <dl class="method">
-<dt id="ggame.asset.PolygonAsset.destroy"><code class="descname">destroy</code><span class="sig-paren"><span>（</span></span><span class="sig-paren"><span>）</span></span><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.PolygonAsset.destroy" title="這個定義的固定鏈接"><span></span></a></dt>
 <dd>
 <p><span>銷毀或取消分配資產使用的任何基礎圖形資源。在任何不再使用的資產上調用此方法。</span></p>
 </dd>
@@ -847,8 +836,7 @@ APP.run()</pre>
 </dd>
 </dl>
 </div>
-<div class="section" id="lineasset">
-<br/><span>LineAsset </span><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#lineasset" title="永久鏈接到這個標題"><span></span></a>
+<div class="section" id="lineasset"><br/><span>LineAsset </span><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#lineasset" title="永久鏈接到這個標題"><span></span></a>
 <dl class="class">
 <dt id="ggame.asset.LineAsset"><em class="property"><span>class </span></em><code class="descclassname">ggame.asset.</code><code class="descname">LineAsset</code><span class="sig-paren"><span>（</span></span><em><span>x</span></em><span>，</span><em><span>y</span></em><span>，</span><em><span>line = LineStyle（1</span></em><span>，</span><em><span>BLACK）</span></em><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/asset.html#LineAsset"><span class="viewcode-link"><span>[source]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.LineAsset" title="這個定義的固定鏈接"><span></span></a></dt>
 <dd>
@@ -896,8 +884,7 @@ APP.run()</pre>
 </dd>
 </dl>
 </div>
-<div class="section" id="textasset">
-<br/><span>TextAsset </span><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#textasset" title="永久鏈接到這個標題"><span></span></a>
+<div class="section" id="textasset"><br/><span><strong><span style="color: #3366ff;">TextAsset</span></strong> </span><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#textasset" title="永久鏈接到這個標題"><span></span></a>
 <dl class="class">
 <dt id="ggame.asset.TextAsset"><em class="property"><span>class </span></em><code class="descclassname">ggame.asset.</code><code class="descname">TextAsset</code><span class="sig-paren"><span>（</span></span><em><span>text</span></em><span>，</span><em><span>** kwargs </span></em><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/asset.html#TextAsset"><span class="viewcode-link"><span>[來源]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.TextAsset" title="這個定義的固定鏈接"><span></span></a></dt>
 <dd>
@@ -930,19 +917,19 @@ APP.run()</pre>
 <p><span>完整示例：</span></p>
 <div class="highlight-default notranslate">
 <div class="highlight">
-<pre><span></span><span class="sd">"""</span>
-<span class="sd">Example of using TextAsset class.</span>
-<span class="sd">"""</span>
-<span class="kn">from</span> <span class="nn">ggame</span> <span class="k">import</span> <span class="n">TextAsset</span><span class="p">,</span> <span class="n">Color</span>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">"""
+Example of using TextAsset class.
+"""
+from ggame import TextAsset, Color
 
-<span class="n">TA</span> <span class="o">=</span> <span class="n">TextAsset</span><span class="p">(</span>
-    <span class="s2">"Sample Text"</span><span class="p">,</span> <span class="n">style</span><span class="o">=</span><span class="s2">"bold 40pt Arial"</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">250</span><span class="p">,</span> <span class="n">fill</span><span class="o">=</span><span class="n">Color</span><span class="p">(</span><span class="mh">0x1122FF</span><span class="p">,</span> <span class="mf">1.0</span><span class="p">)</span>
-<span class="p">)</span>
-</pre>
+TA = TextAsset(
+    "Sample Text", style="bold 40pt Arial", width=250, fill=Color(0x1122FF, 1.0)
+)
+destroy（）</pre>
+<pre><br/><br/></pre>
 </div>
 </div>
 <dl class="method">
-<dt id="ggame.asset.TextAsset.destroy"><code class="descname">destroy</code><span class="sig-paren"><span>（</span></span><span class="sig-paren"><span>）</span></span><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.asset.TextAsset.destroy" title="這個定義的固定鏈接"><span></span></a></dt>
 <dd>
 <p><span>銷毀或取消分配資產使用的任何基礎圖形資源。在任何不再使用的資產上調用此方法。</span></p>
 </dd>
@@ -987,11 +974,10 @@ APP.run()</pre>
 </dl>
 </div>
 </div>
-<div class="section" id="module-ggame.sound"><span id="sounds"></span>
-<br/><span>聽起來</span><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#module-ggame.sound" title="永久鏈接到這個標題"><span></span></a>
-<p><span>用於在ggame應用程序中加載和播放聲音資源的工具。</span></p>
-<div class="section" id="soundasset">
-<br/><span>了SoundAsset </span><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#soundasset" title="永久鏈接到這個標題"><span></span></a>
+<h2>聲音</h2>
+<div class="section"><span></span></div>
+<div class="section" id="module-ggame.sound"><span id="sounds"></span><span>用於在ggame應用程序中加載和播放聲音資源的工具。</span>
+<div class="section" id="soundasset"><br/><span style="color: #3366ff;"><strong>SoundAsset </strong></span><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#soundasset" title="永久鏈接到這個標題"><span></span></a>
 <dl class="class">
 <dt id="ggame.sound.SoundAsset"><em class="property"><span>class </span></em><code class="descclassname">ggame.sound.</code><code class="descname">SoundAsset</code><span class="sig-paren"><span>（</span></span><em><span>url </span></em><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/sound.html#SoundAsset"><span class="viewcode-link"><span>[source]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sound.SoundAsset" title="這個定義的固定鏈接"><span></span></a></dt>
 <dd>
@@ -1017,8 +1003,7 @@ APP.run()</pre>
 </dd>
 </dl>
 </div>
-<div class="section" id="sound">
-<br/><span>聲音</span><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#sound" title="永久鏈接到這個標題"><span></span></a>
+<div class="section" id="sound"><br/><span>聲音</span><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#sound" title="永久鏈接到這個標題"><span></span></a>
 <dl class="class">
 <dt id="ggame.sound.Sound"><em class="property"><span>class </span></em><code class="descclassname">ggame.sound.</code><code class="descname">Sound</code><span class="sig-paren"><span>（</span></span><em><span>資產</span></em><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/sound.html#Sound"><span class="viewcode-link"><span>[來源]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sound.Sound" title="這個定義的固定鏈接"><span></span></a></dt>
 <dd>
@@ -1064,10 +1049,9 @@ APP.run()</pre>
 </div>
 </div>
 <div class="section" id="module-ggame.sprite"><span id="sprites"></span>
-<br/><span>精靈</span><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#module-ggame.sprite" title="永久鏈接到這個標題"><span></span></a>
+<h2>精靈</h2>
 <p><span>用於封裝ggame應用程序中所有可見對象的Sprite類。</span></p>
-<div class="section" id="sprite">
-<br/><span>精靈</span><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#sprite" title="永久鏈接到這個標題"><span></span></a>
+<div class="section" id="sprite"><br/><strong><span style="color: #3366ff;">精靈</span></strong><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#sprite" title="永久鏈接到這個標題"><span></span></a>
 <dl class="class">
 <dt id="ggame.sprite.Sprite"><em class="property"><span>類</span></em><code class="descclassname">ggame.sprite.</code><code class="descname">Sprite</code><span class="sig-paren"><span>（</span></span><em><span>資產</span></em><span>，</span><em><span>POS =（0</span></em><span>，</span><em><span>0） </span></em><span>，</span><em><span>edgedef =無</span></em><span class="sig-paren"><span>）</span></span><a class="reference internal" href="https://ggame.readthedocs.io/en/latest/_modules/ggame/sprite.html#Sprite"><span class="viewcode-link"><span>[源]</span></span></a><a class="headerlink" href="https://ggame.readthedocs.io/en/latest/ggameapi.html#ggame.sprite.Sprite" title="這個定義的固定鏈接"><span></span></a></dt>
 <dd>
@@ -1097,17 +1081,16 @@ APP.run()</pre>
 <p><span>例：</span></p>
 <div class="highlight-default notranslate">
 <div class="highlight">
-<pre><span></span><span class="kn">from</span> <span class="nn">ggame.sprite</span> <span class="k">import</span> <span class="n">Sprite</span>
-<span class="kn">from</span> <span class="nn">ggame.asset</span> <span class="k">import</span> <span class="n">ImageAsset</span><span class="p">,</span> <span class="n">CircleAsset</span>
-<span class="kn">from</span> <span class="nn">ggame.app</span> <span class="k">import</span> <span class="n">App</span>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from ggame.sprite import Sprite
+from ggame.asset import ImageAsset, CircleAsset
+from ggame.app import App
 
-<span class="n">player</span> <span class="o">=</span> <span class="n">Sprite</span><span class="p">(</span>
-    <span class="n">ImageAsset</span><span class="p">(</span><span class="s2">"bunny.png"</span><span class="p">,</span>
-    <span class="p">(</span><span class="mi">100</span><span class="p">,</span><span class="mi">100</span><span class="p">),</span>
-    <span class="n">CircleAsset</span><span class="p">(</span><span class="mi">50</span><span class="p">))</span>
+player = Sprite(
+    ImageAsset("bunny.png",
+    (100,100),
+    CircleAsset(50))
 
-<span class="n">App</span><span class="p">()</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
-</pre>
+App().run()</pre>
 </div>
 </div>
 <p><span>這將使用'player.png'圖像創建一個精靈，該圖像的左上角位於坐標（100,100）處，並且具有50像素半徑的圓形碰撞邊界。</span></p>
@@ -1448,7 +1431,8 @@ APP.run()</pre>
 <p><strong>40723207:</strong></p>
 <p><span>       這個禮拜我們開始要使用heroku，將可攜式的heroku程式放入p37裡，更新一下start.bat，重開後邊可以使用heroku的指令了。雖然感覺跟git原本的指令差不多，不過還是得記下來。</span></p>
 <p><strong>40723209:</strong></p>
-<p><strong>40723210:<br/><br/></strong>今天老師教的是把我們的隨身系統更新一個heroku指令，在為什麼加入這個軟件呢，因為我們之後每一組，都會用到heroku的網站，要上傳到heroku的網站指令是不同的，所以需要下載新的heroku的插件，雖然跟git指令有一點類似，只是heroku網站可以在線上改，下禮拜才會開始用heroku網站，所以我很期待這個功能。<strong></strong></p>
+<p><strong>40723210:</strong></p>
+<p>今天老師教的是把我們的隨身系統更新一個heroku指令，在為什麼加入這個軟件呢，因為我們之後每一組，都會用到heroku的網站，要上傳到heroku的網站指令是不同的，所以需要下載新的heroku的插件，雖然跟git指令有一點類似，只是heroku網站可以在線上改，下禮拜才會開始用heroku網站，所以我很期待這個功能。<strong></strong></p>
 <p><strong>40723245:</strong></p>
 <p><strong>40723246:</strong></p><h2>W12</h2>
 <p><strong>40723206:</strong></p>
