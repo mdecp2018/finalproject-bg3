@@ -9,7 +9,7 @@
 <preferences/>
 <find_panel_settings/>
 <vnodes>
-<v t="leo.20180827201556.1"><vh>@settings</vh>
+<v t="leo.20180827201556.1" a="E"><vh>@settings</vh>
 <v t="leo.20180827201556.2"><vh>@data qt-gui-plugin-style-sheet</vh></v>
 <v t="leo.20180827201556.3"><vh>@string initial_split_orientation = horizontal</vh></v>
 </v>
@@ -21,8 +21,23 @@
 <v t="leo.20180827201621.6" a="E"><vh>body</vh>
 <v t="leo.20180827201621.7" a="E"><vh>reveal div</vh>
 <v t="leo.20180827201621.8" a="E"><vh>slides div</vh>
-<v t="leo.20180827201621.9"><vh>封面投影片</vh>
+<v t="leo.20180827201621.9" a="E"><vh>封面投影片</vh>
 <v t="leo.20180827201621.10"><vh>封面投影片內容</vh></v>
+</v>
+<v t="leo.20190103233139.1"><vh>組員</vh>
+<v t="leo.20190103233139.2"><vh>封面投影片內容</vh></v>
+</v>
+<v t="leo.20190103233550.1"><vh>目錄</vh>
+<v t="leo.20190103233550.2"><vh>封面投影片內容</vh></v>
+</v>
+<v t="leo.20190103235026.1" a="E"><vh>遊戲來源</vh>
+<v t="leo.20190103235026.2"><vh>封面投影片內容</vh></v>
+</v>
+<v t="leo.20190103235035.1" a="E"><vh>遊戲開發</vh>
+<v t="leo.20190103235035.2"><vh>封面投影片內容</vh></v>
+</v>
+<v t="leo.20190103235038.1" a="E"><vh>目錄</vh>
+<v t="leo.20190103235038.2"><vh>封面投影片內容</vh></v>
 </v>
 <v t="leo.20190103223827.1" a="E"><vh>w1</vh>
 <v t="leo.20190103223827.2"><vh>封面投影片內容</vh></v>
@@ -30,7 +45,7 @@
 <v t="leo.20180827201621.11" a="E"><vh>快捷鍵</vh>
 <v t="leo.20180827201621.12"><vh>投影片快捷鍵</vh></v>
 </v>
-<v t="leo.20180827201621.13"><vh>各式內容引用範例</vh>
+<v t="leo.20180827201621.13" a="E"><vh>各式內容引用範例</vh>
 <v t="leo.20180827201621.14" a="E"><vh>導入數學符號與方程式</vh>
 <v t="leo.20180827201621.15"><vh>LaTeX 格式方程式</vh></v>
 </v>
@@ -127,15 +142,19 @@ QLineEdit#editorLabel {
 <t tx="leo.20180827201556.3">horizontal: body pane to the left
 vertical: body pane on the botton</t>
 <t tx="leo.20180827201621.1"></t>
-<t tx="leo.20180827201621.10">## 2018Fall 分組網際簡報
+<t tx="leo.20180827201621.10">## 期末分組倉儲簡報
 
-### 虎科大機械設計工程系
+## 第三組報告 
 
-&lt;small&gt;
-Created by [KMOLab](http://lab.kmol.info/)
+* [倉儲](https://github.com/mdecp2018/finalproject-bg3)
+
+* [網站](https://mdecp2018.github.io/finalproject-bg3/)
+
+* [heroku網站](http://cp2018-bg3.herokuapp.com)
+
 &lt;/small&gt;
+Created by [bg3](https://github.com/orgs/mdecp2018/teams/bg3/members)
 
-[2018 Fall 分組網誌](./../blog/index.html)
 
 
 </t>
@@ -344,5 +363,99 @@ make.start()
 &lt;p&gt;&lt;a href="https://s40723210.github.io/s40723210.github.io/mygame.html"&gt;&lt;img src="https://i.imgur.com/t1er2K1.png" title="source : imgur.com" /&gt;&lt;/a&gt;&lt;/p&gt;
 
 </t>
+<t tx="leo.20190103233139.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20190103233139.2">## 第三組成員
+
+
+          40723206  王冠驊 (期中自評成績：60)
+
+          40723207  吳文翔 (期中自評成績：87)
+
+          40723209  吳耕甫 (期中自評成績：70)
+ 
+          40723210  李承澤 (期中自評成績：92) [組長]
+
+          40723245  蔡育灃 (期中自評成績：80)
+
+          40723246  鄭竣元 (期中自評成績：85)
+</t>
+<t tx="leo.20190103233550.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20190103233550.2"># 專案:小遊戲
+
+* eric6 簡單解說
+
+* heroku之網頁說明
+
+* 分組協同report
+
+* 遊戲開發
+</t>
+<t tx="leo.20190103235026.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20190103235026.2"># 遊戲的來源
+
+我們的遊戲是以Ggame的程式庫內容，來進行製作
+
+在老師的kmolgame 倉儲中, 自帶 ggame 的模塊 
+
+我們就可以import Ggame 中的 .py 檔
+
+&lt;p&gt;&lt;a href="https://i.imgur.com/JKeV7v0.png"&gt;&lt;img src="https://i.imgur.com/JKeV7v0.png" title="source : imgur.com" /&gt;&lt;/a&gt;&lt;/p&gt;
+
+
+</t>
+<t tx="leo.20190103235035.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20190103235035.2"># 遊戲的開發
+
+ kmolgame 倉儲中的各種範例
+
+&lt;p&gt;&lt;a href="https://i.imgur.com/w4McyRb.png"&gt;&lt;img src="https://i.imgur.com/w4McyRb.png" title="source : imgur.com" /&gt;&lt;/a&gt;&lt;/p&gt;
+
+</t>
+<t tx="leo.20190103235038.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20190103235038.2">## 範例(一)
+
+太空大戰
+
+&lt;p&gt;&lt;a href="https://i.imgur.com/1bwlMto.png"&gt;&lt;img src="https://i.imgur.com/1bwlMto.png" title="source : imgur.com" /&gt;&lt;/a&gt;&lt;/p&gt;</t>
 </tnodes>
 </leo_file>
