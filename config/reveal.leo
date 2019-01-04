@@ -36,8 +36,35 @@
 <v t="leo.20190103235035.1" a="E"><vh>遊戲開發</vh>
 <v t="leo.20190103235035.2"><vh>封面投影片內容</vh></v>
 </v>
-<v t="leo.20190103235038.1" a="E"><vh>目錄</vh>
+<v t="leo.20190103235038.1"><vh>範例</vh>
 <v t="leo.20190103235038.2"><vh>封面投影片內容</vh></v>
+</v>
+<v t="leo.20190104173218.1" a="E"><vh>範例</vh>
+<v t="leo.20190104173218.2"><vh>封面投影片內容</vh></v>
+</v>
+<v t="leo.20190104173221.1"><vh>範例</vh>
+<v t="leo.20190104173221.2"><vh>封面投影片內容</vh></v>
+</v>
+<v t="leo.20190104173819.1"><vh>研究</vh>
+<v t="leo.20190104173819.2"><vh>封面投影片內容</vh></v>
+</v>
+<v t="leo.20190104174020.1"><vh>研究</vh>
+<v t="leo.20190104174020.2"><vh>封面投影片內容</vh></v>
+</v>
+<v t="leo.20190104174022.1"><vh>研究</vh>
+<v t="leo.20190104174022.2"><vh>封面投影片內容</vh></v>
+</v>
+<v t="leo.20190104190355.1"><vh>外觀</vh>
+<v t="leo.20190104190355.2"><vh>封面投影片內容</vh></v>
+</v>
+<v t="leo.20190104201643.1"><vh>外觀</vh>
+<v t="leo.20190104201643.2"><vh>封面投影片內容</vh></v>
+</v>
+<v t="leo.20190104201744.1" a="E"><vh>研究</vh>
+<v t="leo.20190104201744.2"><vh>封面投影片內容</vh></v>
+</v>
+<v t="leo.20190104201745.1" a="E"><vh>研究</vh>
+<v t="leo.20190104201745.2"><vh>封面投影片內容</vh></v>
 </v>
 <v t="leo.20190103223827.1" a="E"><vh>w1</vh>
 <v t="leo.20190103223827.2"><vh>封面投影片內容</vh></v>
@@ -456,6 +483,148 @@ make.start()
 
 太空大戰
 
-&lt;p&gt;&lt;a href="https://i.imgur.com/1bwlMto.png"&gt;&lt;img src="https://i.imgur.com/1bwlMto.png" title="source : imgur.com" /&gt;&lt;/a&gt;&lt;/p&gt;</t>
+&lt;p&gt;&lt;a href="https://i.imgur.com/1bwlMto.png"&gt;&lt;img src="https://i.imgur.com/1bwlMto.png" title="source : imgur.com" /&gt;&lt;/a&gt;&lt;/p&gt;
+
+</t>
+<t tx="leo.20190104173218.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20190104173218.2">## 範例(二)
+
+兔子跳
+&lt;p&gt;&lt;a href="https://i.imgur.com/fw1ZB4x.png"&gt;&lt;img src="https://i.imgur.com/fw1ZB4x.png" title="source : imgur.com" /&gt;&lt;/a&gt;&lt;/p&gt;
+
+</t>
+<t tx="leo.20190104173221.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20190104173221.2">## 範例(三)
+
+可動的紅色球
+
+&lt;p&gt;&lt;a href="https://i.imgur.com/20aNzbJ.png"&gt;&lt;img src="https://i.imgur.com/20aNzbJ.png" title="source : imgur.com" /&gt;&lt;/a&gt;&lt;/p&gt;
+
+</t>
+<t tx="leo.20190104173819.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20190104173819.2">### 研究之一
+
+兔子跳與太陽結合
+
+&lt;p&gt;&lt;a href="https://i.imgur.com/UqxaBeq.png"&gt;&lt;img src="https://i.imgur.com/UqxaBeq.png" title="source : imgur.com" /&gt;&lt;/a&gt;&lt;/p&gt;
+
+</t>
+<t tx="leo.20190104174020.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20190104174020.2">## 研究之二
+
+太陽上下左右移動
+
+&lt;iframe src="https://www.youtube.com/embed/DvaSKzYhKGA" width="640" height="492" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen&gt;&lt;/iframe&gt;
+
+</t>
+<t tx="leo.20190104174022.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20190104174022.2">## 研究之三
+
+太陽能把吃兔子
+
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/yWBfP75P1eI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+
+</t>
+<t tx="leo.20190104190355.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20190104190355.2">### 改變素材
+
+太陽角色改變
+
+&lt;p&gt;&lt;a href="https://i.imgur.com/y7tUpAF.png"&gt;&lt;img src="https://i.imgur.com/y7tUpAF.png" title="source : imgur.com" /&gt;&lt;/a&gt;&lt;/p&gt;
+
+</t>
+<t tx="leo.20190104201643.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20190104201643.2">### 改變素材
+
+兔子改變成蝴蝶
+
+&lt;p&gt;&lt;a href="https://i.imgur.com/bvQvONk.png"&gt;&lt;img src="https://i.imgur.com/bvQvONk.png" title="source : imgur.com" /&gt;&lt;/a&gt;&lt;/p&gt;
+
+</t>
+<t tx="leo.20190104201744.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20190104201744.2">## 角色的動畫
+
+增加忍者的攻擊動畫
+
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/ULpOGoeBnkY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;</t>
+<t tx="leo.20190104201745.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20190104201745.2">## 特殊功能物件
+
+增加能加速和能變大的物件
+
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/xSM4JbnG3gc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+</t>
 </tnodes>
 </leo_file>
