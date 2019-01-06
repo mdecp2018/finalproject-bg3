@@ -24,17 +24,20 @@
 <v t="leo.20180827201621.9"><vh>封面投影片</vh>
 <v t="leo.20180827201621.10"><vh>封面投影片內容</vh></v>
 </v>
-<v t="leo.20190103233139.1"><vh>組員</vh>
+<v t="leo.20190103233139.1" a="E"><vh>組員</vh>
 <v t="leo.20190103233139.2"><vh>封面投影片內容</vh></v>
 </v>
-<v t="leo.20190103233550.1"><vh>目錄</vh>
+<v t="leo.20190103233550.1" a="E"><vh>目錄</vh>
 <v t="leo.20190103233550.2"><vh>封面投影片內容</vh></v>
 </v>
-<v t="leo.20190105170934.1" a="E"><vh>目錄</vh>
+<v t="leo.20190105170934.1" a="E"><vh>eric6</vh>
 <v t="leo.20190105170934.2"><vh>封面投影片內容</vh></v>
 </v>
-<v t="leo.20190105170936.1" a="E"><vh>目錄</vh>
+<v t="leo.20190105170936.1" a="E"><vh>python</vh>
 <v t="leo.20190105170936.2"><vh>封面投影片內容</vh></v>
+</v>
+<v t="leo.20190106204631.1" a="E"><vh>report</vh>
+<v t="leo.20190106204631.2"><vh>封面投影片內容</vh></v>
 </v>
 <v t="leo.20190103235026.1"><vh>遊戲來源</vh>
 <v t="leo.20190103235026.2"><vh>封面投影片內容</vh></v>
@@ -436,6 +439,8 @@ make.start()
 
 * eric6 簡單解說
 
+* puthon介紹
+
 * heroku之網頁說明
 
 * 分組協同report
@@ -646,11 +651,10 @@ make.start()
 
 						
 </t>
-<t tx="leo.20190105170934.2"># eric6
-
-eric是一個用於計算機編程的免費 集成開發環境（IDE）。是一個功能齊全的IDE，
-默認提供編寫代碼和軟件項目專業管理所需的所有必要工具。
-&lt;a href="http://www.bkill.com/u/upload/2017/04/07/071941524287.jpg"&gt;&lt;img src="http://www.bkill.com/u/upload/2017/04/07/071941524287.jpg" width="500" height="300"&gt;&lt;/a&gt;
+<t tx="leo.20190105170934.2">## eric6
+eric是一個用於計算機編程的免費 集成開發環境。
+是一個功能齊全的IDE。
+&lt;a href="http://www.bkill.com/u/upload/2017/04/07/071941524287.jpg"&gt;&lt;img src="http://www.bkill.com/u/upload/2017/04/07/071941524287.jpg" width="600" height=""&gt;&lt;/a&gt;
 
 </t>
 <t tx="leo.20190105170936.1">&lt;section data-markdown&gt;
@@ -662,7 +666,11 @@ eric是一個用於計算機編程的免費 集成開發環境（IDE）。是一
 
 						
 </t>
-<t tx="leo.20190105170936.2">### 有個自由的軟體整合式開發環境，主要為開發Python和Ruby語言編寫的程式而設計。歷史上某個時期中，Eric4是這款軟體針對Python 2的變種，而Eric5則針對Python 3。但自從Eric6發布以後，兩者均由同一份程式碼所支援。
+<t tx="leo.20190105170936.2">## python
+是一種廣泛使用的高階程式語言。
+Python的設計哲學強調程式碼的可讀性和簡潔的語法。
+
+&lt;a&gt;&lt;img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Python-logo-notext.svg/1024px-Python-logo-notext.svg.png" width="400" height=""&gt;&lt;/a&gt;
 </t>
 <t tx="leo.20190105210256.1">&lt;section data-markdown&gt;
     &lt;script type="text/template"&gt;
@@ -678,6 +686,23 @@ eric是一個用於計算機編程的免費 集成開發環境（IDE）。是一
 太陽與兔子
 
 &lt;p&gt;&lt;a href="https://s40723210.github.io/s40723210.github.io/test1.html"&gt;&lt;img src="https://i.imgur.com/mXqo7X1.png" title="source : imgur.com" /&gt;&lt;/a&gt;&lt;/p&gt;
+
+</t>
+<t tx="leo.20190106204631.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20190106204631.2">## 分組協同報告
+我們觀看期末專案示範網站所提供的期末報告pdf
+尋找製作的題目，由各組員分別協同編輯，
+最終製成最後的期末報告
+
+&lt;a&gt;&lt;img src="https://i.imgur.com/CuD0yDWg.jpg" width="400" height=""&gt;&lt;/a&gt;
 
 </t>
 </tnodes>
