@@ -33,8 +33,11 @@
 <v t="leo.20190105170934.1" a="E"><vh>eric6</vh>
 <v t="leo.20190105170934.2"><vh>封面投影片內容</vh></v>
 </v>
-<v t="leo.20190105170936.1" a="E"><vh>python</vh>
+<v t="leo.20190105170936.1"><vh>python</vh>
 <v t="leo.20190105170936.2"><vh>封面投影片內容</vh></v>
+</v>
+<v t="leo.20190107125027.1" a="E"><vh>hero</vh>
+<v t="leo.20190107125027.2"><vh>封面投影片內容</vh></v>
 </v>
 <v t="leo.20190106204631.1" a="E"><vh>report</vh>
 <v t="leo.20190106204631.2"><vh>封面投影片內容</vh></v>
@@ -703,6 +706,21 @@ Python的設計哲學強調程式碼的可讀性和簡潔的語法。
 最終製成最後的期末報告
 
 &lt;a&gt;&lt;img src="https://i.imgur.com/CuD0yDWg.jpg" width="400" height=""&gt;&lt;/a&gt;
+
+</t>
+<t tx="leo.20190107125027.1">&lt;section data-markdown&gt;
+    &lt;script type="text/template"&gt;
+@others
+    &lt;/script&gt;
+&lt;/section&gt;
+
+
+						
+</t>
+<t tx="leo.20190107125027.2">## Heroku
+Heroku 是一個平台即服務。
+開發者可以自行在Heroku平台開發和佈署各種網站。
+&lt;a&gt;&lt;img src="https://miro.medium.com/max/768/1*w2RAR48UbSAYv-6y_V-cdA.png" width="600" height=""&gt;&lt;/a&gt;
 
 </t>
 </tnodes>
